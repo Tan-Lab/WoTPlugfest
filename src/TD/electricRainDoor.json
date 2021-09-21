@@ -1,0 +1,672 @@
+{
+  "@context" : [ "https://www.w3.org/2019/wot/td/v1", {
+    "echonet" : "https://echonet.jp/"
+  }, {
+    "@language" : "en"
+  } ],
+  "id" : "",
+  "echonet:eoj" : "0x0263",
+  "title" : "electricRainDoor",
+  "titles" : {
+    "en" : "electricRainDoor",
+    "ja" : "電動雨戸・シャッター"
+  },
+  "description" : "Electrically operated rain sliding door/shutter",
+  "descriptions" : {
+    "en" : "Electrically operated rain sliding door/shutter",
+    "ja" : "電動雨戸・シャッター"
+  },
+  "properties" : {
+    "operationStatus" : {
+      "title" : "operationStatus",
+      "titles" : {
+        "en" : "operationStatus",
+        "ja" : "動作状態"
+      },
+      "echonet:epc" : "0x80",
+      "description" : "Operation status",
+      "descriptions" : {
+        "en" : "Operation status",
+        "ja" : "動作状態"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : true,
+      "type" : "boolean"
+    },
+    "installationLocation" : {
+      "title" : "installationLocation",
+      "titles" : {
+        "en" : "installationLocation",
+        "ja" : "設置場所"
+      },
+      "echonet:epc" : "0x81",
+      "description" : "Installation location",
+      "descriptions" : {
+        "en" : "Installation location",
+        "ja" : "設置場所"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : true,
+      "oneOf" : [ {
+        "type" : "string"
+      }, {
+        "type" : "string"
+      } ]
+    },
+    "protocol" : {
+      "title" : "protocol",
+      "titles" : {
+        "en" : "protocol",
+        "ja" : "規格Version情報"
+      },
+      "echonet:epc" : "0x82",
+      "description" : "Standard version information",
+      "descriptions" : {
+        "en" : "Standard version information",
+        "ja" : "規格Version情報"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "id" : {
+      "title" : "id",
+      "titles" : {
+        "en" : "id",
+        "ja" : "識別番号"
+      },
+      "echonet:epc" : "0x83",
+      "description" : "Identification number",
+      "descriptions" : {
+        "en" : "Identification number",
+        "ja" : "識別番号"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "instantaneousElectricPowerConsumption" : {
+      "title" : "instantaneousElectricPowerConsumption",
+      "titles" : {
+        "en" : "instantaneousElectricPowerConsumption",
+        "ja" : "瞬時消費電力計測値"
+      },
+      "echonet:epc" : "0x84",
+      "description" : "Measured instantaneous power consumption",
+      "descriptions" : {
+        "en" : "Measured instantaneous power consumption",
+        "ja" : "瞬時消費電力計測値"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "W",
+      "minimum" : 0,
+      "maximum" : 65533
+    },
+    "consumedCumulativeElectricEnergy" : {
+      "title" : "consumedCumulativeElectricEnergy",
+      "titles" : {
+        "en" : "consumedCumulativeElectricEnergy",
+        "ja" : "積算消費電力計測値"
+      },
+      "echonet:epc" : "0x85",
+      "description" : "Measured cumulative power consumption",
+      "descriptions" : {
+        "en" : "Measured cumulative power consumption",
+        "ja" : "積算消費電力計測値"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "kWh",
+      "minimum" : 0,
+      "maximum" : 999999.999
+    },
+    "manufacturerFaultCode" : {
+      "title" : "manufacturerFaultCode",
+      "titles" : {
+        "en" : "manufacturerFaultCode",
+        "ja" : "メーカ異常コード"
+      },
+      "echonet:epc" : "0x86",
+      "description" : "Manufacturer's fault code",
+      "descriptions" : {
+        "en" : "Manufacturer's fault code",
+        "ja" : "メーカ異常コード"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "currentLimit" : {
+      "title" : "currentLimit",
+      "titles" : {
+        "en" : "currentLimit",
+        "ja" : "電流制限設定"
+      },
+      "echonet:epc" : "0x87",
+      "description" : "Current limit setting",
+      "descriptions" : {
+        "en" : "Current limit setting",
+        "ja" : "電流制限設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "%",
+      "minimum" : 0,
+      "maximum" : 100
+    },
+    "faultStatus" : {
+      "title" : "faultStatus",
+      "titles" : {
+        "en" : "faultStatus",
+        "ja" : "異常発生状態"
+      },
+      "echonet:epc" : "0x88",
+      "description" : "Fault status",
+      "descriptions" : {
+        "en" : "Fault status",
+        "ja" : "異常発生状態"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : true,
+      "type" : "boolean"
+    },
+    "faultDescription" : {
+      "title" : "faultDescription",
+      "titles" : {
+        "en" : "faultDescription",
+        "ja" : "異常内容"
+      },
+      "echonet:epc" : "0x89",
+      "description" : "Fault description",
+      "descriptions" : {
+        "en" : "Fault description",
+        "ja" : "異常内容"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "manufacturer" : {
+      "title" : "manufacturer",
+      "titles" : {
+        "en" : "manufacturer",
+        "ja" : "メーカコード"
+      },
+      "echonet:epc" : "0x8A",
+      "description" : "Manufactur code",
+      "descriptions" : {
+        "en" : "Manufactur code",
+        "ja" : "メーカコード"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "businessFacilityCode" : {
+      "title" : "businessFacilityCode",
+      "titles" : {
+        "en" : "businessFacilityCode",
+        "ja" : "事業場コード"
+      },
+      "echonet:epc" : "0x8B",
+      "description" : "Business facility code",
+      "descriptions" : {
+        "en" : "Business facility code",
+        "ja" : "事業場コード"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "productCode" : {
+      "title" : "productCode",
+      "titles" : {
+        "en" : "productCode",
+        "ja" : "商品コード"
+      },
+      "echonet:epc" : "0x8C",
+      "description" : "Product code",
+      "descriptions" : {
+        "en" : "Product code",
+        "ja" : "商品コード"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "serialNumber" : {
+      "title" : "serialNumber",
+      "titles" : {
+        "en" : "serialNumber",
+        "ja" : "製造番号"
+      },
+      "echonet:epc" : "0x8D",
+      "description" : "Production number",
+      "descriptions" : {
+        "en" : "Production number",
+        "ja" : "製造番号"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "productionDate" : {
+      "title" : "productionDate",
+      "titles" : {
+        "en" : "productionDate",
+        "ja" : "製造年月日"
+      },
+      "echonet:epc" : "0x8E",
+      "description" : "Production date",
+      "descriptions" : {
+        "en" : "Production date",
+        "ja" : "製造年月日"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string",
+      "format" : "date"
+    },
+    "powerSaving" : {
+      "title" : "powerSaving",
+      "titles" : {
+        "en" : "powerSaving",
+        "ja" : "節電動作設定"
+      },
+      "echonet:epc" : "0x8F",
+      "description" : "Power-saving operation setting",
+      "descriptions" : {
+        "en" : "Power-saving operation setting",
+        "ja" : "節電動作設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "boolean"
+    },
+    "timerOperationMode" : {
+      "title" : "timerOperationMode",
+      "titles" : {
+        "en" : "timerOperationMode",
+        "ja" : "タイマ動作設定"
+      },
+      "echonet:epc" : "0x90",
+      "description" : "Timer operation setting",
+      "descriptions" : {
+        "en" : "Timer operation setting",
+        "ja" : "タイマ動作設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : true,
+      "type" : "boolean"
+    },
+    "remoteControl" : {
+      "title" : "remoteControl",
+      "titles" : {
+        "en" : "remoteControl",
+        "ja" : "遠隔操作設定"
+      },
+      "echonet:epc" : "0x93",
+      "description" : "Remote controll setting",
+      "descriptions" : {
+        "en" : "Remote controll setting",
+        "ja" : "遠隔操作設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "boolean"
+    },
+    "currentDateAndTime" : {
+      "title" : "currentDateAndTime",
+      "titles" : {
+        "en" : "currentDateAndTime",
+        "ja" : "現在年月日設定"
+      },
+      "echonet:epc" : "0x98",
+      "description" : "Current date setting",
+      "descriptions" : {
+        "en" : "Current date setting",
+        "ja" : "現在年月日設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string",
+      "format" : "date-time"
+    },
+    "powerLimit" : {
+      "title" : "powerLimit",
+      "titles" : {
+        "en" : "powerLimit",
+        "ja" : "電力制限設定"
+      },
+      "echonet:epc" : "0x99",
+      "description" : "Power limit setting",
+      "descriptions" : {
+        "en" : "Power limit setting",
+        "ja" : "電力制限設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "W",
+      "minimum" : 0,
+      "maximum" : 65533
+    },
+    "hourMeter" : {
+      "title" : "hourMeter",
+      "titles" : {
+        "en" : "hourMeter",
+        "ja" : "積算運転時間"
+      },
+      "echonet:epc" : "0x9A",
+      "description" : "Cumulative operating time",
+      "descriptions" : {
+        "en" : "Cumulative operating time",
+        "ja" : "積算運転時間"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "unit" : {
+          "type" : "string",
+          "enum" : [ "second", "minute", "hour", "day" ],
+          "descriptions" : {
+            "ja" : "積算運転時間",
+            "en" : "Cumulative operating time"
+          }
+        },
+        "time" : {
+          "type" : "number",
+          "minimum" : 0,
+          "maximum" : 4294967295,
+          "descriptions" : {
+            "ja" : "時間",
+            "en" : "time"
+          }
+        }
+      }
+    },
+    "openingSpeed" : {
+      "title" : "openingSpeed",
+      "titles" : {
+        "en" : "openingSpeed",
+        "ja" : "開速度設定"
+      },
+      "echonet:epc" : "0xD0",
+      "description" : "Opening speed setting",
+      "descriptions" : {
+        "en" : "Opening speed setting",
+        "ja" : "開速度設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string",
+      "enum" : [ "low", "medium", "high" ]
+    },
+    "closingSpeed" : {
+      "title" : "closingSpeed",
+      "titles" : {
+        "en" : "closingSpeed",
+        "ja" : "閉速度設定"
+      },
+      "echonet:epc" : "0xD1",
+      "description" : "Closing speed setting",
+      "descriptions" : {
+        "en" : "Closing speed setting",
+        "ja" : "閉速度設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string",
+      "enum" : [ "low", "medium", "high" ]
+    },
+    "operationTime" : {
+      "title" : "operationTime",
+      "titles" : {
+        "en" : "operationTime",
+        "ja" : "動作時間設定値"
+      },
+      "echonet:epc" : "0xD2",
+      "description" : "Operation time",
+      "descriptions" : {
+        "en" : "Operation time",
+        "ja" : "動作時間設定値"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "second",
+      "minimum" : 0,
+      "maximum" : 253
+    },
+    "openCloseOperation" : {
+      "title" : "openCloseOperation",
+      "titles" : {
+        "en" : "openCloseOperation",
+        "ja" : "開閉動作設定"
+      },
+      "echonet:epc" : "0xE0",
+      "description" : "Open/close operation setting",
+      "descriptions" : {
+        "en" : "Open/close operation setting",
+        "ja" : "開閉動作設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : true,
+      "type" : "string",
+      "enum" : [ "open", "close", "stop" ]
+    },
+    "degreeOfOpening" : {
+      "title" : "degreeOfOpening",
+      "titles" : {
+        "en" : "degreeOfOpening",
+        "ja" : "開度レベル設定"
+      },
+      "echonet:epc" : "0xE1",
+      "description" : "Degree-of-opening setting",
+      "descriptions" : {
+        "en" : "Degree-of-opening setting",
+        "ja" : "開度レベル設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "%",
+      "minimum" : 0,
+      "maximum" : 100
+    },
+    "blindAngle" : {
+      "title" : "blindAngle",
+      "titles" : {
+        "en" : "blindAngle",
+        "ja" : "ブラインド角度設定値"
+      },
+      "echonet:epc" : "0xE2",
+      "description" : "Blind angle setting",
+      "descriptions" : {
+        "en" : "Blind angle setting",
+        "ja" : "ブラインド角度設定値"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "degree",
+      "minimum" : 0,
+      "maximum" : 180
+    },
+    "openCloseSpeed" : {
+      "title" : "openCloseSpeed",
+      "titles" : {
+        "en" : "openCloseSpeed",
+        "ja" : "開閉速度設定"
+      },
+      "echonet:epc" : "0xE3",
+      "description" : "Opening/closing speed setting",
+      "descriptions" : {
+        "en" : "Opening/closing speed setting",
+        "ja" : "開閉速度設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string",
+      "enum" : [ "low", "medium", "high" ]
+    },
+    "electricLock" : {
+      "title" : "electricLock",
+      "titles" : {
+        "en" : "electricLock",
+        "ja" : "電気錠設定"
+      },
+      "echonet:epc" : "0xE5",
+      "description" : "Electric lock setting",
+      "descriptions" : {
+        "en" : "Electric lock setting",
+        "ja" : "電気錠設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "boolean"
+    },
+    "remoteOperation" : {
+      "title" : "remoteOperation",
+      "titles" : {
+        "en" : "remoteOperation",
+        "ja" : "遠隔操作設定状態"
+      },
+      "echonet:epc" : "0xE8",
+      "description" : "Remote operation setting status",
+      "descriptions" : {
+        "en" : "Remote operation setting status",
+        "ja" : "遠隔操作設定状態"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : true,
+      "type" : "boolean"
+    },
+    "selectiveDegreeOfOpening" : {
+      "title" : "selectiveDegreeOfOpening",
+      "titles" : {
+        "en" : "selectiveDegreeOfOpening",
+        "ja" : "選択開度動作設定"
+      },
+      "echonet:epc" : "0xE9",
+      "description" : "Selective degree-of-opening setting",
+      "descriptions" : {
+        "en" : "Selective degree-of-opening setting",
+        "ja" : "選択開度動作設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : true,
+      "type" : "string",
+      "enum" : [ "degreeOfOpening", "operationTimeOfOpening", "operationTimeOfClosing", "localSetting", "slitDegreeOfOpening" ]
+    },
+    "openCloseStatus" : {
+      "title" : "openCloseStatus",
+      "titles" : {
+        "en" : "openCloseStatus",
+        "ja" : "開閉状態"
+      },
+      "echonet:epc" : "0xEA",
+      "description" : "Open/closed status",
+      "descriptions" : {
+        "en" : "Open/closed status",
+        "ja" : "開閉状態"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : true,
+      "type" : "string",
+      "enum" : [ "fullyOpen", "fullyClosed", "opening", "closing", "stoppedHalfway" ]
+    },
+    "slitDegreeOfOpening" : {
+      "title" : "slitDegreeOfOpening",
+      "titles" : {
+        "en" : "slitDegreeOfOpening",
+        "ja" : "スリット開度設定"
+      },
+      "echonet:epc" : "0xED",
+      "description" : "Slit degree-of-opening",
+      "descriptions" : {
+        "en" : "Slit degree-of-opening",
+        "ja" : "スリット開度設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "minimum" : 1,
+      "maximum" : 8
+    },
+    "oneTimeOpeningSpeed" : {
+      "title" : "oneTimeOpeningSpeed",
+      "titles" : {
+        "en" : "oneTimeOpeningSpeed",
+        "ja" : "ワンタイム開速度設定"
+      },
+      "echonet:epc" : "0xEE",
+      "description" : "One-time opening speed setting",
+      "descriptions" : {
+        "en" : "One-time opening speed setting",
+        "ja" : "ワンタイム開速度設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string",
+      "enum" : [ "low", "medium", "high", "none" ]
+    },
+    "oneTimeClosingSpeed" : {
+      "title" : "oneTimeClosingSpeed",
+      "titles" : {
+        "en" : "oneTimeClosingSpeed",
+        "ja" : "ワンタイム閉速度設定"
+      },
+      "echonet:epc" : "0xEF",
+      "description" : "One-time closing speed setting",
+      "descriptions" : {
+        "en" : "One-time closing speed setting",
+        "ja" : "ワンタイム閉速度設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string",
+      "enum" : [ "low", "medium", "high", "none" ]
+    }
+  }
+}

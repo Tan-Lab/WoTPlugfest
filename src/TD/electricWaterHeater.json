@@ -1,0 +1,1510 @@
+{
+  "@context" : [ "https://www.w3.org/2019/wot/td/v1", {
+    "echonet" : "https://echonet.jp/"
+  }, {
+    "@language" : "en"
+  } ],
+  "id" : "",
+  "echonet:eoj" : "0x026B",
+  "title" : "electricWaterHeater",
+  "titles" : {
+    "en" : "electricWaterHeater",
+    "ja" : "電気温水器"
+  },
+  "description" : "Electric water heater",
+  "descriptions" : {
+    "en" : "Electric water heater",
+    "ja" : "電気温水器"
+  },
+  "properties" : {
+    "operationStatus" : {
+      "title" : "operationStatus",
+      "titles" : {
+        "en" : "operationStatus",
+        "ja" : "動作状態"
+      },
+      "echonet:epc" : "0x80",
+      "description" : "Operation status",
+      "descriptions" : {
+        "en" : "Operation status",
+        "ja" : "動作状態"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : true,
+      "type" : "boolean"
+    },
+    "installationLocation" : {
+      "title" : "installationLocation",
+      "titles" : {
+        "en" : "installationLocation",
+        "ja" : "設置場所"
+      },
+      "echonet:epc" : "0x81",
+      "description" : "Installation location",
+      "descriptions" : {
+        "en" : "Installation location",
+        "ja" : "設置場所"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : true,
+      "oneOf" : [ {
+        "type" : "string"
+      }, {
+        "type" : "string"
+      } ]
+    },
+    "protocol" : {
+      "title" : "protocol",
+      "titles" : {
+        "en" : "protocol",
+        "ja" : "規格Version情報"
+      },
+      "echonet:epc" : "0x82",
+      "description" : "Standard version information",
+      "descriptions" : {
+        "en" : "Standard version information",
+        "ja" : "規格Version情報"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "id" : {
+      "title" : "id",
+      "titles" : {
+        "en" : "id",
+        "ja" : "識別番号"
+      },
+      "echonet:epc" : "0x83",
+      "description" : "Identification number",
+      "descriptions" : {
+        "en" : "Identification number",
+        "ja" : "識別番号"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "instantaneousElectricPowerConsumption" : {
+      "title" : "instantaneousElectricPowerConsumption",
+      "titles" : {
+        "en" : "instantaneousElectricPowerConsumption",
+        "ja" : "瞬時消費電力計測値"
+      },
+      "echonet:epc" : "0x84",
+      "description" : "Measured instantaneous power consumption",
+      "descriptions" : {
+        "en" : "Measured instantaneous power consumption",
+        "ja" : "瞬時消費電力計測値"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "W",
+      "minimum" : 0,
+      "maximum" : 65533
+    },
+    "consumedCumulativeElectricEnergy" : {
+      "title" : "consumedCumulativeElectricEnergy",
+      "titles" : {
+        "en" : "consumedCumulativeElectricEnergy",
+        "ja" : "積算消費電力計測値"
+      },
+      "echonet:epc" : "0x85",
+      "description" : "Measured cumulative power consumption",
+      "descriptions" : {
+        "en" : "Measured cumulative power consumption",
+        "ja" : "積算消費電力計測値"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "kWh",
+      "minimum" : 0,
+      "maximum" : 999999.999
+    },
+    "manufacturerFaultCode" : {
+      "title" : "manufacturerFaultCode",
+      "titles" : {
+        "en" : "manufacturerFaultCode",
+        "ja" : "メーカ異常コード"
+      },
+      "echonet:epc" : "0x86",
+      "description" : "Manufacturer's fault code",
+      "descriptions" : {
+        "en" : "Manufacturer's fault code",
+        "ja" : "メーカ異常コード"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "currentLimit" : {
+      "title" : "currentLimit",
+      "titles" : {
+        "en" : "currentLimit",
+        "ja" : "電流制限設定"
+      },
+      "echonet:epc" : "0x87",
+      "description" : "Current limit setting",
+      "descriptions" : {
+        "en" : "Current limit setting",
+        "ja" : "電流制限設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "%",
+      "minimum" : 0,
+      "maximum" : 100
+    },
+    "faultStatus" : {
+      "title" : "faultStatus",
+      "titles" : {
+        "en" : "faultStatus",
+        "ja" : "異常発生状態"
+      },
+      "echonet:epc" : "0x88",
+      "description" : "Fault status",
+      "descriptions" : {
+        "en" : "Fault status",
+        "ja" : "異常発生状態"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : true,
+      "type" : "boolean"
+    },
+    "faultDescription" : {
+      "title" : "faultDescription",
+      "titles" : {
+        "en" : "faultDescription",
+        "ja" : "異常内容"
+      },
+      "echonet:epc" : "0x89",
+      "description" : "Fault description",
+      "descriptions" : {
+        "en" : "Fault description",
+        "ja" : "異常内容"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "manufacturer" : {
+      "title" : "manufacturer",
+      "titles" : {
+        "en" : "manufacturer",
+        "ja" : "メーカコード"
+      },
+      "echonet:epc" : "0x8A",
+      "description" : "Manufactur code",
+      "descriptions" : {
+        "en" : "Manufactur code",
+        "ja" : "メーカコード"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "businessFacilityCode" : {
+      "title" : "businessFacilityCode",
+      "titles" : {
+        "en" : "businessFacilityCode",
+        "ja" : "事業場コード"
+      },
+      "echonet:epc" : "0x8B",
+      "description" : "Business facility code",
+      "descriptions" : {
+        "en" : "Business facility code",
+        "ja" : "事業場コード"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "productCode" : {
+      "title" : "productCode",
+      "titles" : {
+        "en" : "productCode",
+        "ja" : "商品コード"
+      },
+      "echonet:epc" : "0x8C",
+      "description" : "Product code",
+      "descriptions" : {
+        "en" : "Product code",
+        "ja" : "商品コード"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "serialNumber" : {
+      "title" : "serialNumber",
+      "titles" : {
+        "en" : "serialNumber",
+        "ja" : "製造番号"
+      },
+      "echonet:epc" : "0x8D",
+      "description" : "Production number",
+      "descriptions" : {
+        "en" : "Production number",
+        "ja" : "製造番号"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "productionDate" : {
+      "title" : "productionDate",
+      "titles" : {
+        "en" : "productionDate",
+        "ja" : "製造年月日"
+      },
+      "echonet:epc" : "0x8E",
+      "description" : "Production date",
+      "descriptions" : {
+        "en" : "Production date",
+        "ja" : "製造年月日"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string",
+      "format" : "date"
+    },
+    "powerSaving" : {
+      "title" : "powerSaving",
+      "titles" : {
+        "en" : "powerSaving",
+        "ja" : "節電動作設定"
+      },
+      "echonet:epc" : "0x8F",
+      "description" : "Power-saving operation setting",
+      "descriptions" : {
+        "en" : "Power-saving operation setting",
+        "ja" : "節電動作設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "boolean"
+    },
+    "onTimerReservation" : {
+      "title" : "onTimerReservation",
+      "titles" : {
+        "en" : "onTimerReservation",
+        "ja" : "ONタイマ予約設定"
+      },
+      "echonet:epc" : "0x90",
+      "description" : "ON timer setting",
+      "descriptions" : {
+        "en" : "ON timer setting",
+        "ja" : "ONタイマ予約設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "boolean"
+    },
+    "onTimerTime" : {
+      "title" : "onTimerTime",
+      "titles" : {
+        "en" : "onTimerTime",
+        "ja" : "ONタイマ時刻設定値"
+      },
+      "echonet:epc" : "0x91",
+      "description" : "ON timer setting",
+      "descriptions" : {
+        "en" : "ON timer setting",
+        "ja" : "ONタイマ時刻設定値"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string",
+      "format" : "time"
+    },
+    "remoteControl" : {
+      "title" : "remoteControl",
+      "titles" : {
+        "en" : "remoteControl",
+        "ja" : "遠隔操作設定"
+      },
+      "echonet:epc" : "0x93",
+      "description" : "Remote controll setting",
+      "descriptions" : {
+        "en" : "Remote controll setting",
+        "ja" : "遠隔操作設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "boolean"
+    },
+    "currentDateAndTime" : {
+      "title" : "currentDateAndTime",
+      "titles" : {
+        "en" : "currentDateAndTime",
+        "ja" : "現在年月日設定"
+      },
+      "echonet:epc" : "0x98",
+      "description" : "Current date setting",
+      "descriptions" : {
+        "en" : "Current date setting",
+        "ja" : "現在年月日設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string",
+      "format" : "date-time"
+    },
+    "powerLimit" : {
+      "title" : "powerLimit",
+      "titles" : {
+        "en" : "powerLimit",
+        "ja" : "電力制限設定"
+      },
+      "echonet:epc" : "0x99",
+      "description" : "Power limit setting",
+      "descriptions" : {
+        "en" : "Power limit setting",
+        "ja" : "電力制限設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "W",
+      "minimum" : 0,
+      "maximum" : 65533
+    },
+    "hourMeter" : {
+      "title" : "hourMeter",
+      "titles" : {
+        "en" : "hourMeter",
+        "ja" : "積算運転時間"
+      },
+      "echonet:epc" : "0x9A",
+      "description" : "Cumulative operating time",
+      "descriptions" : {
+        "en" : "Cumulative operating time",
+        "ja" : "積算運転時間"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "unit" : {
+          "type" : "string",
+          "enum" : [ "second", "minute", "hour", "day" ],
+          "descriptions" : {
+            "ja" : "積算運転時間",
+            "en" : "Cumulative operating time"
+          }
+        },
+        "time" : {
+          "type" : "number",
+          "minimum" : 0,
+          "maximum" : 4294967295,
+          "descriptions" : {
+            "ja" : "時間",
+            "en" : "time"
+          }
+        }
+      }
+    },
+    "automaticWaterHeating" : {
+      "title" : "automaticWaterHeating",
+      "titles" : {
+        "en" : "automaticWaterHeating",
+        "ja" : "沸き上げ自動設定"
+      },
+      "echonet:epc" : "0xB0",
+      "description" : "Automatic water heating setting",
+      "descriptions" : {
+        "en" : "Automatic water heating setting",
+        "ja" : "沸き上げ自動設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : true,
+      "type" : "string",
+      "enum" : [ "auto", "manualNoHeating", "manualHeating" ]
+    },
+    "automaticWaterHeatingTemperatureControl" : {
+      "title" : "automaticWaterHeatingTemperatureControl",
+      "titles" : {
+        "en" : "automaticWaterHeatingTemperatureControl",
+        "ja" : "沸き上げ湯温自動設定"
+      },
+      "echonet:epc" : "0xB1",
+      "description" : "Automatic water temperature control setting",
+      "descriptions" : {
+        "en" : "Automatic water temperature control setting",
+        "ja" : "沸き上げ湯温自動設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "boolean"
+    },
+    "waterHeatingStatus" : {
+      "title" : "waterHeatingStatus",
+      "titles" : {
+        "en" : "waterHeatingStatus",
+        "ja" : "沸き上げ中状態"
+      },
+      "echonet:epc" : "0xB2",
+      "description" : "Water heater status",
+      "descriptions" : {
+        "en" : "Water heater status",
+        "ja" : "沸き上げ中状態"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : true,
+      "type" : "boolean"
+    },
+    "targetWaterHeatingTemperature" : {
+      "title" : "targetWaterHeatingTemperature",
+      "titles" : {
+        "en" : "targetWaterHeatingTemperature",
+        "ja" : "沸き上げ湯温設定値"
+      },
+      "echonet:epc" : "0xB3",
+      "description" : "Water heating temperature setting",
+      "descriptions" : {
+        "en" : "Water heating temperature setting",
+        "ja" : "沸き上げ湯温設定値"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "oneOf" : [ {
+        "type" : "number",
+        "unit" : "Celsius",
+        "minimum" : 0,
+        "maximum" : 100
+      }, {
+        "type" : "string",
+        "enum" : [ "undefined" ]
+      } ]
+    },
+    "heatingStopDays" : {
+      "title" : "heatingStopDays",
+      "titles" : {
+        "en" : "heatingStopDays",
+        "ja" : "手動沸き上げ停止日数設定値"
+      },
+      "echonet:epc" : "0xB4",
+      "description" : "Manual water heating stop days setting",
+      "descriptions" : {
+        "en" : "Manual water heating stop days setting",
+        "ja" : "手動沸き上げ停止日数設定値"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "oneOf" : [ {
+        "type" : "number",
+        "unit" : "days",
+        "minimum" : 0,
+        "maximum" : 252
+      }, {
+        "type" : "string",
+        "enum" : [ "infinite" ]
+      } ]
+    },
+    "relativeTimeHeatingOff" : {
+      "title" : "relativeTimeHeatingOff",
+      "titles" : {
+        "en" : "relativeTimeHeatingOff",
+        "ja" : "手動沸き上げOFFタイマ相対時間設定値"
+      },
+      "echonet:epc" : "0xB5",
+      "description" : "Relative time setting value for manual water heating OFF",
+      "descriptions" : {
+        "en" : "Relative time setting value for manual water heating OFF",
+        "ja" : "手動沸き上げOFFタイマ相対時間設定値"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string",
+      "format" : "time"
+    },
+    "tankOperationMode" : {
+      "title" : "tankOperationMode",
+      "titles" : {
+        "en" : "tankOperationMode",
+        "ja" : "タンク運転モード設定"
+      },
+      "echonet:epc" : "0xB6",
+      "description" : "Tank operation mode setting",
+      "descriptions" : {
+        "en" : "Tank operation mode setting",
+        "ja" : "タンク運転モード設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string",
+      "enum" : [ "standard", "saving", "extra" ]
+    },
+    "daytimeReheatingPermission" : {
+      "title" : "daytimeReheatingPermission",
+      "titles" : {
+        "en" : "daytimeReheatingPermission",
+        "ja" : "昼間沸き増し許可設定"
+      },
+      "echonet:epc" : "0xC0",
+      "description" : "Daytime reheating permission setting",
+      "descriptions" : {
+        "en" : "Daytime reheating permission setting",
+        "ja" : "昼間沸き増し許可設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "boolean"
+    },
+    "tankWaterTemperature" : {
+      "title" : "tankWaterTemperature",
+      "titles" : {
+        "en" : "tankWaterTemperature",
+        "ja" : "温水器湯温計測値"
+      },
+      "echonet:epc" : "0xC1",
+      "description" : "Measured temperature of water in water heater",
+      "descriptions" : {
+        "en" : "Measured temperature of water in water heater",
+        "ja" : "温水器湯温計測値"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "Celsius",
+      "minimum" : 0,
+      "maximum" : 100
+    },
+    "alarmStatus" : {
+      "title" : "alarmStatus",
+      "titles" : {
+        "en" : "alarmStatus",
+        "ja" : "警報発生状態"
+      },
+      "echonet:epc" : "0xC2",
+      "description" : "Alarm status",
+      "descriptions" : {
+        "en" : "Alarm status",
+        "ja" : "警報発生状態"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : true,
+      "type" : "object",
+      "properties" : {
+        "noHotWater" : {
+          "descriptions" : {
+            "ja" : "湯切れ警報",
+            "en" : "No Hot Water"
+          },
+          "type" : "boolean",
+          "values" : [ {
+            "value" : false,
+            "descriptions" : {
+              "ja" : "発生",
+              "en" : "Alarm"
+            },
+            "edt" : "0x01"
+          }, {
+            "value" : true,
+            "descriptions" : {
+              "ja" : "正常",
+              "en" : "No Alarm"
+            },
+            "edt" : "0x00"
+          } ]
+        },
+        "leaking" : {
+          "descriptions" : {
+            "ja" : "漏水警報",
+            "en" : "Leaking"
+          },
+          "type" : "boolean",
+          "values" : [ {
+            "value" : false,
+            "descriptions" : {
+              "ja" : "発生",
+              "en" : "Alarm"
+            },
+            "edt" : "0x01"
+          }, {
+            "value" : true,
+            "descriptions" : {
+              "ja" : "正常",
+              "en" : "No Alarm"
+            },
+            "edt" : "0x00"
+          } ]
+        },
+        "freezing" : {
+          "descriptions" : {
+            "ja" : "凍結警報",
+            "en" : "Freezing"
+          },
+          "type" : "boolean",
+          "values" : [ {
+            "value" : false,
+            "descriptions" : {
+              "ja" : "発生",
+              "en" : "Alarm"
+            },
+            "edt" : "0x01"
+          }, {
+            "value" : true,
+            "descriptions" : {
+              "ja" : "正常",
+              "en" : "No Alarm"
+            },
+            "edt" : "0x00"
+          } ]
+        }
+      }
+    },
+    "hotWaterSupplyStatus" : {
+      "title" : "hotWaterSupplyStatus",
+      "titles" : {
+        "en" : "hotWaterSupplyStatus",
+        "ja" : "給湯中状態"
+      },
+      "echonet:epc" : "0xC3",
+      "description" : "Hot water supply status",
+      "descriptions" : {
+        "en" : "Hot water supply status",
+        "ja" : "給湯中状態"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : true,
+      "type" : "boolean"
+    },
+    "relativeTimeKeepingTemperature" : {
+      "title" : "relativeTimeKeepingTemperature",
+      "titles" : {
+        "en" : "relativeTimeKeepingTemperature",
+        "ja" : "風呂保温運転相対時間設定値"
+      },
+      "echonet:epc" : "0xC4",
+      "description" : "Relative time setting for keeping bath temperature",
+      "descriptions" : {
+        "en" : "Relative time setting for keeping bath temperature",
+        "ja" : "風呂保温運転相対時間設定値"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string",
+      "format" : "time"
+    },
+    "energyShiftParticipation" : {
+      "title" : "energyShiftParticipation",
+      "titles" : {
+        "en" : "energyShiftParticipation",
+        "ja" : "エネルギーシフト参加状態"
+      },
+      "echonet:epc" : "0xC7",
+      "description" : "Participation in energy shift",
+      "descriptions" : {
+        "en" : "Participation in energy shift",
+        "ja" : "エネルギーシフト参加状態"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "boolean"
+    },
+    "standardTimeToStartHeating" : {
+      "title" : "standardTimeToStartHeating",
+      "titles" : {
+        "en" : "standardTimeToStartHeating",
+        "ja" : "沸き上げ開始基準時刻"
+      },
+      "echonet:epc" : "0xC8",
+      "description" : "Standard time to start heating",
+      "descriptions" : {
+        "en" : "Standard time to start heating",
+        "ja" : "沸き上げ開始基準時刻"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number"
+    },
+    "numberOfEnergyShifts" : {
+      "title" : "numberOfEnergyShifts",
+      "titles" : {
+        "en" : "numberOfEnergyShifts",
+        "ja" : "エネルギーシフト回数"
+      },
+      "echonet:epc" : "0xC9",
+      "description" : "Number of energy shifts",
+      "descriptions" : {
+        "en" : "Number of energy shifts",
+        "ja" : "エネルギーシフト回数"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "minimum" : 1,
+      "maximum" : 2
+    },
+    "waterHeatingShiftTime1" : {
+      "title" : "waterHeatingShiftTime1",
+      "titles" : {
+        "en" : "waterHeatingShiftTime1",
+        "ja" : "昼間沸き上げシフト時刻1"
+      },
+      "echonet:epc" : "0xCA",
+      "description" : "Daytime heating shift time 1",
+      "descriptions" : {
+        "en" : "Daytime heating shift time 1",
+        "ja" : "昼間沸き上げシフト時刻1"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "oneOf" : [ {
+        "type" : "string",
+        "enum" : [ "at0900", "at1000", "at1100", "at1200", "at1300", "at1400", "at1500", "at1600", "at1700" ]
+      }, {
+        "type" : "string",
+        "enum" : [ "cleared" ]
+      } ]
+    },
+    "estimatedElectricEnergyAtShiftTime1" : {
+      "title" : "estimatedElectricEnergyAtShiftTime1",
+      "titles" : {
+        "en" : "estimatedElectricEnergyAtShiftTime1",
+        "ja" : "昼間沸き上げシフト時刻1での沸き上げ予測電力量"
+      },
+      "echonet:epc" : "0xCB",
+      "description" : "Expected electric energy at daytime heating shift time 1",
+      "descriptions" : {
+        "en" : "Expected electric energy at daytime heating shift time 1",
+        "ja" : "昼間沸き上げシフト時刻1での沸き上げ予測電力量"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "at1000" : {
+          "type" : "number",
+          "unit" : "Wh",
+          "minimum" : 0,
+          "maximum" : 4294967293,
+          "descriptions" : {
+            "ja" : "10時",
+            "en" : "10:00"
+          }
+        },
+        "at1300" : {
+          "type" : "number",
+          "unit" : "Wh",
+          "minimum" : 0,
+          "maximum" : 4294967293,
+          "descriptions" : {
+            "ja" : "13時",
+            "en" : "13:00"
+          }
+        },
+        "at1500" : {
+          "type" : "number",
+          "unit" : "Wh",
+          "minimum" : 0,
+          "maximum" : 4294967293,
+          "descriptions" : {
+            "ja" : "15時",
+            "en" : "15:00"
+          }
+        },
+        "at1700" : {
+          "type" : "number",
+          "unit" : "Wh",
+          "minimum" : 0,
+          "maximum" : 4294967293,
+          "descriptions" : {
+            "ja" : "17時",
+            "en" : "17:00"
+          }
+        }
+      }
+    },
+    "electricEnergyConsumptionRate1" : {
+      "title" : "electricEnergyConsumptionRate1",
+      "titles" : {
+        "en" : "electricEnergyConsumptionRate1",
+        "ja" : "時間あたり消費電力量1"
+      },
+      "echonet:epc" : "0xCC",
+      "description" : "Consumption of electric energy per hour 1",
+      "descriptions" : {
+        "en" : "Consumption of electric energy per hour 1",
+        "ja" : "時間あたり消費電力量1"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "at1000" : {
+          "type" : "number",
+          "unit" : "Wh",
+          "minimum" : 0,
+          "maximum" : 65533,
+          "descriptions" : {
+            "ja" : "10時シフト時",
+            "en" : "10:00"
+          }
+        },
+        "at1300" : {
+          "type" : "number",
+          "unit" : "Wh",
+          "minimum" : 0,
+          "maximum" : 65533,
+          "descriptions" : {
+            "ja" : "13時シフト時",
+            "en" : "13:00"
+          }
+        },
+        "at1500" : {
+          "type" : "number",
+          "unit" : "Wh",
+          "minimum" : 0,
+          "maximum" : 65533,
+          "descriptions" : {
+            "ja" : "15時シフト時",
+            "en" : "15:00"
+          }
+        },
+        "at1700" : {
+          "type" : "number",
+          "unit" : "Wh",
+          "minimum" : 0,
+          "maximum" : 65533,
+          "descriptions" : {
+            "ja" : "17時シフト時",
+            "en" : "17:00"
+          }
+        }
+      }
+    },
+    "waterHeatingShiftTime2" : {
+      "title" : "waterHeatingShiftTime2",
+      "titles" : {
+        "en" : "waterHeatingShiftTime2",
+        "ja" : "昼間沸き上げシフト時刻2"
+      },
+      "echonet:epc" : "0xCD",
+      "description" : "Daytime heating shift time 2",
+      "descriptions" : {
+        "en" : "Daytime heating shift time 2",
+        "ja" : "昼間沸き上げシフト時刻2"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "oneOf" : [ {
+        "type" : "string",
+        "enum" : [ "at1000", "at1100", "at1200", "at1300", "at1400", "at1500", "at1600", "at1700" ]
+      }, {
+        "type" : "string",
+        "enum" : [ "cleared" ]
+      } ]
+    },
+    "estimatedElectricEnergyAtShiftTime2" : {
+      "title" : "estimatedElectricEnergyAtShiftTime2",
+      "titles" : {
+        "en" : "estimatedElectricEnergyAtShiftTime2",
+        "ja" : "昼間沸き上げシフト時刻2での沸き上げ予測電力量"
+      },
+      "echonet:epc" : "0xCE",
+      "description" : "Expected electric energy at daytime heating shift time 2",
+      "descriptions" : {
+        "en" : "Expected electric energy at daytime heating shift time 2",
+        "ja" : "昼間沸き上げシフト時刻2での沸き上げ予測電力量"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "at1300" : {
+          "type" : "number",
+          "unit" : "Wh",
+          "minimum" : 0,
+          "maximum" : 4294967293,
+          "descriptions" : {
+            "ja" : "13時",
+            "en" : "13:00"
+          }
+        },
+        "at1500" : {
+          "type" : "number",
+          "unit" : "Wh",
+          "minimum" : 0,
+          "maximum" : 4294967293,
+          "descriptions" : {
+            "ja" : "15時",
+            "en" : "15:00"
+          }
+        },
+        "at1700" : {
+          "type" : "number",
+          "unit" : "Wh",
+          "minimum" : 0,
+          "maximum" : 4294967293,
+          "descriptions" : {
+            "ja" : "17時",
+            "en" : "17:00"
+          }
+        }
+      }
+    },
+    "electricEnergyConsumptionRate2" : {
+      "title" : "electricEnergyConsumptionRate2",
+      "titles" : {
+        "en" : "electricEnergyConsumptionRate2",
+        "ja" : "時間あたり消費電力量2"
+      },
+      "echonet:epc" : "0xCF",
+      "description" : "Consumption of electric energy per hour 2",
+      "descriptions" : {
+        "en" : "Consumption of electric energy per hour 2",
+        "ja" : "時間あたり消費電力量2"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "at1300" : {
+          "type" : "number",
+          "unit" : "Wh",
+          "minimum" : 0,
+          "maximum" : 65533,
+          "descriptions" : {
+            "ja" : "13時シフト時",
+            "en" : "13:00"
+          }
+        },
+        "at1500" : {
+          "type" : "number",
+          "unit" : "Wh",
+          "minimum" : 0,
+          "maximum" : 65533,
+          "descriptions" : {
+            "ja" : "15時シフト時",
+            "en" : "15:00"
+          }
+        },
+        "at1700" : {
+          "type" : "number",
+          "unit" : "Wh",
+          "minimum" : 0,
+          "maximum" : 65533,
+          "descriptions" : {
+            "ja" : "17時シフト時",
+            "en" : "17:00"
+          }
+        }
+      }
+    },
+    "targetSuppliedWaterTemperature" : {
+      "title" : "targetSuppliedWaterTemperature",
+      "titles" : {
+        "en" : "targetSuppliedWaterTemperature",
+        "ja" : "給湯温度設定値"
+      },
+      "echonet:epc" : "0xD1",
+      "description" : "Temperature of supplied water setting",
+      "descriptions" : {
+        "en" : "Temperature of supplied water setting",
+        "ja" : "給湯温度設定値"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "Celsius",
+      "minimum" : 0,
+      "maximum" : 100
+    },
+    "targetBathWaterTemperature" : {
+      "title" : "targetBathWaterTemperature",
+      "titles" : {
+        "en" : "targetBathWaterTemperature",
+        "ja" : "風呂温度設定値"
+      },
+      "echonet:epc" : "0xD3",
+      "description" : "Bath water temperature setting",
+      "descriptions" : {
+        "en" : "Bath water temperature setting",
+        "ja" : "風呂温度設定値"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "Celsius",
+      "minimum" : 0,
+      "maximum" : 100
+    },
+    "bathWaterVolume4" : {
+      "title" : "bathWaterVolume4",
+      "titles" : {
+        "en" : "bathWaterVolume4",
+        "ja" : "風呂湯量設定4"
+      },
+      "echonet:epc" : "0xD4",
+      "description" : "Bath water volume setting4",
+      "descriptions" : {
+        "en" : "Bath water volume setting4",
+        "ja" : "風呂湯量設定4"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "minimum" : 1,
+      "maximum" : 255
+    },
+    "maximumAllowableWaterVolume4" : {
+      "title" : "maximumAllowableWaterVolume4",
+      "titles" : {
+        "en" : "maximumAllowableWaterVolume4",
+        "ja" : "風呂湯量設定4設定可能最大レベル"
+      },
+      "echonet:epc" : "0xD5",
+      "description" : "Bath water volume setting4 maximum settable level",
+      "descriptions" : {
+        "en" : "Bath water volume setting4 maximum settable level",
+        "ja" : "風呂湯量設定4設定可能最大レベル"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "minimum" : 1,
+      "maximum" : 255
+    },
+    "volume" : {
+      "title" : "volume",
+      "titles" : {
+        "en" : "volume",
+        "ja" : "音量設定値"
+      },
+      "echonet:epc" : "0xD6",
+      "description" : "Volume setting",
+      "descriptions" : {
+        "en" : "Volume setting",
+        "ja" : "音量設定値"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "%",
+      "minimum" : 0,
+      "maximum" : 100
+    },
+    "mute" : {
+      "title" : "mute",
+      "titles" : {
+        "en" : "mute",
+        "ja" : "ミュート設定"
+      },
+      "echonet:epc" : "0xD7",
+      "description" : "Mute setting",
+      "descriptions" : {
+        "en" : "Mute setting",
+        "ja" : "ミュート設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "boolean"
+    },
+    "remainingWaterVolume" : {
+      "title" : "remainingWaterVolume",
+      "titles" : {
+        "en" : "remainingWaterVolume",
+        "ja" : "給湯可能湯量値"
+      },
+      "echonet:epc" : "0xD8",
+      "description" : "Remaining hot water volume",
+      "descriptions" : {
+        "en" : "Remaining hot water volume",
+        "ja" : "給湯可能湯量値"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "L",
+      "minimum" : 0,
+      "maximum" : 65533
+    },
+    "surplusPowerPrediction" : {
+      "title" : "surplusPowerPrediction",
+      "titles" : {
+        "en" : "surplusPowerPrediction",
+        "ja" : "余剰電力量予測値"
+      },
+      "echonet:epc" : "0xD9",
+      "description" : "Surplus electric energy power prediction value",
+      "descriptions" : {
+        "en" : "Surplus electric energy power prediction value",
+        "ja" : "余剰電力量予測値"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "month" : {
+          "type" : "number",
+          "minimum" : 1,
+          "maximum" : 12
+        },
+        "day" : {
+          "type" : "number",
+          "minimum" : 1,
+          "maximum" : 31
+        },
+        "hour" : {
+          "type" : "number",
+          "minimum" : 0,
+          "maximum" : 23
+        },
+        "surplusEnergyPredictionValue" : {
+          "type" : "array",
+          "minItems" : 24,
+          "maxItems" : 24,
+          "items" : {
+            "oneOf" : [ {
+              "type" : "number",
+              "unit" : "Wh",
+              "minimum" : -327670,
+              "maximum" : 327650
+            }, {
+              "type" : "string",
+              "enum" : [ "invalid" ]
+            } ]
+          }
+        }
+      }
+    },
+    "winterRatedPower" : {
+      "title" : "winterRatedPower",
+      "titles" : {
+        "en" : "winterRatedPower",
+        "ja" : "冬季H/Pユニット定格消費電力"
+      },
+      "echonet:epc" : "0xDB",
+      "description" : "Rated power consumption of H/P unit in wintertime",
+      "descriptions" : {
+        "en" : "Rated power consumption of H/P unit in wintertime",
+        "ja" : "冬季H/Pユニット定格消費電力"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "W",
+      "minimum" : 0,
+      "maximum" : 65533
+    },
+    "betweenSeasonRatedPower" : {
+      "title" : "betweenSeasonRatedPower",
+      "titles" : {
+        "en" : "betweenSeasonRatedPower",
+        "ja" : "中間期H/Pユニット定格消費電力"
+      },
+      "echonet:epc" : "0xDC",
+      "description" : "Rated power consumption of H/P unit in in-between seasons",
+      "descriptions" : {
+        "en" : "Rated power consumption of H/P unit in in-between seasons",
+        "ja" : "中間期H/Pユニット定格消費電力"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "W",
+      "minimum" : 0,
+      "maximum" : 65533
+    },
+    "summerRatedPower" : {
+      "title" : "summerRatedPower",
+      "titles" : {
+        "en" : "summerRatedPower",
+        "ja" : "夏季H/Pユニット定格消費電力"
+      },
+      "echonet:epc" : "0xDD",
+      "description" : "Rated power consumption of H/P unit in summertime",
+      "descriptions" : {
+        "en" : "Rated power consumption of H/P unit in summertime",
+        "ja" : "夏季H/Pユニット定格消費電力"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "W",
+      "minimum" : 0,
+      "maximum" : 65533
+    },
+    "targetWaterHeatingVolume" : {
+      "title" : "targetWaterHeatingVolume",
+      "titles" : {
+        "en" : "targetWaterHeatingVolume",
+        "ja" : "沸き上げ湯量設定値"
+      },
+      "echonet:epc" : "0xE0",
+      "description" : "Bath water volume setting",
+      "descriptions" : {
+        "en" : "Bath water volume setting",
+        "ja" : "沸き上げ湯量設定値"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "%",
+      "minimum" : 0,
+      "maximum" : 100
+    },
+    "remainingWater" : {
+      "title" : "remainingWater",
+      "titles" : {
+        "en" : "remainingWater",
+        "ja" : "残湯量計測値"
+      },
+      "echonet:epc" : "0xE1",
+      "description" : "Measured amount of water remaining in tank",
+      "descriptions" : {
+        "en" : "Measured amount of water remaining in tank",
+        "ja" : "残湯量計測値"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "L",
+      "minimum" : 0,
+      "maximum" : 65533
+    },
+    "tankCapacity" : {
+      "title" : "tankCapacity",
+      "titles" : {
+        "en" : "tankCapacity",
+        "ja" : "タンク容量値"
+      },
+      "echonet:epc" : "0xE2",
+      "description" : "Tank capacity",
+      "descriptions" : {
+        "en" : "Tank capacity",
+        "ja" : "タンク容量値"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "L",
+      "minimum" : 0,
+      "maximum" : 65533
+    },
+    "automaticBathOperation" : {
+      "title" : "automaticBathOperation",
+      "titles" : {
+        "en" : "automaticBathOperation",
+        "ja" : "風呂自動モード設定"
+      },
+      "echonet:epc" : "0xE3",
+      "description" : "Automatic Bath Water Heating Mode Setting",
+      "descriptions" : {
+        "en" : "Automatic Bath Water Heating Mode Setting",
+        "ja" : "風呂自動モード設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "boolean"
+    },
+    "bathReheatingOperation" : {
+      "title" : "bathReheatingOperation",
+      "titles" : {
+        "en" : "bathReheatingOperation",
+        "ja" : "手動風呂追い焚き動作設定"
+      },
+      "echonet:epc" : "0xE4",
+      "description" : "Manual bath reheating operation setting",
+      "descriptions" : {
+        "en" : "Manual bath reheating operation setting",
+        "ja" : "手動風呂追い焚き動作設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "boolean"
+    },
+    "bathHotWaterAddition" : {
+      "title" : "bathHotWaterAddition",
+      "titles" : {
+        "en" : "bathHotWaterAddition",
+        "ja" : "手動風呂足し湯動作設定"
+      },
+      "echonet:epc" : "0xE5",
+      "description" : "Manual bath hot water addition function setting",
+      "descriptions" : {
+        "en" : "Manual bath hot water addition function setting",
+        "ja" : "手動風呂足し湯動作設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "boolean"
+    },
+    "bathLukewarmWaterFunction" : {
+      "title" : "bathLukewarmWaterFunction",
+      "titles" : {
+        "en" : "bathLukewarmWaterFunction",
+        "ja" : "手動風呂ぬるめ動作設定"
+      },
+      "echonet:epc" : "0xE6",
+      "description" : "Manual lukewarm water temperature lowering function setting.",
+      "descriptions" : {
+        "en" : "Manual lukewarm water temperature lowering function setting.",
+        "ja" : "手動風呂ぬるめ動作設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "boolean"
+    },
+    "bathWaterVolume1" : {
+      "title" : "bathWaterVolume1",
+      "titles" : {
+        "en" : "bathWaterVolume1",
+        "ja" : "風呂湯量設定1"
+      },
+      "echonet:epc" : "0xE7",
+      "description" : "Bath water volume setting 1",
+      "descriptions" : {
+        "en" : "Bath water volume setting 1",
+        "ja" : "風呂湯量設定1"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "L",
+      "minimum" : 0,
+      "maximum" : 253
+    },
+    "bathWaterVolume2" : {
+      "title" : "bathWaterVolume2",
+      "titles" : {
+        "en" : "bathWaterVolume2",
+        "ja" : "風呂湯量設定2"
+      },
+      "echonet:epc" : "0xE8",
+      "description" : "Bath water volume setting 2",
+      "descriptions" : {
+        "en" : "Bath water volume setting 2",
+        "ja" : "風呂湯量設定2"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "minimum" : 1,
+      "maximum" : 8
+    },
+    "bathroomPriority" : {
+      "title" : "bathroomPriority",
+      "titles" : {
+        "en" : "bathroomPriority",
+        "ja" : "浴室優先設定"
+      },
+      "echonet:epc" : "0xE9",
+      "description" : "Bathroom priority setting",
+      "descriptions" : {
+        "en" : "Bathroom priority setting",
+        "ja" : "浴室優先設定"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "boolean"
+    },
+    "bathOperationStatusMonitor" : {
+      "title" : "bathOperationStatusMonitor",
+      "titles" : {
+        "en" : "bathOperationStatusMonitor",
+        "ja" : "風呂動作状態監視"
+      },
+      "echonet:epc" : "0xEA",
+      "description" : "Bath Operation Status Monitor",
+      "descriptions" : {
+        "en" : "Bath Operation Status Monitor",
+        "ja" : "風呂動作状態監視"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : true,
+      "type" : "string",
+      "enum" : [ "runningHotWater", "noOperation", "keepingTemperature" ]
+    },
+    "bathWaterVolume3" : {
+      "title" : "bathWaterVolume3",
+      "titles" : {
+        "en" : "bathWaterVolume3",
+        "ja" : "風呂湯量設定3"
+      },
+      "echonet:epc" : "0xEE",
+      "description" : "Bath water volume setting 3",
+      "descriptions" : {
+        "en" : "Bath water volume setting 3",
+        "ja" : "風呂湯量設定3"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "L",
+      "minimum" : 0,
+      "maximum" : 65533
+    }
+  }
+}

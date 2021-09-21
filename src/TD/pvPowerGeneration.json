@@ -1,0 +1,960 @@
+{
+  "@context" : [ "https://www.w3.org/2019/wot/td/v1", {
+    "echonet" : "https://echonet.jp/"
+  }, {
+    "@language" : "en"
+  } ],
+  "id" : "",
+  "echonet:eoj" : "0x0279",
+  "title" : "pvPowerGeneration",
+  "titles" : {
+    "en" : "pvPowerGeneration",
+    "ja" : "住宅用太陽光発電"
+  },
+  "description" : "Household solar power generation",
+  "descriptions" : {
+    "en" : "Household solar power generation",
+    "ja" : "住宅用太陽光発電"
+  },
+  "properties" : {
+    "operationStatus" : {
+      "title" : "operationStatus",
+      "titles" : {
+        "en" : "operationStatus",
+        "ja" : "動作状態"
+      },
+      "echonet:epc" : "0x80",
+      "description" : "Operation status",
+      "descriptions" : {
+        "en" : "Operation status",
+        "ja" : "動作状態"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : true,
+      "type" : "boolean"
+    },
+    "installationLocation" : {
+      "title" : "installationLocation",
+      "titles" : {
+        "en" : "installationLocation",
+        "ja" : "設置場所"
+      },
+      "echonet:epc" : "0x81",
+      "description" : "Installation location",
+      "descriptions" : {
+        "en" : "Installation location",
+        "ja" : "設置場所"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : true,
+      "oneOf" : [ {
+        "type" : "string"
+      }, {
+        "type" : "string"
+      } ]
+    },
+    "protocol" : {
+      "title" : "protocol",
+      "titles" : {
+        "en" : "protocol",
+        "ja" : "規格Version情報"
+      },
+      "echonet:epc" : "0x82",
+      "description" : "Standard version information",
+      "descriptions" : {
+        "en" : "Standard version information",
+        "ja" : "規格Version情報"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "id" : {
+      "title" : "id",
+      "titles" : {
+        "en" : "id",
+        "ja" : "識別番号"
+      },
+      "echonet:epc" : "0x83",
+      "description" : "Identification number",
+      "descriptions" : {
+        "en" : "Identification number",
+        "ja" : "識別番号"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "instantaneousElectricPowerConsumption" : {
+      "title" : "instantaneousElectricPowerConsumption",
+      "titles" : {
+        "en" : "instantaneousElectricPowerConsumption",
+        "ja" : "瞬時消費電力計測値"
+      },
+      "echonet:epc" : "0x84",
+      "description" : "Measured instantaneous power consumption",
+      "descriptions" : {
+        "en" : "Measured instantaneous power consumption",
+        "ja" : "瞬時消費電力計測値"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "W",
+      "minimum" : 0,
+      "maximum" : 65533
+    },
+    "consumedCumulativeElectricEnergy" : {
+      "title" : "consumedCumulativeElectricEnergy",
+      "titles" : {
+        "en" : "consumedCumulativeElectricEnergy",
+        "ja" : "積算消費電力計測値"
+      },
+      "echonet:epc" : "0x85",
+      "description" : "Measured cumulative power consumption",
+      "descriptions" : {
+        "en" : "Measured cumulative power consumption",
+        "ja" : "積算消費電力計測値"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "kWh",
+      "minimum" : 0,
+      "maximum" : 999999.999
+    },
+    "manufacturerFaultCode" : {
+      "title" : "manufacturerFaultCode",
+      "titles" : {
+        "en" : "manufacturerFaultCode",
+        "ja" : "メーカ異常コード"
+      },
+      "echonet:epc" : "0x86",
+      "description" : "Manufacturer's fault code",
+      "descriptions" : {
+        "en" : "Manufacturer's fault code",
+        "ja" : "メーカ異常コード"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "currentLimit" : {
+      "title" : "currentLimit",
+      "titles" : {
+        "en" : "currentLimit",
+        "ja" : "電流制限設定"
+      },
+      "echonet:epc" : "0x87",
+      "description" : "Current limit setting",
+      "descriptions" : {
+        "en" : "Current limit setting",
+        "ja" : "電流制限設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "%",
+      "minimum" : 0,
+      "maximum" : 100
+    },
+    "faultStatus" : {
+      "title" : "faultStatus",
+      "titles" : {
+        "en" : "faultStatus",
+        "ja" : "異常発生状態"
+      },
+      "echonet:epc" : "0x88",
+      "description" : "Fault status",
+      "descriptions" : {
+        "en" : "Fault status",
+        "ja" : "異常発生状態"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : true,
+      "type" : "boolean"
+    },
+    "faultDescription" : {
+      "title" : "faultDescription",
+      "titles" : {
+        "en" : "faultDescription",
+        "ja" : "異常内容"
+      },
+      "echonet:epc" : "0x89",
+      "description" : "Fault description",
+      "descriptions" : {
+        "en" : "Fault description",
+        "ja" : "異常内容"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "manufacturer" : {
+      "title" : "manufacturer",
+      "titles" : {
+        "en" : "manufacturer",
+        "ja" : "メーカコード"
+      },
+      "echonet:epc" : "0x8A",
+      "description" : "Manufactur code",
+      "descriptions" : {
+        "en" : "Manufactur code",
+        "ja" : "メーカコード"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "businessFacilityCode" : {
+      "title" : "businessFacilityCode",
+      "titles" : {
+        "en" : "businessFacilityCode",
+        "ja" : "事業場コード"
+      },
+      "echonet:epc" : "0x8B",
+      "description" : "Business facility code",
+      "descriptions" : {
+        "en" : "Business facility code",
+        "ja" : "事業場コード"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "productCode" : {
+      "title" : "productCode",
+      "titles" : {
+        "en" : "productCode",
+        "ja" : "商品コード"
+      },
+      "echonet:epc" : "0x8C",
+      "description" : "Product code",
+      "descriptions" : {
+        "en" : "Product code",
+        "ja" : "商品コード"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "serialNumber" : {
+      "title" : "serialNumber",
+      "titles" : {
+        "en" : "serialNumber",
+        "ja" : "製造番号"
+      },
+      "echonet:epc" : "0x8D",
+      "description" : "Production number",
+      "descriptions" : {
+        "en" : "Production number",
+        "ja" : "製造番号"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "productionDate" : {
+      "title" : "productionDate",
+      "titles" : {
+        "en" : "productionDate",
+        "ja" : "製造年月日"
+      },
+      "echonet:epc" : "0x8E",
+      "description" : "Production date",
+      "descriptions" : {
+        "en" : "Production date",
+        "ja" : "製造年月日"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string",
+      "format" : "date"
+    },
+    "powerSaving" : {
+      "title" : "powerSaving",
+      "titles" : {
+        "en" : "powerSaving",
+        "ja" : "節電動作設定"
+      },
+      "echonet:epc" : "0x8F",
+      "description" : "Power-saving operation setting",
+      "descriptions" : {
+        "en" : "Power-saving operation setting",
+        "ja" : "節電動作設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "boolean"
+    },
+    "remoteControl" : {
+      "title" : "remoteControl",
+      "titles" : {
+        "en" : "remoteControl",
+        "ja" : "遠隔操作設定"
+      },
+      "echonet:epc" : "0x93",
+      "description" : "Remote controll setting",
+      "descriptions" : {
+        "en" : "Remote controll setting",
+        "ja" : "遠隔操作設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "boolean"
+    },
+    "currentDateAndTime" : {
+      "title" : "currentDateAndTime",
+      "titles" : {
+        "en" : "currentDateAndTime",
+        "ja" : "現在年月日設定"
+      },
+      "echonet:epc" : "0x98",
+      "description" : "Current date setting",
+      "descriptions" : {
+        "en" : "Current date setting",
+        "ja" : "現在年月日設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string",
+      "format" : "date-time"
+    },
+    "powerLimit" : {
+      "title" : "powerLimit",
+      "titles" : {
+        "en" : "powerLimit",
+        "ja" : "電力制限設定"
+      },
+      "echonet:epc" : "0x99",
+      "description" : "Power limit setting",
+      "descriptions" : {
+        "en" : "Power limit setting",
+        "ja" : "電力制限設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "W",
+      "minimum" : 0,
+      "maximum" : 65533
+    },
+    "hourMeter" : {
+      "title" : "hourMeter",
+      "titles" : {
+        "en" : "hourMeter",
+        "ja" : "積算運転時間"
+      },
+      "echonet:epc" : "0x9A",
+      "description" : "Cumulative operating time",
+      "descriptions" : {
+        "en" : "Cumulative operating time",
+        "ja" : "積算運転時間"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "unit" : {
+          "type" : "string",
+          "enum" : [ "second", "minute", "hour", "day" ],
+          "descriptions" : {
+            "ja" : "積算運転時間",
+            "en" : "Cumulative operating time"
+          }
+        },
+        "time" : {
+          "type" : "number",
+          "minimum" : 0,
+          "maximum" : 4294967295,
+          "descriptions" : {
+            "ja" : "時間",
+            "en" : "time"
+          }
+        }
+      }
+    },
+    "outputPowerControl1" : {
+      "title" : "outputPowerControl1",
+      "titles" : {
+        "en" : "outputPowerControl1",
+        "ja" : "出力制御設定1"
+      },
+      "echonet:epc" : "0xA0",
+      "description" : "Output power control setting 1",
+      "descriptions" : {
+        "en" : "Output power control setting 1",
+        "ja" : "出力制御設定1"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "%",
+      "minimum" : 0,
+      "maximum" : 100
+    },
+    "outputPowerControl2" : {
+      "title" : "outputPowerControl2",
+      "titles" : {
+        "en" : "outputPowerControl2",
+        "ja" : "出力制御設定2"
+      },
+      "echonet:epc" : "0xA1",
+      "description" : "Output power control setting 2",
+      "descriptions" : {
+        "en" : "Output power control setting 2",
+        "ja" : "出力制御設定2"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "W",
+      "minimum" : 0,
+      "maximum" : 65533
+    },
+    "surplusPurchaseControl" : {
+      "title" : "surplusPurchaseControl",
+      "titles" : {
+        "en" : "surplusPurchaseControl",
+        "ja" : "余剰買取制御機能設定"
+      },
+      "echonet:epc" : "0xA2",
+      "description" : "Function to control purchase surplus electricity setting",
+      "descriptions" : {
+        "en" : "Function to control purchase surplus electricity setting",
+        "ja" : "余剰買取制御機能設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "boolean"
+    },
+    "outputPowerControlSchedule" : {
+      "title" : "outputPowerControlSchedule",
+      "titles" : {
+        "en" : "outputPowerControlSchedule",
+        "ja" : "出力制御スケジュール"
+      },
+      "echonet:epc" : "0xB0",
+      "description" : "Output power controlling schedule",
+      "descriptions" : {
+        "en" : "Output power controlling schedule",
+        "ja" : "出力制御スケジュール"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "startDateAndTime" : {
+          "oneOf" : [ {
+            "type" : "string",
+            "format" : "date-time"
+          }, {
+            "type" : "string",
+            "enum" : [ "unknown" ]
+          } ],
+          "descriptions" : {
+            "ja" : "現在年月日",
+            "en" : "Current date (YYYY: MM: DD)"
+          }
+        },
+        "intervalTime" : {
+          "type" : "number",
+          "unit" : "minute",
+          "minimum" : 0,
+          "maximum" : 1800
+        },
+        "powerControlRatio" : {
+          "type" : "array",
+          "minItems" : 96,
+          "maxItems" : 96,
+          "items" : {
+            "oneOf" : [ {
+              "type" : "number",
+              "unit" : "%",
+              "minimum" : 0,
+              "maximum" : 100
+            }, {
+              "type" : "string",
+              "enum" : [ "undefined" ]
+            } ]
+          },
+          "descriptions" : {
+            "ja" : "0x00～0x64 (0～100%) x 96 (30分毎の値、2日分)",
+            "en" : "0x00-0x64 (0-100%) x 96 (values every 30 minutes, for 2 days)"
+          }
+        }
+      }
+    },
+    "updateScheduleDateAndTime" : {
+      "title" : "updateScheduleDateAndTime",
+      "titles" : {
+        "en" : "updateScheduleDateAndTime",
+        "ja" : "次回アクセス日時"
+      },
+      "echonet:epc" : "0xB1",
+      "description" : "Next access date and time",
+      "descriptions" : {
+        "en" : "Next access date and time",
+        "ja" : "次回アクセス日時"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : true,
+      "oneOf" : [ {
+        "type" : "string",
+        "format" : "date-time"
+      }, {
+        "type" : "string",
+        "enum" : [ "noControlNoSchedule" ]
+      } ]
+    },
+    "surplusPurchaseControlType" : {
+      "title" : "surplusPurchaseControlType",
+      "titles" : {
+        "en" : "surplusPurchaseControlType",
+        "ja" : "余剰買取制御機能タイプ"
+      },
+      "echonet:epc" : "0xB2",
+      "description" : "Function to control the type of surplus electricity purchase",
+      "descriptions" : {
+        "en" : "Function to control the type of surplus electricity purchase",
+        "ja" : "余剰買取制御機能タイプ"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "boolean"
+    },
+    "outputPowerChangeTime" : {
+      "title" : "outputPowerChangeTime",
+      "titles" : {
+        "en" : "outputPowerChangeTime",
+        "ja" : "出力変化時間設定値"
+      },
+      "echonet:epc" : "0xB3",
+      "description" : "Output power change time setting value",
+      "descriptions" : {
+        "en" : "Output power change time setting value",
+        "ja" : "出力変化時間設定値"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "second",
+      "minimum" : 0,
+      "maximum" : 65533
+    },
+    "upperLimitClip" : {
+      "title" : "upperLimitClip",
+      "titles" : {
+        "en" : "upperLimitClip",
+        "ja" : "上限クリップ設定値"
+      },
+      "echonet:epc" : "0xB4",
+      "description" : "Upper limit clip setting value",
+      "descriptions" : {
+        "en" : "Upper limit clip setting value",
+        "ja" : "上限クリップ設定値"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "oneOf" : [ {
+        "type" : "number",
+        "unit" : "W",
+        "minimum" : 0,
+        "maximum" : 65533
+      }, {
+        "type" : "string",
+        "enum" : [ "notSet" ]
+      } ]
+    },
+    "operatingPowerFactor" : {
+      "title" : "operatingPowerFactor",
+      "titles" : {
+        "en" : "operatingPowerFactor",
+        "ja" : "運転力率設定値"
+      },
+      "echonet:epc" : "0xC0",
+      "description" : "Operation power factor setting value",
+      "descriptions" : {
+        "en" : "Operation power factor setting value",
+        "ja" : "運転力率設定値"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "%",
+      "minimum" : 0,
+      "maximum" : 100
+    },
+    "contractType" : {
+      "title" : "contractType",
+      "titles" : {
+        "en" : "contractType",
+        "ja" : "FIT契約タイプ"
+      },
+      "echonet:epc" : "0xC1",
+      "description" : "FIT contract type",
+      "descriptions" : {
+        "en" : "FIT contract type",
+        "ja" : "FIT契約タイプ"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string",
+      "enum" : [ "fit", "non_fit", "undefined" ]
+    },
+    "selfConsumptionType" : {
+      "title" : "selfConsumptionType",
+      "titles" : {
+        "en" : "selfConsumptionType",
+        "ja" : "自家消費タイプ"
+      },
+      "echonet:epc" : "0xC2",
+      "description" : "Self-consumption type",
+      "descriptions" : {
+        "en" : "Self-consumption type",
+        "ja" : "自家消費タイプ"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string",
+      "enum" : [ "withSelfConsumption", "withoutSelfConsumption", "unknown" ]
+    },
+    "approvedCapacity" : {
+      "title" : "approvedCapacity",
+      "titles" : {
+        "en" : "approvedCapacity",
+        "ja" : "設備認定容量"
+      },
+      "echonet:epc" : "0xC3",
+      "description" : "Capacity approved by equipment",
+      "descriptions" : {
+        "en" : "Capacity approved by equipment",
+        "ja" : "設備認定容量"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "oneOf" : [ {
+        "type" : "number",
+        "unit" : "W",
+        "minimum" : 0,
+        "maximum" : 65533
+      }, {
+        "type" : "string",
+        "enum" : [ "notSet" ]
+      } ]
+    },
+    "conversionCoefficient" : {
+      "title" : "conversionCoefficient",
+      "titles" : {
+        "en" : "conversionCoefficient",
+        "ja" : "換算係数"
+      },
+      "echonet:epc" : "0xC4",
+      "description" : "Conversion coefficient",
+      "descriptions" : {
+        "en" : "Conversion coefficient",
+        "ja" : "換算係数"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "%",
+      "minimum" : 0,
+      "maximum" : 100
+    },
+    "powerSystemInterconnectionStatus" : {
+      "title" : "powerSystemInterconnectionStatus",
+      "titles" : {
+        "en" : "powerSystemInterconnectionStatus",
+        "ja" : "系統連系状態"
+      },
+      "echonet:epc" : "0xD0",
+      "description" : "System-interconnected type",
+      "descriptions" : {
+        "en" : "System-interconnected type",
+        "ja" : "系統連系状態"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string",
+      "enum" : [ "reversePowerFlowAcceptable", "independent", "reversePowerFlowNotAcceptable", "unknown" ]
+    },
+    "outputPowerRestraintStatus" : {
+      "title" : "outputPowerRestraintStatus",
+      "titles" : {
+        "en" : "outputPowerRestraintStatus",
+        "ja" : "出力抑制状態"
+      },
+      "echonet:epc" : "0xD1",
+      "description" : "Output power restraint status",
+      "descriptions" : {
+        "en" : "Output power restraint status",
+        "ja" : "出力抑制状態"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string",
+      "enum" : [ "outputControl", "exceptControl", "reasonUnknown", "notPowerRestraint", "unknown" ]
+    },
+    "instantaneousElectricPowerGeneration" : {
+      "title" : "instantaneousElectricPowerGeneration",
+      "titles" : {
+        "en" : "instantaneousElectricPowerGeneration",
+        "ja" : "瞬時発電電力計測値"
+      },
+      "echonet:epc" : "0xE0",
+      "description" : "Measured instantaneous amount of electricity generated",
+      "descriptions" : {
+        "en" : "Measured instantaneous amount of electricity generated",
+        "ja" : "瞬時発電電力計測値"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "W",
+      "minimum" : 0,
+      "maximum" : 65533
+    },
+    "cumulativeElectricEnergyOfGeneration" : {
+      "title" : "cumulativeElectricEnergyOfGeneration",
+      "titles" : {
+        "en" : "cumulativeElectricEnergyOfGeneration",
+        "ja" : "積算発電電力量計測値"
+      },
+      "echonet:epc" : "0xE1",
+      "description" : "Measured cumulative amount of electric energy generated",
+      "descriptions" : {
+        "en" : "Measured cumulative amount of electric energy generated",
+        "ja" : "積算発電電力量計測値"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "kWh",
+      "minimum" : 0,
+      "maximum" : 999999.999
+    },
+    "cumulativeElectricEnergySold" : {
+      "title" : "cumulativeElectricEnergySold",
+      "titles" : {
+        "en" : "cumulativeElectricEnergySold",
+        "ja" : "積算売電電力量計測値"
+      },
+      "echonet:epc" : "0xE3",
+      "description" : "Measured cumulative amount of electric energy sold",
+      "descriptions" : {
+        "en" : "Measured cumulative amount of electric energy sold",
+        "ja" : "積算売電電力量計測値"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "kWh",
+      "minimum" : 0,
+      "maximum" : 999999.999
+    },
+    "powerGenerationOutputLimit1" : {
+      "title" : "powerGenerationOutputLimit1",
+      "titles" : {
+        "en" : "powerGenerationOutputLimit1",
+        "ja" : "発電電力制限設定1"
+      },
+      "echonet:epc" : "0xE5",
+      "description" : "Power generation output limit setting 1",
+      "descriptions" : {
+        "en" : "Power generation output limit setting 1",
+        "ja" : "発電電力制限設定1"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "%",
+      "minimum" : 0,
+      "maximum" : 100
+    },
+    "powerGenerationOutputLimit2" : {
+      "title" : "powerGenerationOutputLimit2",
+      "titles" : {
+        "en" : "powerGenerationOutputLimit2",
+        "ja" : "発電電力制限設定2"
+      },
+      "echonet:epc" : "0xE6",
+      "description" : "Power generation output limit setting 2",
+      "descriptions" : {
+        "en" : "Power generation output limit setting 2",
+        "ja" : "発電電力制限設定2"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "W",
+      "minimum" : 0,
+      "maximum" : 65533
+    },
+    "limitElectricEnergySold" : {
+      "title" : "limitElectricEnergySold",
+      "titles" : {
+        "en" : "limitElectricEnergySold",
+        "ja" : "売電電力制限設定"
+      },
+      "echonet:epc" : "0xE7",
+      "description" : "Limit setting for the amount of electricity sold",
+      "descriptions" : {
+        "en" : "Limit setting for the amount of electricity sold",
+        "ja" : "売電電力制限設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "W",
+      "minimum" : 0,
+      "maximum" : 65533
+    },
+    "ratedElectricPowerOfgeneration" : {
+      "title" : "ratedElectricPowerOfgeneration",
+      "titles" : {
+        "en" : "ratedElectricPowerOfgeneration",
+        "ja" : "定格発電電力値(系統連系時)"
+      },
+      "echonet:epc" : "0xE8",
+      "description" : "Rated power generation output (System-interconnected)",
+      "descriptions" : {
+        "en" : "Rated power generation output (System-interconnected)",
+        "ja" : "定格発電電力値(系統連系時)"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "oneOf" : [ {
+        "type" : "number",
+        "unit" : "W",
+        "minimum" : 0,
+        "maximum" : 65533
+      }, {
+        "type" : "string",
+        "enum" : [ "notSet" ]
+      } ]
+    },
+    "ratedElectricPowerOfgenerationIndependent" : {
+      "title" : "ratedElectricPowerOfgenerationIndependent",
+      "titles" : {
+        "en" : "ratedElectricPowerOfgenerationIndependent",
+        "ja" : "定格発電電力値(独立時)"
+      },
+      "echonet:epc" : "0xE9",
+      "description" : "Rated power generation output (Independent)",
+      "descriptions" : {
+        "en" : "Rated power generation output (Independent)",
+        "ja" : "定格発電電力値(独立時)"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "W",
+      "minimum" : 0,
+      "maximum" : 65533
+    }
+  },
+  "actions" : {
+    "resetCumulativeElectricEnergyOfGeneration" : {
+      "title" : "resetCumulativeElectricEnergyOfGeneration",
+      "titles" : {
+        "en" : "resetCumulativeElectricEnergyOfGeneration",
+        "ja" : "積算発電電力量リセット設定"
+      },
+      "description" : "Resetting cumulative amount of electric energy generated",
+      "descriptions" : {
+        "en" : "Resetting cumulative amount of electric energy generated",
+        "ja" : "積算発電電力量リセット設定"
+      },
+      "input" : { },
+      "output" : {
+        "type" : "object",
+        "description" : "Return true/false and a message",
+        "descriptions" : {
+          "en" : "Return true/false and a message",
+          "ja" : "true/false とメッセージを返す"
+        },
+        "properties" : {
+          "result" : {
+            "type" : "boolean"
+          },
+          "message" : {
+            "type" : "string"
+          }
+        }
+      }
+    },
+    "resetCumulativeElectricEnergySold" : {
+      "title" : "resetCumulativeElectricEnergySold",
+      "titles" : {
+        "en" : "resetCumulativeElectricEnergySold",
+        "ja" : "積算売電電力量リセット設定"
+      },
+      "description" : "Resetting cumulative amount of electric energy sold",
+      "descriptions" : {
+        "en" : "Resetting cumulative amount of electric energy sold",
+        "ja" : "積算売電電力量リセット設定"
+      },
+      "input" : { },
+      "output" : {
+        "type" : "object",
+        "description" : "Return true/false and a message",
+        "descriptions" : {
+          "en" : "Return true/false and a message",
+          "ja" : "true/false とメッセージを返す"
+        },
+        "properties" : {
+          "result" : {
+            "type" : "boolean"
+          },
+          "message" : {
+            "type" : "string"
+          }
+        }
+      }
+    }
+  }
+}

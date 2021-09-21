@@ -1,0 +1,873 @@
+{
+  "@context" : [ "https://www.w3.org/2019/wot/td/v1", {
+    "echonet" : "https://echonet.jp/"
+  }, {
+    "@language" : "en"
+  } ],
+  "id" : "",
+  "echonet:eoj" : "0x028A",
+  "title" : "hvSmartElectricEnergyMeter",
+  "titles" : {
+    "en" : "hvSmartElectricEnergyMeter",
+    "ja" : "高圧スマート電力量メータ"
+  },
+  "description" : "High-voltage smart electric energy meter",
+  "descriptions" : {
+    "en" : "High-voltage smart electric energy meter",
+    "ja" : "高圧スマート電力量メータ"
+  },
+  "properties" : {
+    "operationStatus" : {
+      "title" : "operationStatus",
+      "titles" : {
+        "en" : "operationStatus",
+        "ja" : "動作状態"
+      },
+      "echonet:epc" : "0x80",
+      "description" : "Operation status",
+      "descriptions" : {
+        "en" : "Operation status",
+        "ja" : "動作状態"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : true,
+      "type" : "boolean"
+    },
+    "installationLocation" : {
+      "title" : "installationLocation",
+      "titles" : {
+        "en" : "installationLocation",
+        "ja" : "設置場所"
+      },
+      "echonet:epc" : "0x81",
+      "description" : "Installation location",
+      "descriptions" : {
+        "en" : "Installation location",
+        "ja" : "設置場所"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : true,
+      "oneOf" : [ {
+        "type" : "string"
+      }, {
+        "type" : "string"
+      } ]
+    },
+    "protocol" : {
+      "title" : "protocol",
+      "titles" : {
+        "en" : "protocol",
+        "ja" : "規格Version情報"
+      },
+      "echonet:epc" : "0x82",
+      "description" : "Standard version information",
+      "descriptions" : {
+        "en" : "Standard version information",
+        "ja" : "規格Version情報"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "id" : {
+      "title" : "id",
+      "titles" : {
+        "en" : "id",
+        "ja" : "識別番号"
+      },
+      "echonet:epc" : "0x83",
+      "description" : "Identification number",
+      "descriptions" : {
+        "en" : "Identification number",
+        "ja" : "識別番号"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "instantaneousElectricPowerConsumption" : {
+      "title" : "instantaneousElectricPowerConsumption",
+      "titles" : {
+        "en" : "instantaneousElectricPowerConsumption",
+        "ja" : "瞬時消費電力計測値"
+      },
+      "echonet:epc" : "0x84",
+      "description" : "Measured instantaneous power consumption",
+      "descriptions" : {
+        "en" : "Measured instantaneous power consumption",
+        "ja" : "瞬時消費電力計測値"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "W",
+      "minimum" : 0,
+      "maximum" : 65533
+    },
+    "consumedCumulativeElectricEnergy" : {
+      "title" : "consumedCumulativeElectricEnergy",
+      "titles" : {
+        "en" : "consumedCumulativeElectricEnergy",
+        "ja" : "積算消費電力計測値"
+      },
+      "echonet:epc" : "0x85",
+      "description" : "Measured cumulative power consumption",
+      "descriptions" : {
+        "en" : "Measured cumulative power consumption",
+        "ja" : "積算消費電力計測値"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "kWh",
+      "minimum" : 0,
+      "maximum" : 999999.999
+    },
+    "manufacturerFaultCode" : {
+      "title" : "manufacturerFaultCode",
+      "titles" : {
+        "en" : "manufacturerFaultCode",
+        "ja" : "メーカ異常コード"
+      },
+      "echonet:epc" : "0x86",
+      "description" : "Manufacturer's fault code",
+      "descriptions" : {
+        "en" : "Manufacturer's fault code",
+        "ja" : "メーカ異常コード"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "currentLimit" : {
+      "title" : "currentLimit",
+      "titles" : {
+        "en" : "currentLimit",
+        "ja" : "電流制限設定"
+      },
+      "echonet:epc" : "0x87",
+      "description" : "Current limit setting",
+      "descriptions" : {
+        "en" : "Current limit setting",
+        "ja" : "電流制限設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "%",
+      "minimum" : 0,
+      "maximum" : 100
+    },
+    "faultStatus" : {
+      "title" : "faultStatus",
+      "titles" : {
+        "en" : "faultStatus",
+        "ja" : "異常発生状態"
+      },
+      "echonet:epc" : "0x88",
+      "description" : "Fault status",
+      "descriptions" : {
+        "en" : "Fault status",
+        "ja" : "異常発生状態"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : true,
+      "type" : "boolean"
+    },
+    "faultDescription" : {
+      "title" : "faultDescription",
+      "titles" : {
+        "en" : "faultDescription",
+        "ja" : "異常内容"
+      },
+      "echonet:epc" : "0x89",
+      "description" : "Fault description",
+      "descriptions" : {
+        "en" : "Fault description",
+        "ja" : "異常内容"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "manufacturer" : {
+      "title" : "manufacturer",
+      "titles" : {
+        "en" : "manufacturer",
+        "ja" : "メーカコード"
+      },
+      "echonet:epc" : "0x8A",
+      "description" : "Manufactur code",
+      "descriptions" : {
+        "en" : "Manufactur code",
+        "ja" : "メーカコード"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "businessFacilityCode" : {
+      "title" : "businessFacilityCode",
+      "titles" : {
+        "en" : "businessFacilityCode",
+        "ja" : "事業場コード"
+      },
+      "echonet:epc" : "0x8B",
+      "description" : "Business facility code",
+      "descriptions" : {
+        "en" : "Business facility code",
+        "ja" : "事業場コード"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "productCode" : {
+      "title" : "productCode",
+      "titles" : {
+        "en" : "productCode",
+        "ja" : "商品コード"
+      },
+      "echonet:epc" : "0x8C",
+      "description" : "Product code",
+      "descriptions" : {
+        "en" : "Product code",
+        "ja" : "商品コード"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "serialNumber" : {
+      "title" : "serialNumber",
+      "titles" : {
+        "en" : "serialNumber",
+        "ja" : "製造番号"
+      },
+      "echonet:epc" : "0x8D",
+      "description" : "Production number",
+      "descriptions" : {
+        "en" : "Production number",
+        "ja" : "製造番号"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "productionDate" : {
+      "title" : "productionDate",
+      "titles" : {
+        "en" : "productionDate",
+        "ja" : "製造年月日"
+      },
+      "echonet:epc" : "0x8E",
+      "description" : "Production date",
+      "descriptions" : {
+        "en" : "Production date",
+        "ja" : "製造年月日"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string",
+      "format" : "date"
+    },
+    "powerSaving" : {
+      "title" : "powerSaving",
+      "titles" : {
+        "en" : "powerSaving",
+        "ja" : "節電動作設定"
+      },
+      "echonet:epc" : "0x8F",
+      "description" : "Power-saving operation setting",
+      "descriptions" : {
+        "en" : "Power-saving operation setting",
+        "ja" : "節電動作設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "boolean"
+    },
+    "remoteControl" : {
+      "title" : "remoteControl",
+      "titles" : {
+        "en" : "remoteControl",
+        "ja" : "遠隔操作設定"
+      },
+      "echonet:epc" : "0x93",
+      "description" : "Remote controll setting",
+      "descriptions" : {
+        "en" : "Remote controll setting",
+        "ja" : "遠隔操作設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "boolean"
+    },
+    "currentDateAndTime" : {
+      "title" : "currentDateAndTime",
+      "titles" : {
+        "en" : "currentDateAndTime",
+        "ja" : "現在年月日設定"
+      },
+      "echonet:epc" : "0x98",
+      "description" : "Current date setting",
+      "descriptions" : {
+        "en" : "Current date setting",
+        "ja" : "現在年月日設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string",
+      "format" : "date-time"
+    },
+    "powerLimit" : {
+      "title" : "powerLimit",
+      "titles" : {
+        "en" : "powerLimit",
+        "ja" : "電力制限設定"
+      },
+      "echonet:epc" : "0x99",
+      "description" : "Power limit setting",
+      "descriptions" : {
+        "en" : "Power limit setting",
+        "ja" : "電力制限設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "W",
+      "minimum" : 0,
+      "maximum" : 65533
+    },
+    "hourMeter" : {
+      "title" : "hourMeter",
+      "titles" : {
+        "en" : "hourMeter",
+        "ja" : "積算運転時間"
+      },
+      "echonet:epc" : "0x9A",
+      "description" : "Cumulative operating time",
+      "descriptions" : {
+        "en" : "Cumulative operating time",
+        "ja" : "積算運転時間"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "unit" : {
+          "type" : "string",
+          "enum" : [ "second", "minute", "hour", "day" ],
+          "descriptions" : {
+            "ja" : "積算運転時間",
+            "en" : "Cumulative operating time"
+          }
+        },
+        "time" : {
+          "type" : "number",
+          "minimum" : 0,
+          "maximum" : 4294967295,
+          "descriptions" : {
+            "ja" : "時間",
+            "en" : "time"
+          }
+        }
+      }
+    },
+    "monthlyMaximumElectricPowerDemand" : {
+      "title" : "monthlyMaximumElectricPowerDemand",
+      "titles" : {
+        "en" : "monthlyMaximumElectricPowerDemand",
+        "ja" : "月間最大需要電力"
+      },
+      "echonet:epc" : "0xC1",
+      "description" : "Monthly maximum electric power demand",
+      "descriptions" : {
+        "en" : "Monthly maximum electric power demand",
+        "ja" : "月間最大需要電力"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "oneOf" : [ {
+        "type" : "number",
+        "unit" : "kW",
+        "minimum" : 0,
+        "maximum" : 9999999.9
+      }, {
+        "type" : "string",
+        "enum" : [ "noData" ]
+      } ]
+    },
+    "cumulativeMaximumElectricPowerDemand" : {
+      "title" : "cumulativeMaximumElectricPowerDemand",
+      "titles" : {
+        "en" : "cumulativeMaximumElectricPowerDemand",
+        "ja" : "累積最大需要電力"
+      },
+      "echonet:epc" : "0xC2",
+      "description" : "Cumulative maximum electric power demand",
+      "descriptions" : {
+        "en" : "Cumulative maximum electric power demand",
+        "ja" : "累積最大需要電力"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "kW",
+      "minimum" : 0,
+      "maximum" : 9999999.9
+    },
+    "averageElectricPowerDemand" : {
+      "title" : "averageElectricPowerDemand",
+      "titles" : {
+        "en" : "averageElectricPowerDemand",
+        "ja" : "定時需要電力(30分平均電力)"
+      },
+      "echonet:epc" : "0xC3",
+      "description" : "Electric power demand at fixed time (30-minute average electric power)",
+      "descriptions" : {
+        "en" : "Electric power demand at fixed time (30-minute average electric power)",
+        "ja" : "定時需要電力 (30分平均電力)"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "dateAndTime" : {
+          "type" : "string",
+          "format" : "date-time",
+          "descriptions" : {
+            "ja" : "計測日時",
+            "en" : "Date and time of measurement"
+          }
+        },
+        "electricPower" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "kW",
+            "minimum" : 0,
+            "maximum" : 9999999.9
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "需要電力",
+            "en" : "Electric Power demand"
+          }
+        }
+      }
+    },
+    "electricPowerDemandLog" : {
+      "title" : "electricPowerDemandLog",
+      "titles" : {
+        "en" : "electricPowerDemandLog",
+        "ja" : "需要電力計測値履歴"
+      },
+      "echonet:epc" : "0xC6",
+      "description" : "Historical data of measured electric power demand",
+      "descriptions" : {
+        "en" : "Historical data of measured electric power demand",
+        "ja" : "需要電力計測値履歴"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "day" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "minimum" : 0,
+            "maximum" : 99
+          }, {
+            "type" : "string",
+            "enum" : [ "defaultValue" ]
+          } ],
+          "descriptions" : {
+            "ja" : "積算履歴収集日",
+            "en" : "Day for which the historical data of measured cumulative amounts of electric energy is to be retrieved"
+          }
+        },
+        "electricPower" : {
+          "type" : "array",
+          "minItems" : 48,
+          "maxItems" : 48,
+          "items" : {
+            "oneOf" : [ {
+              "type" : "number",
+              "unit" : "kW",
+              "minimum" : 0,
+              "maximum" : 9999999.9
+            }, {
+              "type" : "string",
+              "enum" : [ "noData" ]
+            } ]
+          },
+          "descriptions" : {
+            "ja" : "需要電力",
+            "en" : "Electric power demand"
+          }
+        }
+      }
+    },
+    "cumulativeReactiveElectricEnergy" : {
+      "title" : "cumulativeReactiveElectricEnergy",
+      "titles" : {
+        "en" : "cumulativeReactiveElectricEnergy",
+        "ja" : "力測積算無効電力量(遅れ)計測値"
+      },
+      "echonet:epc" : "0xCA",
+      "description" : "Measurement data of reactive electric power consumption (lag) for power factor measurement",
+      "descriptions" : {
+        "en" : "Measurement data of reactive electric power consumption (lag) for power factor measurement",
+        "ja" : "力測積算無効電力量 (遅れ)計測値"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "dateAndTime" : {
+          "type" : "string",
+          "format" : "date-time",
+          "descriptions" : {
+            "ja" : "計測日時",
+            "en" : "Date and time of measurement"
+          }
+        },
+        "reactiveElectricEnergy" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "kvarh",
+            "minimum" : 0,
+            "maximum" : 9999999.9
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "積算無効電力量 (遅れ)",
+            "en" : "Cumulative amount of reactive electric power consumption (lag)"
+          }
+        }
+      }
+    },
+    "cumulativeReactiveElectricEnergyAtEvery30Min" : {
+      "title" : "cumulativeReactiveElectricEnergyAtEvery30Min",
+      "titles" : {
+        "en" : "cumulativeReactiveElectricEnergyAtEvery30Min",
+        "ja" : "定時力測積算無効電力量(遅れ)計測値"
+      },
+      "echonet:epc" : "0xCB",
+      "description" : "Measurement data of cumulative amount of reactive electric power consumption (lag) at fixed time for power factor measurement",
+      "descriptions" : {
+        "en" : "Measurement data of cumulative amount of reactive electric power consumption (lag) at fixed time for power factor measurement",
+        "ja" : "定時力測積算無効電力量 (遅れ)計測値"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "dateAndTime" : {
+          "type" : "string",
+          "format" : "date-time",
+          "descriptions" : {
+            "ja" : "計測日時",
+            "en" : "Date and time of measurement"
+          }
+        },
+        "reactiveElectricEnergy" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "kvarh",
+            "minimum" : 0,
+            "maximum" : 9999999.9
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "積算無効電力量 (遅れ)",
+            "en" : "Cumulative amount of reactive electric power consumption (lag)"
+          }
+        }
+      }
+    },
+    "cumulativeReactiveElectricEnergyLog" : {
+      "title" : "cumulativeReactiveElectricEnergyLog",
+      "titles" : {
+        "en" : "cumulativeReactiveElectricEnergyLog",
+        "ja" : "力測積算無効電力量(遅れ)計測値履歴"
+      },
+      "echonet:epc" : "0xCE",
+      "description" : "Historical data of measurement data of cumulative amount of reactive electric power consumption (lag) for power factor measurement",
+      "descriptions" : {
+        "en" : "Historical data of measurement data of cumulative amount of reactive electric power consumption (lag) for power factor measurement",
+        "ja" : "力測積算無効電力量 (遅れ)計測値履歴"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "day" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "minimum" : 0,
+            "maximum" : 99
+          }, {
+            "type" : "string",
+            "enum" : [ "defaultValue" ]
+          } ],
+          "descriptions" : {
+            "ja" : "積算履歴収集日",
+            "en" : "Day for which the historical data of measured cumulative amounts of electric energy is to be retrieved"
+          }
+        },
+        "reactiveElectricEnergy" : {
+          "type" : "array",
+          "minItems" : 48,
+          "maxItems" : 48,
+          "items" : {
+            "oneOf" : [ {
+              "type" : "number",
+              "unit" : "kvarh",
+              "minimum" : 0,
+              "maximum" : 9999999.9
+            }, {
+              "type" : "string",
+              "enum" : [ "noData" ]
+            } ]
+          },
+          "descriptions" : {
+            "ja" : "積算無効電力量 (遅れ)",
+            "en" : "Measurement data of cumulative amount of reactive electric power consumption (lag)"
+          }
+        }
+      }
+    },
+    "fixedDate" : {
+      "title" : "fixedDate",
+      "titles" : {
+        "en" : "fixedDate",
+        "ja" : "確定日"
+      },
+      "echonet:epc" : "0xE0",
+      "description" : "Fixed date",
+      "descriptions" : {
+        "en" : "Fixed date",
+        "ja" : "確定日"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "minimum" : 1,
+      "maximum" : 31
+    },
+    "cumulativeActiveElectricEnergy" : {
+      "title" : "cumulativeActiveElectricEnergy",
+      "titles" : {
+        "en" : "cumulativeActiveElectricEnergy",
+        "ja" : "積算有効電力量計測値"
+      },
+      "echonet:epc" : "0xE2",
+      "description" : "Measured cumulative amounts of active electric energy",
+      "descriptions" : {
+        "en" : "Measured cumulative amounts of active electric energy",
+        "ja" : "積算有効電力量計測値"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "dateAndTime" : {
+          "type" : "string",
+          "format" : "date-time",
+          "descriptions" : {
+            "ja" : "計測日時",
+            "en" : "Date and time of measurement"
+          }
+        },
+        "activeElectricEnergy" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "kWh",
+            "minimum" : 0,
+            "maximum" : 9999999.9
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "積算有効電力量",
+            "en" : "Cumulative amount of active electric energy"
+          }
+        }
+      }
+    },
+    "cumulativeActiveElectricEnergyAtEvery30Min" : {
+      "title" : "cumulativeActiveElectricEnergyAtEvery30Min",
+      "titles" : {
+        "en" : "cumulativeActiveElectricEnergyAtEvery30Min",
+        "ja" : "定時積算有効電力量計測値"
+      },
+      "echonet:epc" : "0xE3",
+      "description" : "Cumulative amounts of active electric energy at fixed time",
+      "descriptions" : {
+        "en" : "Cumulative amounts of active electric energy at fixed time",
+        "ja" : "定時積算有効電力量計測値"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "dateAndTime" : {
+          "type" : "string",
+          "format" : "date-time",
+          "descriptions" : {
+            "ja" : "計測日時",
+            "en" : "Date and time of measurement"
+          }
+        },
+        "activeElectricEnergy" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "kWh",
+            "minimum" : 0,
+            "maximum" : 9999999.9
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "積算有効電力量",
+            "en" : "Cumulative amount of active electric energy"
+          }
+        }
+      }
+    },
+    "cumulativeActiveElectricEnergyForPowerFactor" : {
+      "title" : "cumulativeActiveElectricEnergyForPowerFactor",
+      "titles" : {
+        "en" : "cumulativeActiveElectricEnergyForPowerFactor",
+        "ja" : "力測積算有効電力量計測値"
+      },
+      "echonet:epc" : "0xE4",
+      "description" : "Measurement data of cumulative amounts of active electric energy for power factor measurement",
+      "descriptions" : {
+        "en" : "Measurement data of cumulative amounts of active electric energy for power factor measurement",
+        "ja" : "力測積算有効電力量計測値"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "dateAndTime" : {
+          "type" : "string",
+          "format" : "date-time",
+          "descriptions" : {
+            "ja" : "計測日時",
+            "en" : "Date and time of measurement"
+          }
+        },
+        "electricEnergy" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "kWh",
+            "minimum" : 0,
+            "maximum" : 9999999.9
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "積算有効電力量",
+            "en" : "Cumulative amount of active electric energy"
+          }
+        }
+      }
+    },
+    "activeElectricEnergyLog" : {
+      "title" : "activeElectricEnergyLog",
+      "titles" : {
+        "en" : "activeElectricEnergyLog",
+        "ja" : "積算有効電力量計測値履歴"
+      },
+      "echonet:epc" : "0xE7",
+      "description" : "Historical data of measured cumulative amount of active electric energy",
+      "descriptions" : {
+        "en" : "Historical data of measured cumulative amount of active electric energy",
+        "ja" : "積算有効電力量計測値履歴"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "day" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "minimum" : 0,
+            "maximum" : 99
+          }, {
+            "type" : "string",
+            "enum" : [ "defaultValue" ]
+          } ],
+          "descriptions" : {
+            "ja" : "積算履歴収集日",
+            "en" : "Day for which the historical data of measured cumulative amounts of electric energy is to be retrieved"
+          }
+        },
+        "activeElectricEnergy" : {
+          "type" : "array",
+          "minItems" : 48,
+          "maxItems" : 48,
+          "items" : {
+            "oneOf" : [ {
+              "type" : "number",
+              "unit" : "kWh",
+              "minimum" : 0,
+              "maximum" : 9999999.9
+            }, {
+              "type" : "string",
+              "enum" : [ "noData" ]
+            } ]
+          },
+          "descriptions" : {
+            "ja" : "積算有効電力量",
+            "en" : "Measured cumulative amount of active electric energy"
+          }
+        }
+      }
+    }
+  }
+}

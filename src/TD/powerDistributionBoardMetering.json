@@ -1,0 +1,3227 @@
+{
+  "@context" : [ "https://www.w3.org/2019/wot/td/v1", {
+    "echonet" : "https://echonet.jp/"
+  }, {
+    "@language" : "en"
+  } ],
+  "id" : "",
+  "echonet:eoj" : "0x0287",
+  "title" : "powerDistributionBoardMetering",
+  "titles" : {
+    "en" : "powerDistributionBoardMetering",
+    "ja" : "分電盤メータリング"
+  },
+  "description" : "Power distribution board",
+  "descriptions" : {
+    "en" : "Power distribution board",
+    "ja" : "分電盤メータリング"
+  },
+  "properties" : {
+    "operationStatus" : {
+      "title" : "operationStatus",
+      "titles" : {
+        "en" : "operationStatus",
+        "ja" : "動作状態"
+      },
+      "echonet:epc" : "0x80",
+      "description" : "Operation status",
+      "descriptions" : {
+        "en" : "Operation status",
+        "ja" : "動作状態"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : true,
+      "type" : "boolean"
+    },
+    "installationLocation" : {
+      "title" : "installationLocation",
+      "titles" : {
+        "en" : "installationLocation",
+        "ja" : "設置場所"
+      },
+      "echonet:epc" : "0x81",
+      "description" : "Installation location",
+      "descriptions" : {
+        "en" : "Installation location",
+        "ja" : "設置場所"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : true,
+      "oneOf" : [ {
+        "type" : "string"
+      }, {
+        "type" : "string"
+      } ]
+    },
+    "protocol" : {
+      "title" : "protocol",
+      "titles" : {
+        "en" : "protocol",
+        "ja" : "規格Version情報"
+      },
+      "echonet:epc" : "0x82",
+      "description" : "Standard version information",
+      "descriptions" : {
+        "en" : "Standard version information",
+        "ja" : "規格Version情報"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "id" : {
+      "title" : "id",
+      "titles" : {
+        "en" : "id",
+        "ja" : "識別番号"
+      },
+      "echonet:epc" : "0x83",
+      "description" : "Identification number",
+      "descriptions" : {
+        "en" : "Identification number",
+        "ja" : "識別番号"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "instantaneousElectricPowerConsumption" : {
+      "title" : "instantaneousElectricPowerConsumption",
+      "titles" : {
+        "en" : "instantaneousElectricPowerConsumption",
+        "ja" : "瞬時消費電力計測値"
+      },
+      "echonet:epc" : "0x84",
+      "description" : "Measured instantaneous power consumption",
+      "descriptions" : {
+        "en" : "Measured instantaneous power consumption",
+        "ja" : "瞬時消費電力計測値"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "W",
+      "minimum" : 0,
+      "maximum" : 65533
+    },
+    "consumedCumulativeElectricEnergy" : {
+      "title" : "consumedCumulativeElectricEnergy",
+      "titles" : {
+        "en" : "consumedCumulativeElectricEnergy",
+        "ja" : "積算消費電力計測値"
+      },
+      "echonet:epc" : "0x85",
+      "description" : "Measured cumulative power consumption",
+      "descriptions" : {
+        "en" : "Measured cumulative power consumption",
+        "ja" : "積算消費電力計測値"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "kWh",
+      "minimum" : 0,
+      "maximum" : 999999.999
+    },
+    "manufacturerFaultCode" : {
+      "title" : "manufacturerFaultCode",
+      "titles" : {
+        "en" : "manufacturerFaultCode",
+        "ja" : "メーカ異常コード"
+      },
+      "echonet:epc" : "0x86",
+      "description" : "Manufacturer's fault code",
+      "descriptions" : {
+        "en" : "Manufacturer's fault code",
+        "ja" : "メーカ異常コード"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "currentLimit" : {
+      "title" : "currentLimit",
+      "titles" : {
+        "en" : "currentLimit",
+        "ja" : "電流制限設定"
+      },
+      "echonet:epc" : "0x87",
+      "description" : "Current limit setting",
+      "descriptions" : {
+        "en" : "Current limit setting",
+        "ja" : "電流制限設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "%",
+      "minimum" : 0,
+      "maximum" : 100
+    },
+    "faultStatus" : {
+      "title" : "faultStatus",
+      "titles" : {
+        "en" : "faultStatus",
+        "ja" : "異常発生状態"
+      },
+      "echonet:epc" : "0x88",
+      "description" : "Fault status",
+      "descriptions" : {
+        "en" : "Fault status",
+        "ja" : "異常発生状態"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : true,
+      "type" : "boolean"
+    },
+    "faultDescription" : {
+      "title" : "faultDescription",
+      "titles" : {
+        "en" : "faultDescription",
+        "ja" : "異常内容"
+      },
+      "echonet:epc" : "0x89",
+      "description" : "Fault description",
+      "descriptions" : {
+        "en" : "Fault description",
+        "ja" : "異常内容"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "manufacturer" : {
+      "title" : "manufacturer",
+      "titles" : {
+        "en" : "manufacturer",
+        "ja" : "メーカコード"
+      },
+      "echonet:epc" : "0x8A",
+      "description" : "Manufactur code",
+      "descriptions" : {
+        "en" : "Manufactur code",
+        "ja" : "メーカコード"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "businessFacilityCode" : {
+      "title" : "businessFacilityCode",
+      "titles" : {
+        "en" : "businessFacilityCode",
+        "ja" : "事業場コード"
+      },
+      "echonet:epc" : "0x8B",
+      "description" : "Business facility code",
+      "descriptions" : {
+        "en" : "Business facility code",
+        "ja" : "事業場コード"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "productCode" : {
+      "title" : "productCode",
+      "titles" : {
+        "en" : "productCode",
+        "ja" : "商品コード"
+      },
+      "echonet:epc" : "0x8C",
+      "description" : "Product code",
+      "descriptions" : {
+        "en" : "Product code",
+        "ja" : "商品コード"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "serialNumber" : {
+      "title" : "serialNumber",
+      "titles" : {
+        "en" : "serialNumber",
+        "ja" : "製造番号"
+      },
+      "echonet:epc" : "0x8D",
+      "description" : "Production number",
+      "descriptions" : {
+        "en" : "Production number",
+        "ja" : "製造番号"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "productionDate" : {
+      "title" : "productionDate",
+      "titles" : {
+        "en" : "productionDate",
+        "ja" : "製造年月日"
+      },
+      "echonet:epc" : "0x8E",
+      "description" : "Production date",
+      "descriptions" : {
+        "en" : "Production date",
+        "ja" : "製造年月日"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string",
+      "format" : "date"
+    },
+    "powerSaving" : {
+      "title" : "powerSaving",
+      "titles" : {
+        "en" : "powerSaving",
+        "ja" : "節電動作設定"
+      },
+      "echonet:epc" : "0x8F",
+      "description" : "Power-saving operation setting",
+      "descriptions" : {
+        "en" : "Power-saving operation setting",
+        "ja" : "節電動作設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "boolean"
+    },
+    "remoteControl" : {
+      "title" : "remoteControl",
+      "titles" : {
+        "en" : "remoteControl",
+        "ja" : "遠隔操作設定"
+      },
+      "echonet:epc" : "0x93",
+      "description" : "Remote controll setting",
+      "descriptions" : {
+        "en" : "Remote controll setting",
+        "ja" : "遠隔操作設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "boolean"
+    },
+    "currentDateAndTime" : {
+      "title" : "currentDateAndTime",
+      "titles" : {
+        "en" : "currentDateAndTime",
+        "ja" : "現在年月日設定"
+      },
+      "echonet:epc" : "0x98",
+      "description" : "Current date setting",
+      "descriptions" : {
+        "en" : "Current date setting",
+        "ja" : "現在年月日設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string",
+      "format" : "date-time"
+    },
+    "powerLimit" : {
+      "title" : "powerLimit",
+      "titles" : {
+        "en" : "powerLimit",
+        "ja" : "電力制限設定"
+      },
+      "echonet:epc" : "0x99",
+      "description" : "Power limit setting",
+      "descriptions" : {
+        "en" : "Power limit setting",
+        "ja" : "電力制限設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "W",
+      "minimum" : 0,
+      "maximum" : 65533
+    },
+    "hourMeter" : {
+      "title" : "hourMeter",
+      "titles" : {
+        "en" : "hourMeter",
+        "ja" : "積算運転時間"
+      },
+      "echonet:epc" : "0x9A",
+      "description" : "Cumulative operating time",
+      "descriptions" : {
+        "en" : "Cumulative operating time",
+        "ja" : "積算運転時間"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "unit" : {
+          "type" : "string",
+          "enum" : [ "second", "minute", "hour", "day" ],
+          "descriptions" : {
+            "ja" : "積算運転時間",
+            "en" : "Cumulative operating time"
+          }
+        },
+        "time" : {
+          "type" : "number",
+          "minimum" : 0,
+          "maximum" : 4294967295,
+          "descriptions" : {
+            "ja" : "時間",
+            "en" : "time"
+          }
+        }
+      }
+    },
+    "masterRatedCapacity" : {
+      "title" : "masterRatedCapacity",
+      "titles" : {
+        "en" : "masterRatedCapacity",
+        "ja" : "主幹定格容量"
+      },
+      "echonet:epc" : "0xB0",
+      "description" : "Master rated capacity",
+      "descriptions" : {
+        "en" : "Master rated capacity",
+        "ja" : "主幹定格容量"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "A",
+      "minimum" : 0,
+      "maximum" : 253
+    },
+    "numberOfMeasurementChannelsSimplex" : {
+      "title" : "numberOfMeasurementChannelsSimplex",
+      "titles" : {
+        "en" : "numberOfMeasurementChannelsSimplex",
+        "ja" : "計測チャンネル数(片方向)"
+      },
+      "echonet:epc" : "0xB1",
+      "description" : "Number of measurement channels (simplex)",
+      "descriptions" : {
+        "en" : "Number of measurement channels (simplex)",
+        "ja" : "計測チャンネル数 (片方向)"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "oneOf" : [ {
+        "type" : "number",
+        "minimum" : 1,
+        "maximum" : 252
+      }, {
+        "type" : "string",
+        "enum" : [ "undefined" ]
+      } ]
+    },
+    "cumulativeElectricEnergyListSimplex" : {
+      "title" : "cumulativeElectricEnergyListSimplex",
+      "titles" : {
+        "en" : "cumulativeElectricEnergyListSimplex",
+        "ja" : "積算電力量計測値リスト(片方向)"
+      },
+      "echonet:epc" : "0xB3",
+      "description" : "Measured cumulative amount of electric power consumption list (simplex)",
+      "descriptions" : {
+        "en" : "Measured cumulative amount of electric power consumption list (simplex)",
+        "ja" : "積算電力量計測値リスト (片方向)"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "startChannel" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "minimum" : 1,
+            "maximum" : 252
+          }, {
+            "type" : "string",
+            "enum" : [ "undefined" ]
+          } ],
+          "descriptions" : {
+            "ja" : "取得開始チャンネル",
+            "en" : "Acquisition start channel"
+          }
+        },
+        "range" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "minimum" : 1,
+            "maximum" : 60
+          }, {
+            "type" : "string",
+            "enum" : [ "undefined" ]
+          } ],
+          "descriptions" : {
+            "ja" : "取得開始チャンネルからの範囲を指定",
+            "en" : "Range from the acquisition start channel"
+          }
+        },
+        "electricEnergy" : {
+          "type" : "array",
+          "maxItems" : 60,
+          "items" : {
+            "oneOf" : [ {
+              "type" : "number",
+              "unit" : "kWh",
+              "minimum" : 0,
+              "maximum" : 999999.99
+            }, {
+              "type" : "string",
+              "enum" : [ "noData" ]
+            } ]
+          },
+          "descriptions" : {
+            "ja" : "積算電力量計測値",
+            "en" : "Measured cumulative amount of electric power consumption"
+          }
+        }
+      }
+    },
+    "instantaneousCurrentListSimplex" : {
+      "title" : "instantaneousCurrentListSimplex",
+      "titles" : {
+        "en" : "instantaneousCurrentListSimplex",
+        "ja" : "瞬時電流計測値リスト(片方向)"
+      },
+      "echonet:epc" : "0xB5",
+      "description" : "Measured instantaneous current list (simplex)",
+      "descriptions" : {
+        "en" : "Measured instantaneous current list (simplex)",
+        "ja" : "瞬時電流計測値リスト (片方向)"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "startChannel" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "minimum" : 1,
+            "maximum" : 252
+          }, {
+            "type" : "string",
+            "enum" : [ "undefined" ]
+          } ],
+          "descriptions" : {
+            "ja" : "取得開始チャンネル",
+            "en" : "Acquisition start channel"
+          }
+        },
+        "range" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "minimum" : 1,
+            "maximum" : 60
+          }, {
+            "type" : "string",
+            "enum" : [ "undefined" ]
+          } ],
+          "descriptions" : {
+            "ja" : "取得開始チャンネルからの範囲を指定",
+            "en" : "Range from the acquisition start channel"
+          }
+        },
+        "instantaneousCurrent" : {
+          "type" : "array",
+          "maxItems" : 60,
+          "items" : {
+            "type" : "object",
+            "properties" : {
+              "rPhase" : {
+                "oneOf" : [ {
+                  "type" : "number",
+                  "unit" : "A",
+                  "minimum" : -3276.7,
+                  "maximum" : 3276.5
+                }, {
+                  "type" : "string",
+                  "enum" : [ "noData" ]
+                } ]
+              },
+              "tPhase" : {
+                "oneOf" : [ {
+                  "type" : "number",
+                  "unit" : "A",
+                  "minimum" : -3276.7,
+                  "maximum" : 3276.5
+                }, {
+                  "type" : "string",
+                  "enum" : [ "noData" ]
+                } ]
+              }
+            }
+          },
+          "descriptions" : {
+            "ja" : "瞬時電流計測値",
+            "en" : "Measured instantaneous current"
+          }
+        }
+      }
+    },
+    "instantaneousElectricPowerListSimplex" : {
+      "title" : "instantaneousElectricPowerListSimplex",
+      "titles" : {
+        "en" : "instantaneousElectricPowerListSimplex",
+        "ja" : "瞬時電力計測値リスト(片方向)"
+      },
+      "echonet:epc" : "0xB7",
+      "description" : "Measured instantaneous power consumption list (simplex)",
+      "descriptions" : {
+        "en" : "Measured instantaneous power consumption list (simplex)",
+        "ja" : "瞬時電力計測値リスト (片方向)"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "startChannel" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "minimum" : 1,
+            "maximum" : 252
+          }, {
+            "type" : "string",
+            "enum" : [ "undefined" ]
+          } ],
+          "descriptions" : {
+            "ja" : "取得開始チャンネル",
+            "en" : "Acquisition start channel"
+          }
+        },
+        "range" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "minimum" : 1,
+            "maximum" : 60
+          }, {
+            "type" : "string",
+            "enum" : [ "undefined" ]
+          } ],
+          "descriptions" : {
+            "ja" : "取得開始チャンネルからの範囲を指定",
+            "en" : "Range from the acquisition start channel"
+          }
+        },
+        "instantaneousElectricPower" : {
+          "type" : "array",
+          "maxItems" : 60,
+          "items" : {
+            "oneOf" : [ {
+              "type" : "number",
+              "unit" : "W",
+              "minimum" : -2147483647,
+              "maximum" : 2147483645
+            }, {
+              "type" : "string",
+              "enum" : [ "noData" ]
+            } ]
+          },
+          "descriptions" : {
+            "ja" : "瞬時電力計測値",
+            "en" : "Measured instantaneous power consumption"
+          }
+        }
+      }
+    },
+    "numberOfMeasurementChannelsDuplex" : {
+      "title" : "numberOfMeasurementChannelsDuplex",
+      "titles" : {
+        "en" : "numberOfMeasurementChannelsDuplex",
+        "ja" : "計測チャンネル数(双方向)"
+      },
+      "echonet:epc" : "0xB8",
+      "description" : "Number of measurement channels (duplex)",
+      "descriptions" : {
+        "en" : "Number of measurement channels (duplex)",
+        "ja" : "計測チャンネル数 (双方向)"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "oneOf" : [ {
+        "type" : "number",
+        "minimum" : 1,
+        "maximum" : 252
+      }, {
+        "type" : "string",
+        "enum" : [ "undefined" ]
+      } ]
+    },
+    "cumulativeElectricEnergyListDuplex" : {
+      "title" : "cumulativeElectricEnergyListDuplex",
+      "titles" : {
+        "en" : "cumulativeElectricEnergyListDuplex",
+        "ja" : "積算電力量計測値リスト(双方向)"
+      },
+      "echonet:epc" : "0xBA",
+      "description" : "Measured cumulative amount of electric power consumption list (duplex)",
+      "descriptions" : {
+        "en" : "Measured cumulative amount of electric power consumption list (duplex)",
+        "ja" : "積算電力量計測値リスト (双方向)"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "startChannel" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "minimum" : 1,
+            "maximum" : 252
+          }, {
+            "type" : "string",
+            "enum" : [ "undefined" ]
+          } ],
+          "descriptions" : {
+            "ja" : "取得開始チャンネル",
+            "en" : "Acquisition start channel"
+          }
+        },
+        "range" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "minimum" : 1,
+            "maximum" : 30
+          }, {
+            "type" : "string",
+            "enum" : [ "undefined" ]
+          } ],
+          "descriptions" : {
+            "ja" : "取得開始チャンネルからの範囲を指定",
+            "en" : "Range from the acquisition start channel"
+          }
+        },
+        "electricEnergy" : {
+          "type" : "array",
+          "maxItems" : 30,
+          "items" : {
+            "type" : "object",
+            "properties" : {
+              "normalDirectionElectricEnergy" : {
+                "oneOf" : [ {
+                  "type" : "number",
+                  "unit" : "kWh",
+                  "minimum" : 0,
+                  "maximum" : 999999.99
+                }, {
+                  "type" : "string",
+                  "enum" : [ "noData" ]
+                } ]
+              },
+              "reverseDirectionElectricEnergy" : {
+                "oneOf" : [ {
+                  "type" : "number",
+                  "unit" : "kWh",
+                  "minimum" : 0,
+                  "maximum" : 999999.99
+                }, {
+                  "type" : "string",
+                  "enum" : [ "noData" ]
+                } ]
+              }
+            }
+          },
+          "descriptions" : {
+            "ja" : "積算電力量計測値",
+            "en" : "Measured cumulative amount of electric power consumption"
+          }
+        }
+      }
+    },
+    "instantaneousCurrentListDuplex" : {
+      "title" : "instantaneousCurrentListDuplex",
+      "titles" : {
+        "en" : "instantaneousCurrentListDuplex",
+        "ja" : "瞬時電流計測値リスト(双方向)"
+      },
+      "echonet:epc" : "0xBC",
+      "description" : "Measured instantaneous current list (duplex)",
+      "descriptions" : {
+        "en" : "Measured instantaneous current list (duplex)",
+        "ja" : "瞬時電流計測値リスト (双方向)"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "startChannel" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "minimum" : 1,
+            "maximum" : 252
+          }, {
+            "type" : "string",
+            "enum" : [ "undefined" ]
+          } ],
+          "descriptions" : {
+            "ja" : "取得開始チャンネル",
+            "en" : "Acquisition start channel"
+          }
+        },
+        "range" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "minimum" : 1,
+            "maximum" : 60
+          }, {
+            "type" : "string",
+            "enum" : [ "undefined" ]
+          } ],
+          "descriptions" : {
+            "ja" : "取得開始チャンネルからの範囲を指定",
+            "en" : "Range from the acquisition start channel"
+          }
+        },
+        "instantaneousCurrent" : {
+          "type" : "array",
+          "maxItems" : 60,
+          "items" : {
+            "type" : "object",
+            "properties" : {
+              "rPhase" : {
+                "oneOf" : [ {
+                  "type" : "number",
+                  "unit" : "A",
+                  "minimum" : -3276.7,
+                  "maximum" : 3276.5
+                }, {
+                  "type" : "string",
+                  "enum" : [ "noData" ]
+                } ]
+              },
+              "tPhase" : {
+                "oneOf" : [ {
+                  "type" : "number",
+                  "unit" : "A",
+                  "minimum" : -3276.7,
+                  "maximum" : 3276.5
+                }, {
+                  "type" : "string",
+                  "enum" : [ "noData" ]
+                } ]
+              }
+            }
+          },
+          "descriptions" : {
+            "ja" : "瞬時電流計測値",
+            "en" : "Measured instantaneous current"
+          }
+        }
+      }
+    },
+    "instantaneousElectricPowerListDuplex" : {
+      "title" : "instantaneousElectricPowerListDuplex",
+      "titles" : {
+        "en" : "instantaneousElectricPowerListDuplex",
+        "ja" : "瞬時電力計測値リスト(双方向)"
+      },
+      "echonet:epc" : "0xBE",
+      "description" : "Measured instantaneous power consumption list (duplex)",
+      "descriptions" : {
+        "en" : "Measured instantaneous power consumption list (duplex)",
+        "ja" : "瞬時電力計測値リスト (双方向)"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "startChannel" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "minimum" : 1,
+            "maximum" : 252
+          }, {
+            "type" : "string",
+            "enum" : [ "undefined" ]
+          } ],
+          "descriptions" : {
+            "ja" : "取得開始チャンネル",
+            "en" : "Acquisition start channel"
+          }
+        },
+        "range" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "minimum" : 1,
+            "maximum" : 60
+          }, {
+            "type" : "string",
+            "enum" : [ "undefined" ]
+          } ],
+          "descriptions" : {
+            "ja" : "取得開始チャンネルからの範囲を指定",
+            "en" : "Range from the acquisition start channel"
+          }
+        },
+        "instantaneousElectricPower" : {
+          "type" : "array",
+          "maxItems" : 60,
+          "items" : {
+            "oneOf" : [ {
+              "type" : "number",
+              "unit" : "W",
+              "minimum" : -2147483647,
+              "maximum" : 2147483645
+            }, {
+              "type" : "string",
+              "enum" : [ "noData" ]
+            } ]
+          },
+          "descriptions" : {
+            "ja" : "瞬時電力計測値",
+            "en" : "Measured instantaneous power consumption"
+          }
+        }
+      }
+    },
+    "normalDirectionCumulativeElectricEnergy" : {
+      "title" : "normalDirectionCumulativeElectricEnergy",
+      "titles" : {
+        "en" : "normalDirectionCumulativeElectricEnergy",
+        "ja" : "積算電力量計測値(正方向)"
+      },
+      "echonet:epc" : "0xC0",
+      "description" : "Measured cumulative amount of electric energy (normal direction)",
+      "descriptions" : {
+        "en" : "Measured cumulative amount of electric energy (normal direction)",
+        "ja" : "積算電力量計測値 (正方向)"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "oneOf" : [ {
+        "type" : "number",
+        "unit" : "kWh",
+        "minimum" : 0,
+        "maximum" : 999999.99
+      }, {
+        "type" : "string",
+        "enum" : [ "noData" ]
+      } ]
+    },
+    "reverseDirectionCumulativeElectricEnergy" : {
+      "title" : "reverseDirectionCumulativeElectricEnergy",
+      "titles" : {
+        "en" : "reverseDirectionCumulativeElectricEnergy",
+        "ja" : "積算電力量計測値(逆方向)"
+      },
+      "echonet:epc" : "0xC1",
+      "description" : "Measured cumulative amount of electric energy (reverse direction)",
+      "descriptions" : {
+        "en" : "Measured cumulative amount of electric energy (reverse direction)",
+        "ja" : "積算電力量計測値 (逆方向)"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "oneOf" : [ {
+        "type" : "number",
+        "unit" : "kWh",
+        "minimum" : 0,
+        "maximum" : 999999.99
+      }, {
+        "type" : "string",
+        "enum" : [ "noData" ]
+      } ]
+    },
+    "normalDirectionCumulativeElectricEnergyLog" : {
+      "title" : "normalDirectionCumulativeElectricEnergyLog",
+      "titles" : {
+        "en" : "normalDirectionCumulativeElectricEnergyLog",
+        "ja" : "積算電力量計測値履歴(正方向)"
+      },
+      "echonet:epc" : "0xC3",
+      "description" : "Historical data of measured cumulative amounts of electric energy (normal direction)",
+      "descriptions" : {
+        "en" : "Historical data of measured cumulative amounts of electric energy (normal direction)",
+        "ja" : "積算電力量計測値履歴 (正方向)"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "day" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "minimum" : 0,
+            "maximum" : 99
+          }, {
+            "type" : "string",
+            "enum" : [ "defaultValue" ]
+          } ],
+          "descriptions" : {
+            "ja" : "積算履歴収集日",
+            "en" : "Day for which the historical data of measured cumulative amounts of electric energy is to be retrieved"
+          }
+        },
+        "electricEnergy" : {
+          "type" : "array",
+          "minItems" : 48,
+          "maxItems" : 48,
+          "items" : {
+            "oneOf" : [ {
+              "type" : "number",
+              "unit" : "kWh",
+              "minimum" : 0,
+              "maximum" : 999999.99
+            }, {
+              "type" : "string",
+              "enum" : [ "noData" ]
+            } ]
+          },
+          "descriptions" : {
+            "ja" : "積算電力量(8桁)の計測結果履歴",
+            "en" : "The historical data of measured cumulative amounts of electric energy (8 digits)"
+          }
+        }
+      }
+    },
+    "reverseDirectionCumulativeElectricEnergyLog" : {
+      "title" : "reverseDirectionCumulativeElectricEnergyLog",
+      "titles" : {
+        "en" : "reverseDirectionCumulativeElectricEnergyLog",
+        "ja" : "積算電力量計測値履歴(逆方向)"
+      },
+      "echonet:epc" : "0xC4",
+      "description" : "Historical data of measured cumulative amounts of electric energy (reverse direction)",
+      "descriptions" : {
+        "en" : "Historical data of measured cumulative amounts of electric energy (reverse direction)",
+        "ja" : "積算電力量計測値履歴 (逆方向)"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "day" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "minimum" : 0,
+            "maximum" : 99
+          }, {
+            "type" : "string",
+            "enum" : [ "defaultValue" ]
+          } ],
+          "descriptions" : {
+            "ja" : "積算履歴収集日",
+            "en" : "Day for which the historical data of measured cumulative amounts of electric energy is to be retrieved"
+          }
+        },
+        "electricEnergy" : {
+          "type" : "array",
+          "minItems" : 48,
+          "maxItems" : 48,
+          "items" : {
+            "oneOf" : [ {
+              "type" : "number",
+              "unit" : "kWh",
+              "minimum" : 0,
+              "maximum" : 999999.99
+            }, {
+              "type" : "string",
+              "enum" : [ "noData" ]
+            } ]
+          },
+          "descriptions" : {
+            "ja" : "積算電力量(8桁)の計測結果履歴",
+            "en" : "The historical data of measured cumulative amounts of electric energy (8 digits)"
+          }
+        }
+      }
+    },
+    "instantaneousElectricPower" : {
+      "title" : "instantaneousElectricPower",
+      "titles" : {
+        "en" : "instantaneousElectricPower",
+        "ja" : "瞬時電力計測値"
+      },
+      "echonet:epc" : "0xC6",
+      "description" : "Measured instantaneous amount of electric energy",
+      "descriptions" : {
+        "en" : "Measured instantaneous amount of electric energy",
+        "ja" : "瞬時電力計測値"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "oneOf" : [ {
+        "type" : "number",
+        "unit" : "W",
+        "minimum" : -2147483647,
+        "maximum" : 2147483645
+      }, {
+        "type" : "string",
+        "enum" : [ "noData" ]
+      } ]
+    },
+    "instantaneousCurrent" : {
+      "title" : "instantaneousCurrent",
+      "titles" : {
+        "en" : "instantaneousCurrent",
+        "ja" : "瞬時電流計測値"
+      },
+      "echonet:epc" : "0xC7",
+      "description" : "Measured instantaneous currents",
+      "descriptions" : {
+        "en" : "Measured instantaneous currents",
+        "ja" : "瞬時電流計測値"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "rPhase" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "A",
+            "minimum" : -3276.7,
+            "maximum" : 3276.5
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "R相",
+            "en" : "R phase"
+          }
+        },
+        "tPhase" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "A",
+            "minimum" : -3276.7,
+            "maximum" : 3276.5
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "T相",
+            "en" : "T phase"
+          }
+        }
+      }
+    },
+    "instantaneousVoltage" : {
+      "title" : "instantaneousVoltage",
+      "titles" : {
+        "en" : "instantaneousVoltage",
+        "ja" : "瞬時電圧計測値"
+      },
+      "echonet:epc" : "0xC8",
+      "description" : "Measured instantaneous voltages",
+      "descriptions" : {
+        "en" : "Measured instantaneous voltages",
+        "ja" : "瞬時電圧計測値"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "rS" : {
+          "type" : "number",
+          "unit" : "V",
+          "minimum" : 0,
+          "maximum" : 6553.3,
+          "descriptions" : {
+            "ja" : "R-S(N)間",
+            "en" : "Between R and S(N)"
+          }
+        },
+        "sT" : {
+          "type" : "number",
+          "unit" : "V",
+          "minimum" : 0,
+          "maximum" : 6553.3,
+          "descriptions" : {
+            "ja" : "S(N)-T間",
+            "en" : "Between S(N) and T"
+          }
+        }
+      }
+    },
+    "measurementChannel1" : {
+      "title" : "measurementChannel1",
+      "titles" : {
+        "en" : "measurementChannel1",
+        "ja" : "計測チャンネル1"
+      },
+      "echonet:epc" : "0xD0",
+      "description" : "Measurement channel 1",
+      "descriptions" : {
+        "en" : "Measurement channel 1",
+        "ja" : "計測チャンネル1"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "electricEnergy" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "kWh",
+            "minimum" : 0,
+            "maximum" : 999999.99
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "積算電力量計測値",
+            "en" : "Measured cumulative amount of electric power consumption"
+          }
+        },
+        "currentRphase" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "A",
+            "minimum" : -3276.7,
+            "maximum" : 3276.5
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "瞬時電流計測値 (R相)",
+            "en" : "Measured instantaneous current (R phase)"
+          }
+        },
+        "currentTphase" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "A",
+            "minimum" : -3276.7,
+            "maximum" : 3276.5
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "瞬時電流計測値 (T相)",
+            "en" : "Measured instantaneous current (T phase)"
+          }
+        }
+      }
+    },
+    "measurementChannel2" : {
+      "title" : "measurementChannel2",
+      "titles" : {
+        "en" : "measurementChannel2",
+        "ja" : "計測チャンネル2"
+      },
+      "echonet:epc" : "0xD1",
+      "description" : "Measurement channel 2",
+      "descriptions" : {
+        "en" : "Measurement channel 2",
+        "ja" : "計測チャンネル2"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "electricEnergy" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "kWh",
+            "minimum" : 0,
+            "maximum" : 999999.99
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "積算電力量計測値",
+            "en" : "Measured cumulative amount of electric power consumption"
+          }
+        },
+        "currentRphase" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "A",
+            "minimum" : -3276.7,
+            "maximum" : 3276.5
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "瞬時電流計測値 (R相)",
+            "en" : "Measured instantaneous current (R phase)"
+          }
+        },
+        "currentTphase" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "A",
+            "minimum" : -3276.7,
+            "maximum" : 3276.5
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "瞬時電流計測値 (T相)",
+            "en" : "Measured instantaneous current (T phase)"
+          }
+        }
+      }
+    },
+    "measurementChannel3" : {
+      "title" : "measurementChannel3",
+      "titles" : {
+        "en" : "measurementChannel3",
+        "ja" : "計測チャンネル3"
+      },
+      "echonet:epc" : "0xD2",
+      "description" : "Measurement channel 3",
+      "descriptions" : {
+        "en" : "Measurement channel 3",
+        "ja" : "計測チャンネル3"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "electricEnergy" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "kWh",
+            "minimum" : 0,
+            "maximum" : 999999.99
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "積算電力量計測値",
+            "en" : "Measured cumulative amount of electric power consumption"
+          }
+        },
+        "currentRphase" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "A",
+            "minimum" : -3276.7,
+            "maximum" : 3276.5
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "瞬時電流計測値 (R相)",
+            "en" : "Measured instantaneous current (R phase)"
+          }
+        },
+        "currentTphase" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "A",
+            "minimum" : -3276.7,
+            "maximum" : 3276.5
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "瞬時電流計測値 (T相)",
+            "en" : "Measured instantaneous current (T phase)"
+          }
+        }
+      }
+    },
+    "measurementChannel4" : {
+      "title" : "measurementChannel4",
+      "titles" : {
+        "en" : "measurementChannel4",
+        "ja" : "計測チャンネル4"
+      },
+      "echonet:epc" : "0xD3",
+      "description" : "Measurement channel 4",
+      "descriptions" : {
+        "en" : "Measurement channel 4",
+        "ja" : "計測チャンネル4"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "electricEnergy" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "kWh",
+            "minimum" : 0,
+            "maximum" : 999999.99
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "積算電力量計測値",
+            "en" : "Measured cumulative amount of electric power consumption"
+          }
+        },
+        "currentRphase" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "A",
+            "minimum" : -3276.7,
+            "maximum" : 3276.5
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "瞬時電流計測値 (R相)",
+            "en" : "Measured instantaneous current (R phase)"
+          }
+        },
+        "currentTphase" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "A",
+            "minimum" : -3276.7,
+            "maximum" : 3276.5
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "瞬時電流計測値 (T相)",
+            "en" : "Measured instantaneous current (T phase)"
+          }
+        }
+      }
+    },
+    "measurementChannel5" : {
+      "title" : "measurementChannel5",
+      "titles" : {
+        "en" : "measurementChannel5",
+        "ja" : "計測チャンネル5"
+      },
+      "echonet:epc" : "0xD4",
+      "description" : "Measurement channel 5",
+      "descriptions" : {
+        "en" : "Measurement channel 5",
+        "ja" : "計測チャンネル5"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "electricEnergy" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "kWh",
+            "minimum" : 0,
+            "maximum" : 999999.99
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "積算電力量計測値",
+            "en" : "Measured cumulative amount of electric power consumption"
+          }
+        },
+        "currentRphase" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "A",
+            "minimum" : -3276.7,
+            "maximum" : 3276.5
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "瞬時電流計測値 (R相)",
+            "en" : "Measured instantaneous current (R phase)"
+          }
+        },
+        "currentTphase" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "A",
+            "minimum" : -3276.7,
+            "maximum" : 3276.5
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "瞬時電流計測値 (T相)",
+            "en" : "Measured instantaneous current (T phase)"
+          }
+        }
+      }
+    },
+    "measurementChannel6" : {
+      "title" : "measurementChannel6",
+      "titles" : {
+        "en" : "measurementChannel6",
+        "ja" : "計測チャンネル6"
+      },
+      "echonet:epc" : "0xD5",
+      "description" : "Measurement channel 6",
+      "descriptions" : {
+        "en" : "Measurement channel 6",
+        "ja" : "計測チャンネル6"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "electricEnergy" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "kWh",
+            "minimum" : 0,
+            "maximum" : 999999.99
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "積算電力量計測値",
+            "en" : "Measured cumulative amount of electric power consumption"
+          }
+        },
+        "currentRphase" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "A",
+            "minimum" : -3276.7,
+            "maximum" : 3276.5
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "瞬時電流計測値 (R相)",
+            "en" : "Measured instantaneous current (R phase)"
+          }
+        },
+        "currentTphase" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "A",
+            "minimum" : -3276.7,
+            "maximum" : 3276.5
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "瞬時電流計測値 (T相)",
+            "en" : "Measured instantaneous current (T phase)"
+          }
+        }
+      }
+    },
+    "measurementChannel7" : {
+      "title" : "measurementChannel7",
+      "titles" : {
+        "en" : "measurementChannel7",
+        "ja" : "計測チャンネル7"
+      },
+      "echonet:epc" : "0xD6",
+      "description" : "Measurement channel 7",
+      "descriptions" : {
+        "en" : "Measurement channel 7",
+        "ja" : "計測チャンネル7"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "electricEnergy" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "kWh",
+            "minimum" : 0,
+            "maximum" : 999999.99
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "積算電力量計測値",
+            "en" : "Measured cumulative amount of electric power consumption"
+          }
+        },
+        "currentRphase" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "A",
+            "minimum" : -3276.7,
+            "maximum" : 3276.5
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "瞬時電流計測値 (R相)",
+            "en" : "Measured instantaneous current (R phase)"
+          }
+        },
+        "currentTphase" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "A",
+            "minimum" : -3276.7,
+            "maximum" : 3276.5
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "瞬時電流計測値 (T相)",
+            "en" : "Measured instantaneous current (T phase)"
+          }
+        }
+      }
+    },
+    "measurementChannel8" : {
+      "title" : "measurementChannel8",
+      "titles" : {
+        "en" : "measurementChannel8",
+        "ja" : "計測チャンネル8"
+      },
+      "echonet:epc" : "0xD7",
+      "description" : "Measurement channel 8",
+      "descriptions" : {
+        "en" : "Measurement channel 8",
+        "ja" : "計測チャンネル8"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "electricEnergy" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "kWh",
+            "minimum" : 0,
+            "maximum" : 999999.99
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "積算電力量計測値",
+            "en" : "Measured cumulative amount of electric power consumption"
+          }
+        },
+        "currentRphase" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "A",
+            "minimum" : -3276.7,
+            "maximum" : 3276.5
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "瞬時電流計測値 (R相)",
+            "en" : "Measured instantaneous current (R phase)"
+          }
+        },
+        "currentTphase" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "A",
+            "minimum" : -3276.7,
+            "maximum" : 3276.5
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "瞬時電流計測値 (T相)",
+            "en" : "Measured instantaneous current (T phase)"
+          }
+        }
+      }
+    },
+    "measurementChannel9" : {
+      "title" : "measurementChannel9",
+      "titles" : {
+        "en" : "measurementChannel9",
+        "ja" : "計測チャンネル9"
+      },
+      "echonet:epc" : "0xD8",
+      "description" : "Measurement channel 9",
+      "descriptions" : {
+        "en" : "Measurement channel 9",
+        "ja" : "計測チャンネル9"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "electricEnergy" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "kWh",
+            "minimum" : 0,
+            "maximum" : 999999.99
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "積算電力量計測値",
+            "en" : "Measured cumulative amount of electric power consumption"
+          }
+        },
+        "currentRphase" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "A",
+            "minimum" : -3276.7,
+            "maximum" : 3276.5
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "瞬時電流計測値 (R相)",
+            "en" : "Measured instantaneous current (R phase)"
+          }
+        },
+        "currentTphase" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "A",
+            "minimum" : -3276.7,
+            "maximum" : 3276.5
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "瞬時電流計測値 (T相)",
+            "en" : "Measured instantaneous current (T phase)"
+          }
+        }
+      }
+    },
+    "measurementChannel10" : {
+      "title" : "measurementChannel10",
+      "titles" : {
+        "en" : "measurementChannel10",
+        "ja" : "計測チャンネル10"
+      },
+      "echonet:epc" : "0xD9",
+      "description" : "Measurement channel 10",
+      "descriptions" : {
+        "en" : "Measurement channel 10",
+        "ja" : "計測チャンネル10"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "electricEnergy" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "kWh",
+            "minimum" : 0,
+            "maximum" : 999999.99
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "積算電力量計測値",
+            "en" : "Measured cumulative amount of electric power consumption"
+          }
+        },
+        "currentRphase" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "A",
+            "minimum" : -3276.7,
+            "maximum" : 3276.5
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "瞬時電流計測値 (R相)",
+            "en" : "Measured instantaneous current (R phase)"
+          }
+        },
+        "currentTphase" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "A",
+            "minimum" : -3276.7,
+            "maximum" : 3276.5
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "瞬時電流計測値 (T相)",
+            "en" : "Measured instantaneous current (T phase)"
+          }
+        }
+      }
+    },
+    "measurementChannel11" : {
+      "title" : "measurementChannel11",
+      "titles" : {
+        "en" : "measurementChannel11",
+        "ja" : "計測チャンネル11"
+      },
+      "echonet:epc" : "0xDA",
+      "description" : "Measurement channel 11",
+      "descriptions" : {
+        "en" : "Measurement channel 11",
+        "ja" : "計測チャンネル11"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "electricEnergy" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "kWh",
+            "minimum" : 0,
+            "maximum" : 999999.99
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "積算電力量計測値",
+            "en" : "Measured cumulative amount of electric power consumption"
+          }
+        },
+        "currentRphase" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "A",
+            "minimum" : -3276.7,
+            "maximum" : 3276.5
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "瞬時電流計測値 (R相)",
+            "en" : "Measured instantaneous current (R phase)"
+          }
+        },
+        "currentTphase" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "A",
+            "minimum" : -3276.7,
+            "maximum" : 3276.5
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "瞬時電流計測値 (T相)",
+            "en" : "Measured instantaneous current (T phase)"
+          }
+        }
+      }
+    },
+    "measurementChannel12" : {
+      "title" : "measurementChannel12",
+      "titles" : {
+        "en" : "measurementChannel12",
+        "ja" : "計測チャンネル12"
+      },
+      "echonet:epc" : "0xDB",
+      "description" : "Measurement channel 12",
+      "descriptions" : {
+        "en" : "Measurement channel 12",
+        "ja" : "計測チャンネル12"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "electricEnergy" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "kWh",
+            "minimum" : 0,
+            "maximum" : 999999.99
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "積算電力量計測値",
+            "en" : "Measured cumulative amount of electric power consumption"
+          }
+        },
+        "currentRphase" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "A",
+            "minimum" : -3276.7,
+            "maximum" : 3276.5
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "瞬時電流計測値 (R相)",
+            "en" : "Measured instantaneous current (R phase)"
+          }
+        },
+        "currentTphase" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "A",
+            "minimum" : -3276.7,
+            "maximum" : 3276.5
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "瞬時電流計測値 (T相)",
+            "en" : "Measured instantaneous current (T phase)"
+          }
+        }
+      }
+    },
+    "measurementChannel13" : {
+      "title" : "measurementChannel13",
+      "titles" : {
+        "en" : "measurementChannel13",
+        "ja" : "計測チャンネル13"
+      },
+      "echonet:epc" : "0xDC",
+      "description" : "Measurement channel 13",
+      "descriptions" : {
+        "en" : "Measurement channel 13",
+        "ja" : "計測チャンネル13"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "electricEnergy" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "kWh",
+            "minimum" : 0,
+            "maximum" : 999999.99
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "積算電力量計測値",
+            "en" : "Measured cumulative amount of electric power consumption"
+          }
+        },
+        "currentRphase" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "A",
+            "minimum" : -3276.7,
+            "maximum" : 3276.5
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "瞬時電流計測値 (R相)",
+            "en" : "Measured instantaneous current (R phase)"
+          }
+        },
+        "currentTphase" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "A",
+            "minimum" : -3276.7,
+            "maximum" : 3276.5
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "瞬時電流計測値 (T相)",
+            "en" : "Measured instantaneous current (T phase)"
+          }
+        }
+      }
+    },
+    "measurementChannel14" : {
+      "title" : "measurementChannel14",
+      "titles" : {
+        "en" : "measurementChannel14",
+        "ja" : "計測チャンネル14"
+      },
+      "echonet:epc" : "0xDD",
+      "description" : "Measurement channel 14",
+      "descriptions" : {
+        "en" : "Measurement channel 14",
+        "ja" : "計測チャンネル14"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "electricEnergy" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "kWh",
+            "minimum" : 0,
+            "maximum" : 999999.99
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "積算電力量計測値",
+            "en" : "Measured cumulative amount of electric power consumption"
+          }
+        },
+        "currentRphase" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "A",
+            "minimum" : -3276.7,
+            "maximum" : 3276.5
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "瞬時電流計測値 (R相)",
+            "en" : "Measured instantaneous current (R phase)"
+          }
+        },
+        "currentTphase" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "A",
+            "minimum" : -3276.7,
+            "maximum" : 3276.5
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "瞬時電流計測値 (T相)",
+            "en" : "Measured instantaneous current (T phase)"
+          }
+        }
+      }
+    },
+    "measurementChannel15" : {
+      "title" : "measurementChannel15",
+      "titles" : {
+        "en" : "measurementChannel15",
+        "ja" : "計測チャンネル15"
+      },
+      "echonet:epc" : "0xDE",
+      "description" : "Measurement channel 15",
+      "descriptions" : {
+        "en" : "Measurement channel 15",
+        "ja" : "計測チャンネル15"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "electricEnergy" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "kWh",
+            "minimum" : 0,
+            "maximum" : 999999.99
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "積算電力量計測値",
+            "en" : "Measured cumulative amount of electric power consumption"
+          }
+        },
+        "currentRphase" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "A",
+            "minimum" : -3276.7,
+            "maximum" : 3276.5
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "瞬時電流計測値 (R相)",
+            "en" : "Measured instantaneous current (R phase)"
+          }
+        },
+        "currentTphase" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "A",
+            "minimum" : -3276.7,
+            "maximum" : 3276.5
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "瞬時電流計測値 (T相)",
+            "en" : "Measured instantaneous current (T phase)"
+          }
+        }
+      }
+    },
+    "measurementChannel16" : {
+      "title" : "measurementChannel16",
+      "titles" : {
+        "en" : "measurementChannel16",
+        "ja" : "計測チャンネル16"
+      },
+      "echonet:epc" : "0xDF",
+      "description" : "Measurement channel 16",
+      "descriptions" : {
+        "en" : "Measurement channel 16",
+        "ja" : "計測チャンネル16"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "electricEnergy" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "kWh",
+            "minimum" : 0,
+            "maximum" : 999999.99
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "積算電力量計測値",
+            "en" : "Measured cumulative amount of electric power consumption"
+          }
+        },
+        "currentRphase" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "A",
+            "minimum" : -3276.7,
+            "maximum" : 3276.5
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "瞬時電流計測値 (R相)",
+            "en" : "Measured instantaneous current (R phase)"
+          }
+        },
+        "currentTphase" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "A",
+            "minimum" : -3276.7,
+            "maximum" : 3276.5
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "瞬時電流計測値 (T相)",
+            "en" : "Measured instantaneous current (T phase)"
+          }
+        }
+      }
+    },
+    "measurementChannel17" : {
+      "title" : "measurementChannel17",
+      "titles" : {
+        "en" : "measurementChannel17",
+        "ja" : "計測チャンネル17"
+      },
+      "echonet:epc" : "0xE0",
+      "description" : "Measurement channel 17",
+      "descriptions" : {
+        "en" : "Measurement channel 17",
+        "ja" : "計測チャンネル17"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "electricEnergy" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "kWh",
+            "minimum" : 0,
+            "maximum" : 999999.99
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "積算電力量計測値",
+            "en" : "Measured cumulative amount of electric power consumption"
+          }
+        },
+        "currentRphase" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "A",
+            "minimum" : -3276.7,
+            "maximum" : 3276.5
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "瞬時電流計測値 (R相)",
+            "en" : "Measured instantaneous current (R phase)"
+          }
+        },
+        "currentTphase" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "A",
+            "minimum" : -3276.7,
+            "maximum" : 3276.5
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "瞬時電流計測値 (T相)",
+            "en" : "Measured instantaneous current (T phase)"
+          }
+        }
+      }
+    },
+    "measurementChannel18" : {
+      "title" : "measurementChannel18",
+      "titles" : {
+        "en" : "measurementChannel18",
+        "ja" : "計測チャンネル18"
+      },
+      "echonet:epc" : "0xE1",
+      "description" : "Measurement channel 18",
+      "descriptions" : {
+        "en" : "Measurement channel 18",
+        "ja" : "計測チャンネル18"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "electricEnergy" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "kWh",
+            "minimum" : 0,
+            "maximum" : 999999.99
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "積算電力量計測値",
+            "en" : "Measured cumulative amount of electric power consumption"
+          }
+        },
+        "currentRphase" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "A",
+            "minimum" : -3276.7,
+            "maximum" : 3276.5
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "瞬時電流計測値 (R相)",
+            "en" : "Measured instantaneous current (R phase)"
+          }
+        },
+        "currentTphase" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "A",
+            "minimum" : -3276.7,
+            "maximum" : 3276.5
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "瞬時電流計測値 (T相)",
+            "en" : "Measured instantaneous current (T phase)"
+          }
+        }
+      }
+    },
+    "measurementChannel19" : {
+      "title" : "measurementChannel19",
+      "titles" : {
+        "en" : "measurementChannel19",
+        "ja" : "計測チャンネル19"
+      },
+      "echonet:epc" : "0xE2",
+      "description" : "Measurement channel 19",
+      "descriptions" : {
+        "en" : "Measurement channel 19",
+        "ja" : "計測チャンネル19"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "electricEnergy" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "kWh",
+            "minimum" : 0,
+            "maximum" : 999999.99
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "積算電力量計測値",
+            "en" : "Measured cumulative amount of electric power consumption"
+          }
+        },
+        "currentRphase" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "A",
+            "minimum" : -3276.7,
+            "maximum" : 3276.5
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "瞬時電流計測値 (R相)",
+            "en" : "Measured instantaneous current (R phase)"
+          }
+        },
+        "currentTphase" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "A",
+            "minimum" : -3276.7,
+            "maximum" : 3276.5
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "瞬時電流計測値 (T相)",
+            "en" : "Measured instantaneous current (T phase)"
+          }
+        }
+      }
+    },
+    "measurementChannel20" : {
+      "title" : "measurementChannel20",
+      "titles" : {
+        "en" : "measurementChannel20",
+        "ja" : "計測チャンネル20"
+      },
+      "echonet:epc" : "0xE3",
+      "description" : "Measurement channel 20",
+      "descriptions" : {
+        "en" : "Measurement channel 20",
+        "ja" : "計測チャンネル20"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "electricEnergy" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "kWh",
+            "minimum" : 0,
+            "maximum" : 999999.99
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "積算電力量計測値",
+            "en" : "Measured cumulative amount of electric power consumption"
+          }
+        },
+        "currentRphase" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "A",
+            "minimum" : -3276.7,
+            "maximum" : 3276.5
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "瞬時電流計測値 (R相)",
+            "en" : "Measured instantaneous current (R phase)"
+          }
+        },
+        "currentTphase" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "A",
+            "minimum" : -3276.7,
+            "maximum" : 3276.5
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "瞬時電流計測値 (T相)",
+            "en" : "Measured instantaneous current (T phase)"
+          }
+        }
+      }
+    },
+    "measurementChannel21" : {
+      "title" : "measurementChannel21",
+      "titles" : {
+        "en" : "measurementChannel21",
+        "ja" : "計測チャンネル21"
+      },
+      "echonet:epc" : "0xE4",
+      "description" : "Measurement channel 21",
+      "descriptions" : {
+        "en" : "Measurement channel 21",
+        "ja" : "計測チャンネル21"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "electricEnergy" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "kWh",
+            "minimum" : 0,
+            "maximum" : 999999.99
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "積算電力量計測値",
+            "en" : "Measured cumulative amount of electric power consumption"
+          }
+        },
+        "currentRphase" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "A",
+            "minimum" : -3276.7,
+            "maximum" : 3276.5
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "瞬時電流計測値 (R相)",
+            "en" : "Measured instantaneous current (R phase)"
+          }
+        },
+        "currentTphase" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "A",
+            "minimum" : -3276.7,
+            "maximum" : 3276.5
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "瞬時電流計測値 (T相)",
+            "en" : "Measured instantaneous current (T phase)"
+          }
+        }
+      }
+    },
+    "measurementChannel22" : {
+      "title" : "measurementChannel22",
+      "titles" : {
+        "en" : "measurementChannel22",
+        "ja" : "計測チャンネル22"
+      },
+      "echonet:epc" : "0xE5",
+      "description" : "Measurement channel 22",
+      "descriptions" : {
+        "en" : "Measurement channel 22",
+        "ja" : "計測チャンネル22"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "electricEnergy" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "kWh",
+            "minimum" : 0,
+            "maximum" : 999999.99
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "積算電力量計測値",
+            "en" : "Measured cumulative amount of electric power consumption"
+          }
+        },
+        "currentRphase" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "A",
+            "minimum" : -3276.7,
+            "maximum" : 3276.5
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "瞬時電流計測値 (R相)",
+            "en" : "Measured instantaneous current (R phase)"
+          }
+        },
+        "currentTphase" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "A",
+            "minimum" : -3276.7,
+            "maximum" : 3276.5
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "瞬時電流計測値 (T相)",
+            "en" : "Measured instantaneous current (T phase)"
+          }
+        }
+      }
+    },
+    "measurementChannel23" : {
+      "title" : "measurementChannel23",
+      "titles" : {
+        "en" : "measurementChannel23",
+        "ja" : "計測チャンネル23"
+      },
+      "echonet:epc" : "0xE6",
+      "description" : "Measurement channel 23",
+      "descriptions" : {
+        "en" : "Measurement channel 23",
+        "ja" : "計測チャンネル23"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "electricEnergy" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "kWh",
+            "minimum" : 0,
+            "maximum" : 999999.99
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "積算電力量計測値",
+            "en" : "Measured cumulative amount of electric power consumption"
+          }
+        },
+        "currentRphase" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "A",
+            "minimum" : -3276.7,
+            "maximum" : 3276.5
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "瞬時電流計測値 (R相)",
+            "en" : "Measured instantaneous current (R phase)"
+          }
+        },
+        "currentTphase" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "A",
+            "minimum" : -3276.7,
+            "maximum" : 3276.5
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "瞬時電流計測値 (T相)",
+            "en" : "Measured instantaneous current (T phase)"
+          }
+        }
+      }
+    },
+    "measurementChannel24" : {
+      "title" : "measurementChannel24",
+      "titles" : {
+        "en" : "measurementChannel24",
+        "ja" : "計測チャンネル24"
+      },
+      "echonet:epc" : "0xE7",
+      "description" : "Measurement channel 24",
+      "descriptions" : {
+        "en" : "Measurement channel 24",
+        "ja" : "計測チャンネル24"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "electricEnergy" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "kWh",
+            "minimum" : 0,
+            "maximum" : 999999.99
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "積算電力量計測値",
+            "en" : "Measured cumulative amount of electric power consumption"
+          }
+        },
+        "currentRphase" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "A",
+            "minimum" : -3276.7,
+            "maximum" : 3276.5
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "瞬時電流計測値 (R相)",
+            "en" : "Measured instantaneous current (R phase)"
+          }
+        },
+        "currentTphase" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "A",
+            "minimum" : -3276.7,
+            "maximum" : 3276.5
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "瞬時電流計測値 (T相)",
+            "en" : "Measured instantaneous current (T phase)"
+          }
+        }
+      }
+    },
+    "measurementChannel25" : {
+      "title" : "measurementChannel25",
+      "titles" : {
+        "en" : "measurementChannel25",
+        "ja" : "計測チャンネル25"
+      },
+      "echonet:epc" : "0xE8",
+      "description" : "Measurement channel 25",
+      "descriptions" : {
+        "en" : "Measurement channel 25",
+        "ja" : "計測チャンネル25"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "electricEnergy" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "kWh",
+            "minimum" : 0,
+            "maximum" : 999999.99
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "積算電力量計測値",
+            "en" : "Measured cumulative amount of electric power consumption"
+          }
+        },
+        "currentRphase" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "A",
+            "minimum" : -3276.7,
+            "maximum" : 3276.5
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "瞬時電流計測値 (R相)",
+            "en" : "Measured instantaneous current (R phase)"
+          }
+        },
+        "currentTphase" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "A",
+            "minimum" : -3276.7,
+            "maximum" : 3276.5
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "瞬時電流計測値 (T相)",
+            "en" : "Measured instantaneous current (T phase)"
+          }
+        }
+      }
+    },
+    "measurementChannel26" : {
+      "title" : "measurementChannel26",
+      "titles" : {
+        "en" : "measurementChannel26",
+        "ja" : "計測チャンネル26"
+      },
+      "echonet:epc" : "0xE9",
+      "description" : "Measurement channel 26",
+      "descriptions" : {
+        "en" : "Measurement channel 26",
+        "ja" : "計測チャンネル26"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "electricEnergy" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "kWh",
+            "minimum" : 0,
+            "maximum" : 999999.99
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "積算電力量計測値",
+            "en" : "Measured cumulative amount of electric power consumption"
+          }
+        },
+        "currentRphase" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "A",
+            "minimum" : -3276.7,
+            "maximum" : 3276.5
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "瞬時電流計測値 (R相)",
+            "en" : "Measured instantaneous current (R phase)"
+          }
+        },
+        "currentTphase" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "A",
+            "minimum" : -3276.7,
+            "maximum" : 3276.5
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "瞬時電流計測値 (T相)",
+            "en" : "Measured instantaneous current (T phase)"
+          }
+        }
+      }
+    },
+    "measurementChannel27" : {
+      "title" : "measurementChannel27",
+      "titles" : {
+        "en" : "measurementChannel27",
+        "ja" : "計測チャンネル27"
+      },
+      "echonet:epc" : "0xEA",
+      "description" : "Measurement channel 27",
+      "descriptions" : {
+        "en" : "Measurement channel 27",
+        "ja" : "計測チャンネル27"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "electricEnergy" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "kWh",
+            "minimum" : 0,
+            "maximum" : 999999.99
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "積算電力量計測値",
+            "en" : "Measured cumulative amount of electric power consumption"
+          }
+        },
+        "currentRphase" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "A",
+            "minimum" : -3276.7,
+            "maximum" : 3276.5
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "瞬時電流計測値 (R相)",
+            "en" : "Measured instantaneous current (R phase)"
+          }
+        },
+        "currentTphase" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "A",
+            "minimum" : -3276.7,
+            "maximum" : 3276.5
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "瞬時電流計測値 (T相)",
+            "en" : "Measured instantaneous current (T phase)"
+          }
+        }
+      }
+    },
+    "measurementChannel28" : {
+      "title" : "measurementChannel28",
+      "titles" : {
+        "en" : "measurementChannel28",
+        "ja" : "計測チャンネル28"
+      },
+      "echonet:epc" : "0xEB",
+      "description" : "Measurement channel 28",
+      "descriptions" : {
+        "en" : "Measurement channel 28",
+        "ja" : "計測チャンネル28"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "electricEnergy" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "kWh",
+            "minimum" : 0,
+            "maximum" : 999999.99
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "積算電力量計測値",
+            "en" : "Measured cumulative amount of electric power consumption"
+          }
+        },
+        "currentRphase" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "A",
+            "minimum" : -3276.7,
+            "maximum" : 3276.5
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "瞬時電流計測値 (R相)",
+            "en" : "Measured instantaneous current (R phase)"
+          }
+        },
+        "currentTphase" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "A",
+            "minimum" : -3276.7,
+            "maximum" : 3276.5
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "瞬時電流計測値 (T相)",
+            "en" : "Measured instantaneous current (T phase)"
+          }
+        }
+      }
+    },
+    "measurementChannel29" : {
+      "title" : "measurementChannel29",
+      "titles" : {
+        "en" : "measurementChannel29",
+        "ja" : "計測チャンネル29"
+      },
+      "echonet:epc" : "0xEC",
+      "description" : "Measurement channel 29",
+      "descriptions" : {
+        "en" : "Measurement channel 29",
+        "ja" : "計測チャンネル29"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "electricEnergy" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "kWh",
+            "minimum" : 0,
+            "maximum" : 999999.99
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "積算電力量計測値",
+            "en" : "Measured cumulative amount of electric power consumption"
+          }
+        },
+        "currentRphase" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "A",
+            "minimum" : -3276.7,
+            "maximum" : 3276.5
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "瞬時電流計測値 (R相)",
+            "en" : "Measured instantaneous current (R phase)"
+          }
+        },
+        "currentTphase" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "A",
+            "minimum" : -3276.7,
+            "maximum" : 3276.5
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "瞬時電流計測値 (T相)",
+            "en" : "Measured instantaneous current (T phase)"
+          }
+        }
+      }
+    },
+    "measurementChannel30" : {
+      "title" : "measurementChannel30",
+      "titles" : {
+        "en" : "measurementChannel30",
+        "ja" : "計測チャンネル30"
+      },
+      "echonet:epc" : "0xED",
+      "description" : "Measurement channel 30",
+      "descriptions" : {
+        "en" : "Measurement channel 30",
+        "ja" : "計測チャンネル30"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "electricEnergy" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "kWh",
+            "minimum" : 0,
+            "maximum" : 999999.99
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "積算電力量計測値",
+            "en" : "Measured cumulative amount of electric power consumption"
+          }
+        },
+        "currentRphase" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "A",
+            "minimum" : -3276.7,
+            "maximum" : 3276.5
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "瞬時電流計測値 (R相)",
+            "en" : "Measured instantaneous current (R phase)"
+          }
+        },
+        "currentTphase" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "A",
+            "minimum" : -3276.7,
+            "maximum" : 3276.5
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "瞬時電流計測値 (T相)",
+            "en" : "Measured instantaneous current (T phase)"
+          }
+        }
+      }
+    },
+    "measurementChannel31" : {
+      "title" : "measurementChannel31",
+      "titles" : {
+        "en" : "measurementChannel31",
+        "ja" : "計測チャンネル31"
+      },
+      "echonet:epc" : "0xEE",
+      "description" : "Measurement channel 31",
+      "descriptions" : {
+        "en" : "Measurement channel 31",
+        "ja" : "計測チャンネル31"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "electricEnergy" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "kWh",
+            "minimum" : 0,
+            "maximum" : 999999.99
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "積算電力量計測値",
+            "en" : "Measured cumulative amount of electric power consumption"
+          }
+        },
+        "currentRphase" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "A",
+            "minimum" : -3276.7,
+            "maximum" : 3276.5
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "瞬時電流計測値 (R相)",
+            "en" : "Measured instantaneous current (R phase)"
+          }
+        },
+        "currentTphase" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "A",
+            "minimum" : -3276.7,
+            "maximum" : 3276.5
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "瞬時電流計測値 (T相)",
+            "en" : "Measured instantaneous current (T phase)"
+          }
+        }
+      }
+    },
+    "measurementChannel32" : {
+      "title" : "measurementChannel32",
+      "titles" : {
+        "en" : "measurementChannel32",
+        "ja" : "計測チャンネル32"
+      },
+      "echonet:epc" : "0xEF",
+      "description" : "Measurement channel 32",
+      "descriptions" : {
+        "en" : "Measurement channel 32",
+        "ja" : "計測チャンネル32"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "electricEnergy" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "kWh",
+            "minimum" : 0,
+            "maximum" : 999999.99
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "積算電力量計測値",
+            "en" : "Measured cumulative amount of electric power consumption"
+          }
+        },
+        "currentRphase" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "A",
+            "minimum" : -3276.7,
+            "maximum" : 3276.5
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "瞬時電流計測値 (R相)",
+            "en" : "Measured instantaneous current (R phase)"
+          }
+        },
+        "currentTphase" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "A",
+            "minimum" : -3276.7,
+            "maximum" : 3276.5
+          }, {
+            "type" : "string",
+            "enum" : [ "noData" ]
+          } ],
+          "descriptions" : {
+            "ja" : "瞬時電流計測値 (T相)",
+            "en" : "Measured instantaneous current (T phase)"
+          }
+        }
+      }
+    }
+  }
+}

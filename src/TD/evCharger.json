@@ -1,0 +1,818 @@
+{
+  "@context" : [ "https://www.w3.org/2019/wot/td/v1", {
+    "echonet" : "https://echonet.jp/"
+  }, {
+    "@language" : "en"
+  } ],
+  "id" : "",
+  "echonet:eoj" : "0x02A1",
+  "title" : "evCharger",
+  "titles" : {
+    "en" : "evCharger",
+    "ja" : "電気自動車充電器"
+  },
+  "description" : "EV Charger",
+  "descriptions" : {
+    "en" : "EV Charger",
+    "ja" : "電気自動車充電器"
+  },
+  "properties" : {
+    "operationStatus" : {
+      "title" : "operationStatus",
+      "titles" : {
+        "en" : "operationStatus",
+        "ja" : "動作状態"
+      },
+      "echonet:epc" : "0x80",
+      "description" : "Operation status",
+      "descriptions" : {
+        "en" : "Operation status",
+        "ja" : "動作状態"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : true,
+      "type" : "boolean"
+    },
+    "installationLocation" : {
+      "title" : "installationLocation",
+      "titles" : {
+        "en" : "installationLocation",
+        "ja" : "設置場所"
+      },
+      "echonet:epc" : "0x81",
+      "description" : "Installation location",
+      "descriptions" : {
+        "en" : "Installation location",
+        "ja" : "設置場所"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : true,
+      "oneOf" : [ {
+        "type" : "string"
+      }, {
+        "type" : "string"
+      } ]
+    },
+    "protocol" : {
+      "title" : "protocol",
+      "titles" : {
+        "en" : "protocol",
+        "ja" : "規格Version情報"
+      },
+      "echonet:epc" : "0x82",
+      "description" : "Standard version information",
+      "descriptions" : {
+        "en" : "Standard version information",
+        "ja" : "規格Version情報"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "id" : {
+      "title" : "id",
+      "titles" : {
+        "en" : "id",
+        "ja" : "識別番号"
+      },
+      "echonet:epc" : "0x83",
+      "description" : "Identification number",
+      "descriptions" : {
+        "en" : "Identification number",
+        "ja" : "識別番号"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "instantaneousElectricPowerConsumption" : {
+      "title" : "instantaneousElectricPowerConsumption",
+      "titles" : {
+        "en" : "instantaneousElectricPowerConsumption",
+        "ja" : "瞬時消費電力計測値"
+      },
+      "echonet:epc" : "0x84",
+      "description" : "Measured instantaneous power consumption",
+      "descriptions" : {
+        "en" : "Measured instantaneous power consumption",
+        "ja" : "瞬時消費電力計測値"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "W",
+      "minimum" : 0,
+      "maximum" : 65533
+    },
+    "consumedCumulativeElectricEnergy" : {
+      "title" : "consumedCumulativeElectricEnergy",
+      "titles" : {
+        "en" : "consumedCumulativeElectricEnergy",
+        "ja" : "積算消費電力計測値"
+      },
+      "echonet:epc" : "0x85",
+      "description" : "Measured cumulative power consumption",
+      "descriptions" : {
+        "en" : "Measured cumulative power consumption",
+        "ja" : "積算消費電力計測値"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "kWh",
+      "minimum" : 0,
+      "maximum" : 999999.999
+    },
+    "manufacturerFaultCode" : {
+      "title" : "manufacturerFaultCode",
+      "titles" : {
+        "en" : "manufacturerFaultCode",
+        "ja" : "メーカ異常コード"
+      },
+      "echonet:epc" : "0x86",
+      "description" : "Manufacturer's fault code",
+      "descriptions" : {
+        "en" : "Manufacturer's fault code",
+        "ja" : "メーカ異常コード"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "currentLimit" : {
+      "title" : "currentLimit",
+      "titles" : {
+        "en" : "currentLimit",
+        "ja" : "電流制限設定"
+      },
+      "echonet:epc" : "0x87",
+      "description" : "Current limit setting",
+      "descriptions" : {
+        "en" : "Current limit setting",
+        "ja" : "電流制限設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "%",
+      "minimum" : 0,
+      "maximum" : 100
+    },
+    "faultStatus" : {
+      "title" : "faultStatus",
+      "titles" : {
+        "en" : "faultStatus",
+        "ja" : "異常発生状態"
+      },
+      "echonet:epc" : "0x88",
+      "description" : "Fault status",
+      "descriptions" : {
+        "en" : "Fault status",
+        "ja" : "異常発生状態"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : true,
+      "type" : "boolean"
+    },
+    "faultDescription" : {
+      "title" : "faultDescription",
+      "titles" : {
+        "en" : "faultDescription",
+        "ja" : "異常内容"
+      },
+      "echonet:epc" : "0x89",
+      "description" : "Fault description",
+      "descriptions" : {
+        "en" : "Fault description",
+        "ja" : "異常内容"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "manufacturer" : {
+      "title" : "manufacturer",
+      "titles" : {
+        "en" : "manufacturer",
+        "ja" : "メーカコード"
+      },
+      "echonet:epc" : "0x8A",
+      "description" : "Manufactur code",
+      "descriptions" : {
+        "en" : "Manufactur code",
+        "ja" : "メーカコード"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "businessFacilityCode" : {
+      "title" : "businessFacilityCode",
+      "titles" : {
+        "en" : "businessFacilityCode",
+        "ja" : "事業場コード"
+      },
+      "echonet:epc" : "0x8B",
+      "description" : "Business facility code",
+      "descriptions" : {
+        "en" : "Business facility code",
+        "ja" : "事業場コード"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "productCode" : {
+      "title" : "productCode",
+      "titles" : {
+        "en" : "productCode",
+        "ja" : "商品コード"
+      },
+      "echonet:epc" : "0x8C",
+      "description" : "Product code",
+      "descriptions" : {
+        "en" : "Product code",
+        "ja" : "商品コード"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "serialNumber" : {
+      "title" : "serialNumber",
+      "titles" : {
+        "en" : "serialNumber",
+        "ja" : "製造番号"
+      },
+      "echonet:epc" : "0x8D",
+      "description" : "Production number",
+      "descriptions" : {
+        "en" : "Production number",
+        "ja" : "製造番号"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "productionDate" : {
+      "title" : "productionDate",
+      "titles" : {
+        "en" : "productionDate",
+        "ja" : "製造年月日"
+      },
+      "echonet:epc" : "0x8E",
+      "description" : "Production date",
+      "descriptions" : {
+        "en" : "Production date",
+        "ja" : "製造年月日"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string",
+      "format" : "date"
+    },
+    "powerSaving" : {
+      "title" : "powerSaving",
+      "titles" : {
+        "en" : "powerSaving",
+        "ja" : "節電動作設定"
+      },
+      "echonet:epc" : "0x8F",
+      "description" : "Power-saving operation setting",
+      "descriptions" : {
+        "en" : "Power-saving operation setting",
+        "ja" : "節電動作設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "boolean"
+    },
+    "remoteControl" : {
+      "title" : "remoteControl",
+      "titles" : {
+        "en" : "remoteControl",
+        "ja" : "遠隔操作設定"
+      },
+      "echonet:epc" : "0x93",
+      "description" : "Remote controll setting",
+      "descriptions" : {
+        "en" : "Remote controll setting",
+        "ja" : "遠隔操作設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "boolean"
+    },
+    "currentDateAndTime" : {
+      "title" : "currentDateAndTime",
+      "titles" : {
+        "en" : "currentDateAndTime",
+        "ja" : "現在年月日設定"
+      },
+      "echonet:epc" : "0x98",
+      "description" : "Current date setting",
+      "descriptions" : {
+        "en" : "Current date setting",
+        "ja" : "現在年月日設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string",
+      "format" : "date-time"
+    },
+    "powerLimit" : {
+      "title" : "powerLimit",
+      "titles" : {
+        "en" : "powerLimit",
+        "ja" : "電力制限設定"
+      },
+      "echonet:epc" : "0x99",
+      "description" : "Power limit setting",
+      "descriptions" : {
+        "en" : "Power limit setting",
+        "ja" : "電力制限設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "W",
+      "minimum" : 0,
+      "maximum" : 65533
+    },
+    "hourMeter" : {
+      "title" : "hourMeter",
+      "titles" : {
+        "en" : "hourMeter",
+        "ja" : "積算運転時間"
+      },
+      "echonet:epc" : "0x9A",
+      "description" : "Cumulative operating time",
+      "descriptions" : {
+        "en" : "Cumulative operating time",
+        "ja" : "積算運転時間"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "unit" : {
+          "type" : "string",
+          "enum" : [ "second", "minute", "hour", "day" ],
+          "descriptions" : {
+            "ja" : "積算運転時間",
+            "en" : "Cumulative operating time"
+          }
+        },
+        "time" : {
+          "type" : "number",
+          "minimum" : 0,
+          "maximum" : 4294967295,
+          "descriptions" : {
+            "ja" : "時間",
+            "en" : "time"
+          }
+        }
+      }
+    },
+    "ratedChargeElectricPower" : {
+      "title" : "ratedChargeElectricPower",
+      "titles" : {
+        "en" : "ratedChargeElectricPower",
+        "ja" : "定格充電能力"
+      },
+      "echonet:epc" : "0xC5",
+      "description" : "Rated charge capacity",
+      "descriptions" : {
+        "en" : "Rated charge capacity",
+        "ja" : "定格充電能力"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "W",
+      "minimum" : 0,
+      "maximum" : 999999999
+    },
+    "chargeStatus" : {
+      "title" : "chargeStatus",
+      "titles" : {
+        "en" : "chargeStatus",
+        "ja" : "車両接続・充電可否状態"
+      },
+      "echonet:epc" : "0xC7",
+      "description" : "Vehicle connection and chargeable status",
+      "descriptions" : {
+        "en" : "Vehicle connection and chargeable status",
+        "ja" : "車両接続・充電可否状態"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : true,
+      "type" : "string",
+      "enum" : [ "undefined", "notConnected", "notChargeable", "chargeable", "unknown" ]
+    },
+    "minimumAndMaximumChargingElectricPower" : {
+      "title" : "minimumAndMaximumChargingElectricPower",
+      "titles" : {
+        "en" : "minimumAndMaximumChargingElectricPower",
+        "ja" : "最小最大充電電力値"
+      },
+      "echonet:epc" : "0xC8",
+      "description" : "Minimum/maximum charging electric energy",
+      "descriptions" : {
+        "en" : "Minimum/maximum charging electric energy",
+        "ja" : "最小最大充電電力値"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "minimumElectricPower" : {
+          "type" : "number",
+          "unit" : "W",
+          "minimum" : 0,
+          "maximum" : 999999999,
+          "descriptions" : {
+            "ja" : "最小充電電力値",
+            "en" : "Minimum charging electric energy"
+          }
+        },
+        "maximumElectricPower" : {
+          "type" : "number",
+          "unit" : "W",
+          "minimum" : 0,
+          "maximum" : 999999999,
+          "descriptions" : {
+            "ja" : "最大充電電力値",
+            "en" : "Maximum charging electric energy"
+          }
+        }
+      }
+    },
+    "minimumAndMaximumChargingCurrent" : {
+      "title" : "minimumAndMaximumChargingCurrent",
+      "titles" : {
+        "en" : "minimumAndMaximumChargingCurrent",
+        "ja" : "最小最大充電電流値"
+      },
+      "echonet:epc" : "0xCA",
+      "description" : "Minimum/maximum charging electric current",
+      "descriptions" : {
+        "en" : "Minimum/maximum charging electric current",
+        "ja" : "最小最大充電電流値"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "minimumCurrent" : {
+          "type" : "number",
+          "unit" : "A",
+          "minimum" : 0,
+          "maximum" : 3276.6,
+          "descriptions" : {
+            "ja" : "最小充電電流値",
+            "en" : "Minimum charging current"
+          }
+        },
+        "maximumCurrent" : {
+          "type" : "number",
+          "unit" : "A",
+          "minimum" : 0,
+          "maximum" : 3276.6,
+          "descriptions" : {
+            "ja" : "最大充電電流値",
+            "en" : "Maximum charging current"
+          }
+        }
+      }
+    },
+    "equipmentType" : {
+      "title" : "equipmentType",
+      "titles" : {
+        "en" : "equipmentType",
+        "ja" : "充電器タイプ"
+      },
+      "echonet:epc" : "0xCC",
+      "description" : "Charger type",
+      "descriptions" : {
+        "en" : "Charger type",
+        "ja" : "充電器タイプ"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string",
+      "enum" : [ "ac_cplt", "ac_hlc_charge", "dc_aa_charge", "dc_bb_charge", "dc_ee_charge", "dc_ff_charge" ]
+    },
+    "chargeableCapacity" : {
+      "title" : "chargeableCapacity",
+      "titles" : {
+        "en" : "chargeableCapacity",
+        "ja" : "車載電池の充電可能容量値"
+      },
+      "echonet:epc" : "0xCE",
+      "description" : "Chargeable capacity of vehicle mounted battery",
+      "descriptions" : {
+        "en" : "Chargeable capacity of vehicle mounted battery",
+        "ja" : "車載電池の充電可能容量値"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "Wh",
+      "minimum" : 0,
+      "maximum" : 999999999
+    },
+    "remainingChargeableCapacity" : {
+      "title" : "remainingChargeableCapacity",
+      "titles" : {
+        "en" : "remainingChargeableCapacity",
+        "ja" : "車載電池の充電可能残容量値"
+      },
+      "echonet:epc" : "0xCF",
+      "description" : "Remaining chargeable capacity of vehicle mounted battery",
+      "descriptions" : {
+        "en" : "Remaining chargeable capacity of vehicle mounted battery",
+        "ja" : "車載電池の充電可能残容量値"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "Wh",
+      "minimum" : 0,
+      "maximum" : 999999999
+    },
+    "usedCapacity1" : {
+      "title" : "usedCapacity1",
+      "titles" : {
+        "en" : "usedCapacity1",
+        "ja" : "車載電池の使用容量値1"
+      },
+      "echonet:epc" : "0xD0",
+      "description" : "Used capacity of vehicle mounted battery 1",
+      "descriptions" : {
+        "en" : "Used capacity of vehicle mounted battery 1",
+        "ja" : "車載電池の使用容量値1"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "Wh",
+      "minimum" : 0,
+      "maximum" : 999999999
+    },
+    "ratedVoltage" : {
+      "title" : "ratedVoltage",
+      "titles" : {
+        "en" : "ratedVoltage",
+        "ja" : "定格電圧"
+      },
+      "echonet:epc" : "0xD2",
+      "description" : "Rated voltage",
+      "descriptions" : {
+        "en" : "Rated voltage",
+        "ja" : "定格電圧"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "V",
+      "minimum" : 0,
+      "maximum" : 32766
+    },
+    "instantaneousElectricPower" : {
+      "title" : "instantaneousElectricPower",
+      "titles" : {
+        "en" : "instantaneousElectricPower",
+        "ja" : "瞬時充電電力計測値"
+      },
+      "echonet:epc" : "0xD3",
+      "description" : "Measured instantaneous charging electric energy",
+      "descriptions" : {
+        "en" : "Measured instantaneous charging electric energy",
+        "ja" : "瞬時充電電力計測値"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "W",
+      "minimum" : 0,
+      "maximum" : 999999999
+    },
+    "cumulativeChargingElectricEnergy" : {
+      "title" : "cumulativeChargingElectricEnergy",
+      "titles" : {
+        "en" : "cumulativeChargingElectricEnergy",
+        "ja" : "積算充電電力量計測値"
+      },
+      "echonet:epc" : "0xD8",
+      "description" : "Measured cumulative amount of charging electric energy",
+      "descriptions" : {
+        "en" : "Measured cumulative amount of charging electric energy",
+        "ja" : "積算充電電力量計測値"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "kWh",
+      "minimum" : 0,
+      "maximum" : 999999.999
+    },
+    "operationMode" : {
+      "title" : "operationMode",
+      "titles" : {
+        "en" : "operationMode",
+        "ja" : "運転モード設定"
+      },
+      "echonet:epc" : "0xDA",
+      "description" : "Operation mode setting",
+      "descriptions" : {
+        "en" : "Operation mode setting",
+        "ja" : "運転モード設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : true,
+      "type" : "string",
+      "enum" : [ "charge", "standby", "idle", "other" ]
+    },
+    "remainingCapacity1" : {
+      "title" : "remainingCapacity1",
+      "titles" : {
+        "en" : "remainingCapacity1",
+        "ja" : "車載電池の電池残容量1"
+      },
+      "echonet:epc" : "0xE2",
+      "description" : "Remaining stored electricity of vehicle mounted battery1",
+      "descriptions" : {
+        "en" : "Remaining stored electricity of vehicle mounted battery1",
+        "ja" : "車載電池の電池残容量1"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "Wh",
+      "minimum" : 0,
+      "maximum" : 999999999
+    },
+    "remainingCapacity3" : {
+      "title" : "remainingCapacity3",
+      "titles" : {
+        "en" : "remainingCapacity3",
+        "ja" : "車載電池の電池残容量3"
+      },
+      "echonet:epc" : "0xE4",
+      "description" : "Remaining stored electricity of vehicle mounted battery3",
+      "descriptions" : {
+        "en" : "Remaining stored electricity of vehicle mounted battery3",
+        "ja" : "車載電池の電池残容量3"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "%",
+      "minimum" : 0,
+      "maximum" : 100
+    },
+    "vehicleId" : {
+      "title" : "vehicleId",
+      "titles" : {
+        "en" : "vehicleId",
+        "ja" : "車両ID"
+      },
+      "echonet:epc" : "0xE6",
+      "description" : "Vehicle ID",
+      "descriptions" : {
+        "en" : "Vehicle ID",
+        "ja" : "車両ID"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "targetChargingElectricEnergy" : {
+      "title" : "targetChargingElectricEnergy",
+      "titles" : {
+        "en" : "targetChargingElectricEnergy",
+        "ja" : "充電量設定値"
+      },
+      "echonet:epc" : "0xE7",
+      "description" : "Charging amount setting",
+      "descriptions" : {
+        "en" : "Charging amount setting",
+        "ja" : "充電量設定値"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "Wh",
+      "minimum" : 0,
+      "maximum" : 999999999
+    },
+    "chargingElectricPower" : {
+      "title" : "chargingElectricPower",
+      "titles" : {
+        "en" : "chargingElectricPower",
+        "ja" : "充電電力設定値"
+      },
+      "echonet:epc" : "0xEB",
+      "description" : "Charging electric energy setting",
+      "descriptions" : {
+        "en" : "Charging electric energy setting",
+        "ja" : "充電電力設定値"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "W",
+      "minimum" : 0,
+      "maximum" : 999999999
+    },
+    "chargingCurrent" : {
+      "title" : "chargingCurrent",
+      "titles" : {
+        "en" : "chargingCurrent",
+        "ja" : "充電電流設定値"
+      },
+      "echonet:epc" : "0xED",
+      "description" : "Charging current setting",
+      "descriptions" : {
+        "en" : "Charging current setting",
+        "ja" : "充電電流設定値"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "A",
+      "minimum" : 0,
+      "maximum" : 6553.3
+    }
+  },
+  "actions" : {
+    "resetCumulativeChargingElectricEnergy" : {
+      "title" : "resetCumulativeChargingElectricEnergy",
+      "titles" : {
+        "en" : "resetCumulativeChargingElectricEnergy",
+        "ja" : "積算充電電力量リセット設定"
+      },
+      "description" : "Cumulative amount of charging electric energy reset setting",
+      "descriptions" : {
+        "en" : "Cumulative amount of charging electric energy reset setting",
+        "ja" : "積算充電電力量リセット設定"
+      },
+      "input" : { },
+      "output" : {
+        "type" : "object",
+        "description" : "Return true/false and a message",
+        "descriptions" : {
+          "en" : "Return true/false and a message",
+          "ja" : "true/false とメッセージを返す"
+        },
+        "properties" : {
+          "result" : {
+            "type" : "boolean"
+          },
+          "message" : {
+            "type" : "string"
+          }
+        }
+      }
+    }
+  }
+}

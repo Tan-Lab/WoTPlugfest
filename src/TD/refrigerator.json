@@ -1,0 +1,1103 @@
+{
+  "@context" : [ "https://www.w3.org/2019/wot/td/v1", {
+    "echonet" : "https://echonet.jp/"
+  }, {
+    "@language" : "en"
+  } ],
+  "id" : "",
+  "echonet:eoj" : "0x03B7",
+  "title" : "refrigerator",
+  "titles" : {
+    "en" : "refrigerator",
+    "ja" : "冷凍冷蔵庫"
+  },
+  "description" : "Refrigerator",
+  "descriptions" : {
+    "en" : "Refrigerator",
+    "ja" : "冷凍冷蔵庫"
+  },
+  "properties" : {
+    "operationStatus" : {
+      "title" : "operationStatus",
+      "titles" : {
+        "en" : "operationStatus",
+        "ja" : "動作状態"
+      },
+      "echonet:epc" : "0x80",
+      "description" : "Operation status",
+      "descriptions" : {
+        "en" : "Operation status",
+        "ja" : "動作状態"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : true,
+      "type" : "boolean"
+    },
+    "installationLocation" : {
+      "title" : "installationLocation",
+      "titles" : {
+        "en" : "installationLocation",
+        "ja" : "設置場所"
+      },
+      "echonet:epc" : "0x81",
+      "description" : "Installation location",
+      "descriptions" : {
+        "en" : "Installation location",
+        "ja" : "設置場所"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : true,
+      "oneOf" : [ {
+        "type" : "string"
+      }, {
+        "type" : "string"
+      } ]
+    },
+    "protocol" : {
+      "title" : "protocol",
+      "titles" : {
+        "en" : "protocol",
+        "ja" : "規格Version情報"
+      },
+      "echonet:epc" : "0x82",
+      "description" : "Standard version information",
+      "descriptions" : {
+        "en" : "Standard version information",
+        "ja" : "規格Version情報"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "id" : {
+      "title" : "id",
+      "titles" : {
+        "en" : "id",
+        "ja" : "識別番号"
+      },
+      "echonet:epc" : "0x83",
+      "description" : "Identification number",
+      "descriptions" : {
+        "en" : "Identification number",
+        "ja" : "識別番号"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "instantaneousElectricPowerConsumption" : {
+      "title" : "instantaneousElectricPowerConsumption",
+      "titles" : {
+        "en" : "instantaneousElectricPowerConsumption",
+        "ja" : "瞬時消費電力計測値"
+      },
+      "echonet:epc" : "0x84",
+      "description" : "Measured instantaneous power consumption",
+      "descriptions" : {
+        "en" : "Measured instantaneous power consumption",
+        "ja" : "瞬時消費電力計測値"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "W",
+      "minimum" : 0,
+      "maximum" : 65533
+    },
+    "consumedCumulativeElectricEnergy" : {
+      "title" : "consumedCumulativeElectricEnergy",
+      "titles" : {
+        "en" : "consumedCumulativeElectricEnergy",
+        "ja" : "積算消費電力計測値"
+      },
+      "echonet:epc" : "0x85",
+      "description" : "Measured cumulative power consumption",
+      "descriptions" : {
+        "en" : "Measured cumulative power consumption",
+        "ja" : "積算消費電力計測値"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "kWh",
+      "minimum" : 0,
+      "maximum" : 999999.999
+    },
+    "manufacturerFaultCode" : {
+      "title" : "manufacturerFaultCode",
+      "titles" : {
+        "en" : "manufacturerFaultCode",
+        "ja" : "メーカ異常コード"
+      },
+      "echonet:epc" : "0x86",
+      "description" : "Manufacturer's fault code",
+      "descriptions" : {
+        "en" : "Manufacturer's fault code",
+        "ja" : "メーカ異常コード"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "currentLimit" : {
+      "title" : "currentLimit",
+      "titles" : {
+        "en" : "currentLimit",
+        "ja" : "電流制限設定"
+      },
+      "echonet:epc" : "0x87",
+      "description" : "Current limit setting",
+      "descriptions" : {
+        "en" : "Current limit setting",
+        "ja" : "電流制限設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "%",
+      "minimum" : 0,
+      "maximum" : 100
+    },
+    "faultStatus" : {
+      "title" : "faultStatus",
+      "titles" : {
+        "en" : "faultStatus",
+        "ja" : "異常発生状態"
+      },
+      "echonet:epc" : "0x88",
+      "description" : "Fault status",
+      "descriptions" : {
+        "en" : "Fault status",
+        "ja" : "異常発生状態"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : true,
+      "type" : "boolean"
+    },
+    "faultDescription" : {
+      "title" : "faultDescription",
+      "titles" : {
+        "en" : "faultDescription",
+        "ja" : "異常内容"
+      },
+      "echonet:epc" : "0x89",
+      "description" : "Fault description",
+      "descriptions" : {
+        "en" : "Fault description",
+        "ja" : "異常内容"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "manufacturer" : {
+      "title" : "manufacturer",
+      "titles" : {
+        "en" : "manufacturer",
+        "ja" : "メーカコード"
+      },
+      "echonet:epc" : "0x8A",
+      "description" : "Manufactur code",
+      "descriptions" : {
+        "en" : "Manufactur code",
+        "ja" : "メーカコード"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "businessFacilityCode" : {
+      "title" : "businessFacilityCode",
+      "titles" : {
+        "en" : "businessFacilityCode",
+        "ja" : "事業場コード"
+      },
+      "echonet:epc" : "0x8B",
+      "description" : "Business facility code",
+      "descriptions" : {
+        "en" : "Business facility code",
+        "ja" : "事業場コード"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "productCode" : {
+      "title" : "productCode",
+      "titles" : {
+        "en" : "productCode",
+        "ja" : "商品コード"
+      },
+      "echonet:epc" : "0x8C",
+      "description" : "Product code",
+      "descriptions" : {
+        "en" : "Product code",
+        "ja" : "商品コード"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "serialNumber" : {
+      "title" : "serialNumber",
+      "titles" : {
+        "en" : "serialNumber",
+        "ja" : "製造番号"
+      },
+      "echonet:epc" : "0x8D",
+      "description" : "Production number",
+      "descriptions" : {
+        "en" : "Production number",
+        "ja" : "製造番号"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "productionDate" : {
+      "title" : "productionDate",
+      "titles" : {
+        "en" : "productionDate",
+        "ja" : "製造年月日"
+      },
+      "echonet:epc" : "0x8E",
+      "description" : "Production date",
+      "descriptions" : {
+        "en" : "Production date",
+        "ja" : "製造年月日"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string",
+      "format" : "date"
+    },
+    "powerSaving" : {
+      "title" : "powerSaving",
+      "titles" : {
+        "en" : "powerSaving",
+        "ja" : "節電動作設定"
+      },
+      "echonet:epc" : "0x8F",
+      "description" : "Power-saving operation setting",
+      "descriptions" : {
+        "en" : "Power-saving operation setting",
+        "ja" : "節電動作設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "boolean"
+    },
+    "remoteControl" : {
+      "title" : "remoteControl",
+      "titles" : {
+        "en" : "remoteControl",
+        "ja" : "遠隔操作設定"
+      },
+      "echonet:epc" : "0x93",
+      "description" : "Remote controll setting",
+      "descriptions" : {
+        "en" : "Remote controll setting",
+        "ja" : "遠隔操作設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "boolean"
+    },
+    "currentDateAndTime" : {
+      "title" : "currentDateAndTime",
+      "titles" : {
+        "en" : "currentDateAndTime",
+        "ja" : "現在年月日設定"
+      },
+      "echonet:epc" : "0x98",
+      "description" : "Current date setting",
+      "descriptions" : {
+        "en" : "Current date setting",
+        "ja" : "現在年月日設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string",
+      "format" : "date-time"
+    },
+    "powerLimit" : {
+      "title" : "powerLimit",
+      "titles" : {
+        "en" : "powerLimit",
+        "ja" : "電力制限設定"
+      },
+      "echonet:epc" : "0x99",
+      "description" : "Power limit setting",
+      "descriptions" : {
+        "en" : "Power limit setting",
+        "ja" : "電力制限設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "W",
+      "minimum" : 0,
+      "maximum" : 65533
+    },
+    "hourMeter" : {
+      "title" : "hourMeter",
+      "titles" : {
+        "en" : "hourMeter",
+        "ja" : "積算運転時間"
+      },
+      "echonet:epc" : "0x9A",
+      "description" : "Cumulative operating time",
+      "descriptions" : {
+        "en" : "Cumulative operating time",
+        "ja" : "積算運転時間"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "unit" : {
+          "type" : "string",
+          "enum" : [ "second", "minute", "hour", "day" ],
+          "descriptions" : {
+            "ja" : "積算運転時間",
+            "en" : "Cumulative operating time"
+          }
+        },
+        "time" : {
+          "type" : "number",
+          "minimum" : 0,
+          "maximum" : 4294967295,
+          "descriptions" : {
+            "ja" : "時間",
+            "en" : "time"
+          }
+        }
+      }
+    },
+    "quickFreeze" : {
+      "title" : "quickFreeze",
+      "titles" : {
+        "en" : "quickFreeze",
+        "ja" : "急速冷凍動作設定"
+      },
+      "echonet:epc" : "0xA0",
+      "description" : "Quick freeze function setting",
+      "descriptions" : {
+        "en" : "Quick freeze function setting",
+        "ja" : "急速冷凍動作設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string",
+      "enum" : [ "normal", "quick", "standby" ]
+    },
+    "quickRefrigeration" : {
+      "title" : "quickRefrigeration",
+      "titles" : {
+        "en" : "quickRefrigeration",
+        "ja" : "急速冷蔵動作設定"
+      },
+      "echonet:epc" : "0xA1",
+      "description" : "Quick refrigeration function setting",
+      "descriptions" : {
+        "en" : "Quick refrigeration function setting",
+        "ja" : "急速冷蔵動作設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string",
+      "enum" : [ "normal", "quick", "standby" ]
+    },
+    "icemaker" : {
+      "title" : "icemaker",
+      "titles" : {
+        "en" : "icemaker",
+        "ja" : "製氷許可設定"
+      },
+      "echonet:epc" : "0xA4",
+      "description" : "Icemaker setting",
+      "descriptions" : {
+        "en" : "Icemaker setting",
+        "ja" : "製氷許可設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string",
+      "enum" : [ "enable", "disable", "standby" ]
+    },
+    "icemakerStatus" : {
+      "title" : "icemakerStatus",
+      "titles" : {
+        "en" : "icemakerStatus",
+        "ja" : "製氷動作状態"
+      },
+      "echonet:epc" : "0xA5",
+      "description" : "Icemaker operation status",
+      "descriptions" : {
+        "en" : "Icemaker operation status",
+        "ja" : "製氷動作状態"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string",
+      "enum" : [ "running", "stopped" ]
+    },
+    "icemakerTankStatus" : {
+      "title" : "icemakerTankStatus",
+      "titles" : {
+        "en" : "icemakerTankStatus",
+        "ja" : "製氷用給水タンク状態"
+      },
+      "echonet:epc" : "0xA6",
+      "description" : "Icemaker tank status",
+      "descriptions" : {
+        "en" : "Icemaker tank status",
+        "ja" : "製氷用給水タンク状態"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string",
+      "enum" : [ "normal", "warning" ]
+    },
+    "refrigeratorHumidification" : {
+      "title" : "refrigeratorHumidification",
+      "titles" : {
+        "en" : "refrigeratorHumidification",
+        "ja" : "冷蔵室加湿動作設定"
+      },
+      "echonet:epc" : "0xA8",
+      "description" : "Refrigerator compartment humidification function setting",
+      "descriptions" : {
+        "en" : "Refrigerator compartment humidification function setting",
+        "ja" : "冷蔵室加湿動作設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string",
+      "enum" : [ "on", "off" ]
+    },
+    "vegetableHumidification" : {
+      "title" : "vegetableHumidification",
+      "titles" : {
+        "en" : "vegetableHumidification",
+        "ja" : "野菜室加湿動作設定"
+      },
+      "echonet:epc" : "0xA9",
+      "description" : "Vegetable compartment humidification function setting",
+      "descriptions" : {
+        "en" : "Vegetable compartment humidification function setting",
+        "ja" : "野菜室加湿動作設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string",
+      "enum" : [ "on", "off" ]
+    },
+    "deodorization" : {
+      "title" : "deodorization",
+      "titles" : {
+        "en" : "deodorization",
+        "ja" : "脱臭動作設定"
+      },
+      "echonet:epc" : "0xAD",
+      "description" : "Deodorization function setting",
+      "descriptions" : {
+        "en" : "Deodorization function setting",
+        "ja" : "脱臭動作設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string",
+      "enum" : [ "on", "off" ]
+    },
+    "doorOpenCloseStatus" : {
+      "title" : "doorOpenCloseStatus",
+      "titles" : {
+        "en" : "doorOpenCloseStatus",
+        "ja" : "ドア開閉状態"
+      },
+      "echonet:epc" : "0xB0",
+      "description" : "Door open/close status",
+      "descriptions" : {
+        "en" : "Door open/close status",
+        "ja" : "ドア開閉状態"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string",
+      "enum" : [ "anyOpen", "allClose" ]
+    },
+    "doorOpenWarning" : {
+      "title" : "doorOpenWarning",
+      "titles" : {
+        "en" : "doorOpenWarning",
+        "ja" : "ドア開放警告状態"
+      },
+      "echonet:epc" : "0xB1",
+      "description" : "Door open warning",
+      "descriptions" : {
+        "en" : "Door open warning",
+        "ja" : "ドア開放警告状態"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : true,
+      "type" : "boolean"
+    },
+    "refrigeratorCompartmentDoorStatus" : {
+      "title" : "refrigeratorCompartmentDoorStatus",
+      "titles" : {
+        "en" : "refrigeratorCompartmentDoorStatus",
+        "ja" : "冷蔵室ドア開閉状態"
+      },
+      "echonet:epc" : "0xB2",
+      "description" : "Refrigerator compartment door status",
+      "descriptions" : {
+        "en" : "Refrigerator compartment door status",
+        "ja" : "冷蔵室ドア開閉状態"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string",
+      "enum" : [ "open", "close" ]
+    },
+    "freezerCompartmentDoorStatus" : {
+      "title" : "freezerCompartmentDoorStatus",
+      "titles" : {
+        "en" : "freezerCompartmentDoorStatus",
+        "ja" : "冷凍室ドア開閉状態"
+      },
+      "echonet:epc" : "0xB3",
+      "description" : "Freezer compartment door status",
+      "descriptions" : {
+        "en" : "Freezer compartment door status",
+        "ja" : "冷凍室ドア開閉状態"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string",
+      "enum" : [ "open", "close" ]
+    },
+    "iceCompartmentDoorStatus" : {
+      "title" : "iceCompartmentDoorStatus",
+      "titles" : {
+        "en" : "iceCompartmentDoorStatus",
+        "ja" : "氷温室ドア開閉状態"
+      },
+      "echonet:epc" : "0xB4",
+      "description" : "Ice compartment door status",
+      "descriptions" : {
+        "en" : "Ice compartment door status",
+        "ja" : "氷温室ドア開閉状態"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string",
+      "enum" : [ "open", "close" ]
+    },
+    "vegetableCompartmentDoorStatus" : {
+      "title" : "vegetableCompartmentDoorStatus",
+      "titles" : {
+        "en" : "vegetableCompartmentDoorStatus",
+        "ja" : "野菜室ドア開閉状態"
+      },
+      "echonet:epc" : "0xB5",
+      "description" : "Vegetable compartment door status",
+      "descriptions" : {
+        "en" : "Vegetable compartment door status",
+        "ja" : "野菜室ドア開閉状態"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string",
+      "enum" : [ "open", "close" ]
+    },
+    "multiModeCompartmentDoorStatus" : {
+      "title" : "multiModeCompartmentDoorStatus",
+      "titles" : {
+        "en" : "multiModeCompartmentDoorStatus",
+        "ja" : "切換室ドア開閉状態"
+      },
+      "echonet:epc" : "0xB6",
+      "description" : "Multi-refrigerating mode compartment door status",
+      "descriptions" : {
+        "en" : "Multi-refrigerating mode compartment door status",
+        "ja" : "切換室ドア開閉状態"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string",
+      "enum" : [ "open", "close" ]
+    },
+    "measuredRefrigeratorTemperature" : {
+      "title" : "measuredRefrigeratorTemperature",
+      "titles" : {
+        "en" : "measuredRefrigeratorTemperature",
+        "ja" : "冷蔵室温度計測値"
+      },
+      "echonet:epc" : "0xD1",
+      "description" : "Measured refrigerator compartment temperature",
+      "descriptions" : {
+        "en" : "Measured refrigerator compartment temperature",
+        "ja" : "冷蔵室温度計測値"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "Celsius",
+      "minimum" : -127,
+      "maximum" : 126
+    },
+    "measuredFreezerTemperature" : {
+      "title" : "measuredFreezerTemperature",
+      "titles" : {
+        "en" : "measuredFreezerTemperature",
+        "ja" : "冷凍室温度計測値"
+      },
+      "echonet:epc" : "0xD2",
+      "description" : "Measured freezer compartment temperature",
+      "descriptions" : {
+        "en" : "Measured freezer compartment temperature",
+        "ja" : "冷凍室温度計測値"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "Celsius",
+      "minimum" : -127,
+      "maximum" : 126
+    },
+    "measuredIceTemperature" : {
+      "title" : "measuredIceTemperature",
+      "titles" : {
+        "en" : "measuredIceTemperature",
+        "ja" : "氷温室温度計測値"
+      },
+      "echonet:epc" : "0xD3",
+      "description" : "Measured subzero-fresh compartment temperature",
+      "descriptions" : {
+        "en" : "Measured subzero-fresh compartment temperature",
+        "ja" : "氷温室温度計測値"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "Celsius",
+      "minimum" : -127,
+      "maximum" : 126
+    },
+    "measuredVegetableTemperature" : {
+      "title" : "measuredVegetableTemperature",
+      "titles" : {
+        "en" : "measuredVegetableTemperature",
+        "ja" : "野菜室温度計測値"
+      },
+      "echonet:epc" : "0xD4",
+      "description" : "Measured vegetable compartment temperature",
+      "descriptions" : {
+        "en" : "Measured vegetable compartment temperature",
+        "ja" : "野菜室温度計測値"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "Celsius",
+      "minimum" : -127,
+      "maximum" : 126
+    },
+    "measuredMultiModeTemperature" : {
+      "title" : "measuredMultiModeTemperature",
+      "titles" : {
+        "en" : "measuredMultiModeTemperature",
+        "ja" : "切換室温度計測値"
+      },
+      "echonet:epc" : "0xD5",
+      "description" : "Measured multi-refrigerating mode compartment temperature",
+      "descriptions" : {
+        "en" : "Measured multi-refrigerating mode compartment temperature",
+        "ja" : "切換室温度計測値"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "Celsius",
+      "minimum" : -127,
+      "maximum" : 126
+    },
+    "compressorRotationSpeed" : {
+      "title" : "compressorRotationSpeed",
+      "titles" : {
+        "en" : "compressorRotationSpeed",
+        "ja" : "圧縮機回転数レベル"
+      },
+      "echonet:epc" : "0xD8",
+      "description" : "Compressor rotation speed",
+      "descriptions" : {
+        "en" : "Compressor rotation speed",
+        "ja" : "圧縮機回転数レベル"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "maximumRotationSpeed" : {
+          "type" : "number",
+          "minimum" : 1,
+          "maximum" : 255,
+          "descriptions" : {
+            "ja" : "最大回転数レベル",
+            "en" : "Maximum rotation speed"
+          }
+        },
+        "rotationSpeed" : {
+          "type" : "number",
+          "minimum" : 0,
+          "maximum" : 255,
+          "descriptions" : {
+            "ja" : "回転数レベル",
+            "en" : "Rotation speed of the actual compressor"
+          }
+        }
+      }
+    },
+    "electricCurrentConsumption" : {
+      "title" : "electricCurrentConsumption",
+      "titles" : {
+        "en" : "electricCurrentConsumption",
+        "ja" : "消費電流計測値"
+      },
+      "echonet:epc" : "0xDA",
+      "description" : "Measured electric current consumption",
+      "descriptions" : {
+        "en" : "Measured electric current consumption",
+        "ja" : "消費電流計測値"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "A",
+      "minimum" : 0,
+      "maximum" : 6553.3
+    },
+    "ratedPowerConsumption" : {
+      "title" : "ratedPowerConsumption",
+      "titles" : {
+        "en" : "ratedPowerConsumption",
+        "ja" : "定格消費電力値"
+      },
+      "echonet:epc" : "0xDC",
+      "description" : "Rated power consumption",
+      "descriptions" : {
+        "en" : "Rated power consumption",
+        "ja" : "定格消費電力値"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "W",
+      "minimum" : 0,
+      "maximum" : 65533
+    },
+    "maximumAllowableTemperatureLevel" : {
+      "title" : "maximumAllowableTemperatureLevel",
+      "titles" : {
+        "en" : "maximumAllowableTemperatureLevel",
+        "ja" : "設定可能温度レベル最大値"
+      },
+      "echonet:epc" : "0xE0",
+      "description" : "Maximum allowable temperature setting level",
+      "descriptions" : {
+        "en" : "Maximum allowable temperature setting level",
+        "ja" : "設定可能温度レベル最大値"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "refrigeratorCompartmentLevel" : {
+          "type" : "number",
+          "minimum" : 0,
+          "maximum" : 255,
+          "descriptions" : {
+            "ja" : "冷蔵室",
+            "en" : "Refrigerator compartment"
+          }
+        },
+        "freezerCompartmentLevel" : {
+          "type" : "number",
+          "minimum" : 0,
+          "maximum" : 255,
+          "descriptions" : {
+            "ja" : "冷凍室",
+            "en" : "Freezer compartment"
+          }
+        },
+        "iceCompartmentLevel" : {
+          "type" : "number",
+          "minimum" : 0,
+          "maximum" : 255,
+          "descriptions" : {
+            "ja" : "氷温室",
+            "en" : "Subzero-fresh compartment"
+          }
+        },
+        "vegetableCompartmentLevel" : {
+          "type" : "number",
+          "minimum" : 0,
+          "maximum" : 255,
+          "descriptions" : {
+            "ja" : "野菜室",
+            "en" : "Vegetable compartment"
+          }
+        },
+        "multiModeCompartmentLevel" : {
+          "type" : "number",
+          "minimum" : 0,
+          "maximum" : 255,
+          "descriptions" : {
+            "ja" : "切換室",
+            "en" : "Multi-refrigerating mode compartment"
+          }
+        }
+      }
+    },
+    "refrigeratorTemperature" : {
+      "title" : "refrigeratorTemperature",
+      "titles" : {
+        "en" : "refrigeratorTemperature",
+        "ja" : "冷蔵室温度設定値"
+      },
+      "echonet:epc" : "0xE2",
+      "description" : "Refrigerator compartment temperature setting",
+      "descriptions" : {
+        "en" : "Refrigerator compartment temperature setting",
+        "ja" : "冷蔵室温度設定値"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "Celsius",
+      "minimum" : -127,
+      "maximum" : 126
+    },
+    "freezerTemperature" : {
+      "title" : "freezerTemperature",
+      "titles" : {
+        "en" : "freezerTemperature",
+        "ja" : "冷凍室温度設定値"
+      },
+      "echonet:epc" : "0xE3",
+      "description" : "Freezer compartment temperature setting",
+      "descriptions" : {
+        "en" : "Freezer compartment temperature setting",
+        "ja" : "冷凍室温度設定値"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "Celsius",
+      "minimum" : -127,
+      "maximum" : 126
+    },
+    "iceTemperature" : {
+      "title" : "iceTemperature",
+      "titles" : {
+        "en" : "iceTemperature",
+        "ja" : "氷温室温度設定値"
+      },
+      "echonet:epc" : "0xE4",
+      "description" : "Ice compartment temperature setting",
+      "descriptions" : {
+        "en" : "Ice compartment temperature setting",
+        "ja" : "氷温室温度設定値"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "Celsius",
+      "minimum" : -127,
+      "maximum" : 126
+    },
+    "vegetableTemperature" : {
+      "title" : "vegetableTemperature",
+      "titles" : {
+        "en" : "vegetableTemperature",
+        "ja" : "野菜室温度設定値"
+      },
+      "echonet:epc" : "0xE5",
+      "description" : "Vegetable compartment temperature setting",
+      "descriptions" : {
+        "en" : "Vegetable compartment temperature setting",
+        "ja" : "野菜室温度設定値"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "Celsius",
+      "minimum" : -127,
+      "maximum" : 126
+    },
+    "multiModeTemperature" : {
+      "title" : "multiModeTemperature",
+      "titles" : {
+        "en" : "multiModeTemperature",
+        "ja" : "切換室温度設定値"
+      },
+      "echonet:epc" : "0xE6",
+      "description" : "Multi-refrigerating mode compartment temperature setting",
+      "descriptions" : {
+        "en" : "Multi-refrigerating mode compartment temperature setting",
+        "ja" : "切換室温度設定値"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "Celsius",
+      "minimum" : -127,
+      "maximum" : 126
+    },
+    "refrigeratorTemperatureLevel" : {
+      "title" : "refrigeratorTemperatureLevel",
+      "titles" : {
+        "en" : "refrigeratorTemperatureLevel",
+        "ja" : "冷蔵室温度レベル設定"
+      },
+      "echonet:epc" : "0xE9",
+      "description" : "Refrigerator compartment temperature level setting",
+      "descriptions" : {
+        "en" : "Refrigerator compartment temperature level setting",
+        "ja" : "冷蔵室温度レベル設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "minimum" : 1,
+      "maximum" : 255
+    },
+    "freezerTemperatureLevel" : {
+      "title" : "freezerTemperatureLevel",
+      "titles" : {
+        "en" : "freezerTemperatureLevel",
+        "ja" : "冷凍室温度レベル設定"
+      },
+      "echonet:epc" : "0xEA",
+      "description" : "Freezer compartment temperature level setting",
+      "descriptions" : {
+        "en" : "Freezer compartment temperature level setting",
+        "ja" : "冷凍室温度レベル設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "minimum" : 1,
+      "maximum" : 255
+    },
+    "iceTemperatureLevel" : {
+      "title" : "iceTemperatureLevel",
+      "titles" : {
+        "en" : "iceTemperatureLevel",
+        "ja" : "氷温室温度レベル設定"
+      },
+      "echonet:epc" : "0xEB",
+      "description" : "Ice compartment temperature level setting",
+      "descriptions" : {
+        "en" : "Ice compartment temperature level setting",
+        "ja" : "氷温室温度レベル設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "minimum" : 1,
+      "maximum" : 255
+    },
+    "vegetableTemperatureLevel" : {
+      "title" : "vegetableTemperatureLevel",
+      "titles" : {
+        "en" : "vegetableTemperatureLevel",
+        "ja" : "野菜室温度レベル設定"
+      },
+      "echonet:epc" : "0xEC",
+      "description" : "Vegetable compartment temperature level setting",
+      "descriptions" : {
+        "en" : "Vegetable compartment temperature level setting",
+        "ja" : "野菜室温度レベル設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "minimum" : 1,
+      "maximum" : 255
+    },
+    "multiModeTemperatureLevel" : {
+      "title" : "multiModeTemperatureLevel",
+      "titles" : {
+        "en" : "multiModeTemperatureLevel",
+        "ja" : "切換室温度レベル設定"
+      },
+      "echonet:epc" : "0xED",
+      "description" : "Multi-refrigerating mode compartment temperature level setting",
+      "descriptions" : {
+        "en" : "Multi-refrigerating mode compartment temperature level setting",
+        "ja" : "切換室温度レベル設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "minimum" : 1,
+      "maximum" : 255
+    }
+  }
+}

@@ -1,0 +1,1244 @@
+{
+  "@context" : [ "https://www.w3.org/2019/wot/td/v1", {
+    "echonet" : "https://echonet.jp/"
+  }, {
+    "@language" : "en"
+  } ],
+  "id" : "",
+  "echonet:eoj" : "0x03D3",
+  "title" : "washerDryer",
+  "titles" : {
+    "en" : "washerDryer",
+    "ja" : "洗濯乾燥機"
+  },
+  "description" : "Washer and dryer",
+  "descriptions" : {
+    "en" : "Washer and dryer",
+    "ja" : "洗濯乾燥機"
+  },
+  "properties" : {
+    "operationStatus" : {
+      "title" : "operationStatus",
+      "titles" : {
+        "en" : "operationStatus",
+        "ja" : "動作状態"
+      },
+      "echonet:epc" : "0x80",
+      "description" : "Operation status",
+      "descriptions" : {
+        "en" : "Operation status",
+        "ja" : "動作状態"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : true,
+      "type" : "boolean"
+    },
+    "installationLocation" : {
+      "title" : "installationLocation",
+      "titles" : {
+        "en" : "installationLocation",
+        "ja" : "設置場所"
+      },
+      "echonet:epc" : "0x81",
+      "description" : "Installation location",
+      "descriptions" : {
+        "en" : "Installation location",
+        "ja" : "設置場所"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : true,
+      "oneOf" : [ {
+        "type" : "string"
+      }, {
+        "type" : "string"
+      } ]
+    },
+    "protocol" : {
+      "title" : "protocol",
+      "titles" : {
+        "en" : "protocol",
+        "ja" : "規格Version情報"
+      },
+      "echonet:epc" : "0x82",
+      "description" : "Standard version information",
+      "descriptions" : {
+        "en" : "Standard version information",
+        "ja" : "規格Version情報"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "id" : {
+      "title" : "id",
+      "titles" : {
+        "en" : "id",
+        "ja" : "識別番号"
+      },
+      "echonet:epc" : "0x83",
+      "description" : "Identification number",
+      "descriptions" : {
+        "en" : "Identification number",
+        "ja" : "識別番号"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "instantaneousElectricPowerConsumption" : {
+      "title" : "instantaneousElectricPowerConsumption",
+      "titles" : {
+        "en" : "instantaneousElectricPowerConsumption",
+        "ja" : "瞬時消費電力計測値"
+      },
+      "echonet:epc" : "0x84",
+      "description" : "Measured instantaneous power consumption",
+      "descriptions" : {
+        "en" : "Measured instantaneous power consumption",
+        "ja" : "瞬時消費電力計測値"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "W",
+      "minimum" : 0,
+      "maximum" : 65533
+    },
+    "consumedCumulativeElectricEnergy" : {
+      "title" : "consumedCumulativeElectricEnergy",
+      "titles" : {
+        "en" : "consumedCumulativeElectricEnergy",
+        "ja" : "積算消費電力計測値"
+      },
+      "echonet:epc" : "0x85",
+      "description" : "Measured cumulative power consumption",
+      "descriptions" : {
+        "en" : "Measured cumulative power consumption",
+        "ja" : "積算消費電力計測値"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "kWh",
+      "minimum" : 0,
+      "maximum" : 999999.999
+    },
+    "manufacturerFaultCode" : {
+      "title" : "manufacturerFaultCode",
+      "titles" : {
+        "en" : "manufacturerFaultCode",
+        "ja" : "メーカ異常コード"
+      },
+      "echonet:epc" : "0x86",
+      "description" : "Manufacturer's fault code",
+      "descriptions" : {
+        "en" : "Manufacturer's fault code",
+        "ja" : "メーカ異常コード"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "currentLimit" : {
+      "title" : "currentLimit",
+      "titles" : {
+        "en" : "currentLimit",
+        "ja" : "電流制限設定"
+      },
+      "echonet:epc" : "0x87",
+      "description" : "Current limit setting",
+      "descriptions" : {
+        "en" : "Current limit setting",
+        "ja" : "電流制限設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "%",
+      "minimum" : 0,
+      "maximum" : 100
+    },
+    "faultStatus" : {
+      "title" : "faultStatus",
+      "titles" : {
+        "en" : "faultStatus",
+        "ja" : "異常発生状態"
+      },
+      "echonet:epc" : "0x88",
+      "description" : "Fault status",
+      "descriptions" : {
+        "en" : "Fault status",
+        "ja" : "異常発生状態"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : true,
+      "type" : "boolean"
+    },
+    "faultDescription" : {
+      "title" : "faultDescription",
+      "titles" : {
+        "en" : "faultDescription",
+        "ja" : "異常内容"
+      },
+      "echonet:epc" : "0x89",
+      "description" : "Fault description",
+      "descriptions" : {
+        "en" : "Fault description",
+        "ja" : "異常内容"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "manufacturer" : {
+      "title" : "manufacturer",
+      "titles" : {
+        "en" : "manufacturer",
+        "ja" : "メーカコード"
+      },
+      "echonet:epc" : "0x8A",
+      "description" : "Manufactur code",
+      "descriptions" : {
+        "en" : "Manufactur code",
+        "ja" : "メーカコード"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "businessFacilityCode" : {
+      "title" : "businessFacilityCode",
+      "titles" : {
+        "en" : "businessFacilityCode",
+        "ja" : "事業場コード"
+      },
+      "echonet:epc" : "0x8B",
+      "description" : "Business facility code",
+      "descriptions" : {
+        "en" : "Business facility code",
+        "ja" : "事業場コード"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "productCode" : {
+      "title" : "productCode",
+      "titles" : {
+        "en" : "productCode",
+        "ja" : "商品コード"
+      },
+      "echonet:epc" : "0x8C",
+      "description" : "Product code",
+      "descriptions" : {
+        "en" : "Product code",
+        "ja" : "商品コード"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "serialNumber" : {
+      "title" : "serialNumber",
+      "titles" : {
+        "en" : "serialNumber",
+        "ja" : "製造番号"
+      },
+      "echonet:epc" : "0x8D",
+      "description" : "Production number",
+      "descriptions" : {
+        "en" : "Production number",
+        "ja" : "製造番号"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "productionDate" : {
+      "title" : "productionDate",
+      "titles" : {
+        "en" : "productionDate",
+        "ja" : "製造年月日"
+      },
+      "echonet:epc" : "0x8E",
+      "description" : "Production date",
+      "descriptions" : {
+        "en" : "Production date",
+        "ja" : "製造年月日"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string",
+      "format" : "date"
+    },
+    "powerSaving" : {
+      "title" : "powerSaving",
+      "titles" : {
+        "en" : "powerSaving",
+        "ja" : "節電動作設定"
+      },
+      "echonet:epc" : "0x8F",
+      "description" : "Power-saving operation setting",
+      "descriptions" : {
+        "en" : "Power-saving operation setting",
+        "ja" : "節電動作設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "boolean"
+    },
+    "onTimerReservationStatus" : {
+      "title" : "onTimerReservationStatus",
+      "titles" : {
+        "en" : "onTimerReservationStatus",
+        "ja" : "ONタイマ予約設定"
+      },
+      "echonet:epc" : "0x90",
+      "description" : "On timer reservation setting",
+      "descriptions" : {
+        "en" : "On timer reservation setting",
+        "ja" : "ONタイマ予約設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string",
+      "enum" : [ "enable", "disable" ]
+    },
+    "onTimerAbsolute" : {
+      "title" : "onTimerAbsolute",
+      "titles" : {
+        "en" : "onTimerAbsolute",
+        "ja" : "ONタイマ時刻設定値"
+      },
+      "echonet:epc" : "0x91",
+      "description" : "On timer setting",
+      "descriptions" : {
+        "en" : "On timer setting",
+        "ja" : "ONタイマ時刻設定値"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string",
+      "format" : "time"
+    },
+    "relativeTimeOfOnTimer" : {
+      "title" : "relativeTimeOfOnTimer",
+      "titles" : {
+        "en" : "relativeTimeOfOnTimer",
+        "ja" : "ONタイマ相対時間設定値"
+      },
+      "echonet:epc" : "0x92",
+      "description" : "Relative time-based on timer setting",
+      "descriptions" : {
+        "en" : "Relative time-based on timer setting",
+        "ja" : "ONタイマ相対時間設定値"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "minute",
+      "minimum" : 0,
+      "maximum" : 15359
+    },
+    "remoteControl" : {
+      "title" : "remoteControl",
+      "titles" : {
+        "en" : "remoteControl",
+        "ja" : "遠隔操作設定"
+      },
+      "echonet:epc" : "0x93",
+      "description" : "Remote controll setting",
+      "descriptions" : {
+        "en" : "Remote controll setting",
+        "ja" : "遠隔操作設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "boolean"
+    },
+    "currentDateAndTime" : {
+      "title" : "currentDateAndTime",
+      "titles" : {
+        "en" : "currentDateAndTime",
+        "ja" : "現在年月日設定"
+      },
+      "echonet:epc" : "0x98",
+      "description" : "Current date setting",
+      "descriptions" : {
+        "en" : "Current date setting",
+        "ja" : "現在年月日設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string",
+      "format" : "date-time"
+    },
+    "powerLimit" : {
+      "title" : "powerLimit",
+      "titles" : {
+        "en" : "powerLimit",
+        "ja" : "電力制限設定"
+      },
+      "echonet:epc" : "0x99",
+      "description" : "Power limit setting",
+      "descriptions" : {
+        "en" : "Power limit setting",
+        "ja" : "電力制限設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "W",
+      "minimum" : 0,
+      "maximum" : 65533
+    },
+    "hourMeter" : {
+      "title" : "hourMeter",
+      "titles" : {
+        "en" : "hourMeter",
+        "ja" : "積算運転時間"
+      },
+      "echonet:epc" : "0x9A",
+      "description" : "Cumulative operating time",
+      "descriptions" : {
+        "en" : "Cumulative operating time",
+        "ja" : "積算運転時間"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "unit" : {
+          "type" : "string",
+          "enum" : [ "second", "minute", "hour", "day" ],
+          "descriptions" : {
+            "ja" : "積算運転時間",
+            "en" : "Cumulative operating time"
+          }
+        },
+        "time" : {
+          "type" : "number",
+          "minimum" : 0,
+          "maximum" : 4294967295,
+          "descriptions" : {
+            "ja" : "時間",
+            "en" : "time"
+          }
+        }
+      }
+    },
+    "doorOpenStatus" : {
+      "title" : "doorOpenStatus",
+      "titles" : {
+        "en" : "doorOpenStatus",
+        "ja" : "扉・蓋開閉状態"
+      },
+      "echonet:epc" : "0xB0",
+      "description" : "Door/cover open/close status",
+      "descriptions" : {
+        "en" : "Door/cover open/close status",
+        "ja" : "扉・蓋開閉状態"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string",
+      "enum" : [ "open", "close" ]
+    },
+    "runningStatus" : {
+      "title" : "runningStatus",
+      "titles" : {
+        "en" : "runningStatus",
+        "ja" : "洗濯・乾燥設定"
+      },
+      "echonet:epc" : "0xB2",
+      "description" : "Washer and dryer setting",
+      "descriptions" : {
+        "en" : "Washer and dryer setting",
+        "ja" : "洗濯・乾燥設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string",
+      "enum" : [ "run", "pause", "stop" ]
+    },
+    "washerDryerCycle1" : {
+      "title" : "washerDryerCycle1",
+      "titles" : {
+        "en" : "washerDryerCycle1",
+        "ja" : "洗濯乾燥コース設定1"
+      },
+      "echonet:epc" : "0xD0",
+      "description" : "Washer and dryer cycle setting 1",
+      "descriptions" : {
+        "en" : "Washer and dryer cycle setting 1",
+        "ja" : "洗濯乾燥コース設定1"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string",
+      "enum" : [ "washDryStandard", "washDrySilent", "washDryHeavilySoiled", "washDryHardToRemove", "washDryPresoaking", "washDryBlankets", "washDrySoft", "washDryDrymark", "washDryCleanRinsing", "washDryIroning", "washDryHangDrying", "washDryThick", "washDryDisinfection", "washDryOilStrains", "washDryMemory", "washDryDetergentSaving", "washDryLightlySoiled", "washDrySmallAmountQuick", "washStandard", "washSilent", "washHeavilySoiled", "washHardToRemove", "washPresoaking", "washBlankets", "washSoft", "washDrymark", "washCleanRinsing", "washDisinfection", "washOilStrains", "washMemory", "washDetergentSaving", "washLightlySoiled", "washSmallAmountQuick", "washTankCleaning", "dryStandard", "dryBlankets", "drySoft", "dryDrymark", "dryIroning", "dryHangDrying", "dryThick", "dryDisinfection", "dryShrinkageMinimization", "dryFinishing", "dryStationaryDrying", "dryUserDefinedTime", "dryWarming", "dryTankDrying" ]
+    },
+    "washerDryerCycle2" : {
+      "title" : "washerDryerCycle2",
+      "titles" : {
+        "en" : "washerDryerCycle2",
+        "ja" : "洗濯乾燥コース設定2"
+      },
+      "echonet:epc" : "0xD1",
+      "description" : "Washer and dryer cycle setting 2",
+      "descriptions" : {
+        "en" : "Washer and dryer cycle setting 2",
+        "ja" : "洗濯乾燥コース設定2"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string",
+      "enum" : [ "washDryNoWash", "washDryStandard", "washDrySilent", "washDryHeavilySoiled", "washDryHardToRemove", "washDryPresoaking", "washDryBlankets", "washDrySoft", "washDryDrymark", "washDryCleanRinsing", "washDryDisinfection", "washDryOilStrains", "washDryMemory", "washDryDetergentSaving", "washDryLightlySoiled", "washDrySmallAmountQuick", "washDryTankCleaning" ]
+    },
+    "dryerCycle" : {
+      "title" : "dryerCycle",
+      "titles" : {
+        "en" : "dryerCycle",
+        "ja" : "乾燥方法設定"
+      },
+      "echonet:epc" : "0xD2",
+      "description" : "Drying cycle setting",
+      "descriptions" : {
+        "en" : "Drying cycle setting",
+        "ja" : "乾燥方法設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string",
+      "enum" : [ "dryNoDrying", "dryStandard", "dryBlankets", "drySoft", "dryDrymark", "dryIroning", "dryHangDrying", "dryThick", "dryDisinfection", "dryShrinkageMinimization", "dryFinishing", "dryStationaryDrying", "dryUserDefinedTime", "dryWarming", "dryHeaterCurrentLimit", "dryTankDrying" ]
+    },
+    "washerDryerCycleOptions1" : {
+      "title" : "washerDryerCycleOptions1",
+      "titles" : {
+        "en" : "washerDryerCycleOptions1",
+        "ja" : "設定可能コース情報1"
+      },
+      "echonet:epc" : "0xD3",
+      "description" : "Washer and dryer cycle option list 1",
+      "descriptions" : {
+        "en" : "Washer and dryer cycle option list 1",
+        "ja" : "設定可能コース情報1"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "array",
+      "items" : {
+        "type" : "string",
+        "enum" : [ "washDryStandard", "washDrySilent", "washDryHeavilySoiled", "washDryHardToRemove", "washDryPresoaking", "washDryBlankets", "washDrySoft", "washDryDrymark", "washDryCleanRinsing", "washDryIroning", "washDryHangDrying", "washDryThick", "washDryDisinfection", "washDryOilStrains", "washDryMemory", "washDryDetergentSaving", "washDryLightlySoiled", "washDrySmallAmountQuick", "washStandard", "washSilent", "washHeavilySoiled", "washHardToRemove", "washPresoaking", "washBlankets", "washSoft", "washDrymark", "washCleanRinsing", "washDisinfection", "washOilStrains", "washMemory", "washDetergentSaving", "washLightlySoiled", "washSmallAmountQuick", "washTankCleaning", "dryStandard", "dryBlankets", "drySoft", "dryDrymark", "dryIroning", "dryHangDrying", "dryThick", "dryDisinfection", "dryShrinkageMinimization", "dryFinishing", "dryStationaryDrying", "dryUserDefinedTime", "dryWarming", "dryTankDrying" ]
+      }
+    },
+    "washerDryerCycleOptions2" : {
+      "title" : "washerDryerCycleOptions2",
+      "titles" : {
+        "en" : "washerDryerCycleOptions2",
+        "ja" : "設定可能コース情報2"
+      },
+      "echonet:epc" : "0xD4",
+      "description" : "Washer and dryer cycle option list 2",
+      "descriptions" : {
+        "en" : "Washer and dryer cycle option list 2",
+        "ja" : "設定可能コース情報2"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "array",
+      "items" : {
+        "type" : "string",
+        "enum" : [ "washDryNoWash", "washDryStandard", "washDrySilent", "washDryHeavilySoiled", "washDryHardToRemove", "washDryPresoaking", "washDryBlankets", "washDrySoft", "washDryDrymark", "washDryCleanRinsing", "washDryDisinfection", "washDryOilStrains", "washDryMemory", "washDryDetergentSaving", "washDryLightlySoiled", "washDrySmallAmountQuick", "washDryTankCleaning" ]
+      }
+    },
+    "washerDryerCycleOptions3" : {
+      "title" : "washerDryerCycleOptions3",
+      "titles" : {
+        "en" : "washerDryerCycleOptions3",
+        "ja" : "設定可能コース情報3"
+      },
+      "echonet:epc" : "0xD5",
+      "description" : "Washer and dryer cycle option list 3",
+      "descriptions" : {
+        "en" : "Washer and dryer cycle option list 3",
+        "ja" : "設定可能コース情報3"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "array",
+      "items" : {
+        "type" : "string",
+        "enum" : [ "dryNoDrying", "dryStandard", "dryBlankets", "drySoft", "dryDrymark", "dryIroning", "dryHangDrying", "dryThick", "dryDisinfection", "dryShrinkageMinimization", "dryFinishing", "dryStationaryDrying", "dryUserDefinedTime", "dryWarming", "dryHeaterCurrentLimit", "dryTankDrying" ]
+      }
+    },
+    "waterFlowRate" : {
+      "title" : "waterFlowRate",
+      "titles" : {
+        "en" : "waterFlowRate",
+        "ja" : "水流設定"
+      },
+      "echonet:epc" : "0xD6",
+      "description" : "Water flow rate setting",
+      "descriptions" : {
+        "en" : "Water flow rate setting",
+        "ja" : "水流設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "oneOf" : [ {
+        "type" : "object",
+        "properties" : {
+          "absolute" : {
+            "type" : "number",
+            "minimum" : 1,
+            "maximum" : 16,
+            "descriptions" : {
+              "ja" : "絶対値指定",
+              "en" : "Absolute setting"
+            }
+          }
+        }
+      }, {
+        "type" : "object",
+        "properties" : {
+          "relative" : {
+            "type" : "number",
+            "minimum" : -8,
+            "maximum" : 8,
+            "descriptions" : {
+              "ja" : "自動からの相対指定 (0は自動設定)",
+              "en" : "Relative setting relative to the automatic setting (0 means Automatic setting)"
+            }
+          }
+        }
+      } ]
+    },
+    "spinDryingRotationSpeed" : {
+      "title" : "spinDryingRotationSpeed",
+      "titles" : {
+        "en" : "spinDryingRotationSpeed",
+        "ja" : "脱水回転数設定値"
+      },
+      "echonet:epc" : "0xD7",
+      "description" : "Rotation speed for spin drying setting",
+      "descriptions" : {
+        "en" : "Rotation speed for spin drying setting",
+        "ja" : "脱水回転数設定値"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "oneOf" : [ {
+        "type" : "object",
+        "properties" : {
+          "absolute" : {
+            "type" : "number",
+            "unit" : "r/min",
+            "minimum" : 0,
+            "maximum" : 4095,
+            "descriptions" : {
+              "ja" : "絶対値指定",
+              "en" : "Absolute setting"
+            }
+          }
+        }
+      }, {
+        "type" : "object",
+        "properties" : {
+          "relative" : {
+            "type" : "number",
+            "unit" : "r/min",
+            "minimum" : -2048,
+            "maximum" : 2048,
+            "descriptions" : {
+              "ja" : "自動からの相対指定 (0は自動設定)",
+              "en" : "Relative setting relative to the automatic setting (0 means Automatic setting)"
+            }
+          }
+        }
+      } ]
+    },
+    "dryingDegree" : {
+      "title" : "dryingDegree",
+      "titles" : {
+        "en" : "dryingDegree",
+        "ja" : "乾燥度設定"
+      },
+      "echonet:epc" : "0xD8",
+      "description" : "Degree of drying setting",
+      "descriptions" : {
+        "en" : "Degree of drying setting",
+        "ja" : "乾燥度設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "oneOf" : [ {
+        "type" : "object",
+        "properties" : {
+          "absolute" : {
+            "type" : "number",
+            "minimum" : 1,
+            "maximum" : 16,
+            "descriptions" : {
+              "ja" : "絶対値指定",
+              "en" : "Absolute setting"
+            }
+          }
+        }
+      }, {
+        "type" : "object",
+        "properties" : {
+          "relative" : {
+            "type" : "number",
+            "minimum" : -8,
+            "maximum" : 8,
+            "descriptions" : {
+              "ja" : "自動からの相対指定 (0は自動設定)",
+              "en" : "Relative setting relative to the automatic setting (0 means Automatic setting)"
+            }
+          }
+        }
+      } ]
+    },
+    "washingTimeRemaining" : {
+      "title" : "washingTimeRemaining",
+      "titles" : {
+        "en" : "washingTimeRemaining",
+        "ja" : "洗濯残り時間"
+      },
+      "echonet:epc" : "0xDB",
+      "description" : "Remaining washing time",
+      "descriptions" : {
+        "en" : "Remaining washing time",
+        "ja" : "洗濯残り時間"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "oneOf" : [ {
+        "type" : "number",
+        "unit" : "minute",
+        "minimum" : 0,
+        "maximum" : 15299
+      }, {
+        "type" : "string",
+        "enum" : [ "unknown" ]
+      } ]
+    },
+    "dryingTimeRemaining" : {
+      "title" : "dryingTimeRemaining",
+      "titles" : {
+        "en" : "dryingTimeRemaining",
+        "ja" : "乾燥残り時間"
+      },
+      "echonet:epc" : "0xDC",
+      "description" : "Remaining drying time",
+      "descriptions" : {
+        "en" : "Remaining drying time",
+        "ja" : "乾燥残り時間"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "oneOf" : [ {
+        "type" : "number",
+        "unit" : "minute",
+        "minimum" : 0,
+        "maximum" : 15299
+      }, {
+        "type" : "string",
+        "enum" : [ "unknown" ]
+      } ]
+    },
+    "onTimerElapsed" : {
+      "title" : "onTimerElapsed",
+      "titles" : {
+        "en" : "onTimerElapsed",
+        "ja" : "ONタイマ経過時間"
+      },
+      "echonet:epc" : "0xDF",
+      "description" : "Elapsed time on the on timer",
+      "descriptions" : {
+        "en" : "Elapsed time on the on timer",
+        "ja" : "ONタイマ経過時間"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "minute",
+      "minimum" : 0,
+      "maximum" : 15359
+    },
+    "presoakingTime" : {
+      "title" : "presoakingTime",
+      "titles" : {
+        "en" : "presoakingTime",
+        "ja" : "つけおき行程時間設定値"
+      },
+      "echonet:epc" : "0xE1",
+      "description" : "Presoaking time setting",
+      "descriptions" : {
+        "en" : "Presoaking time setting",
+        "ja" : "つけおき行程時間設定値"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "oneOf" : [ {
+        "type" : "object",
+        "properties" : {
+          "absolute" : {
+            "type" : "number",
+            "unit" : "minute",
+            "minimum" : 0,
+            "maximum" : 1439,
+            "descriptions" : {
+              "ja" : "絶対値指定",
+              "en" : "Absolute setting"
+            }
+          }
+        }
+      }, {
+        "type" : "object",
+        "properties" : {
+          "relative" : {
+            "type" : "number",
+            "unit" : "minute",
+            "minimum" : -60,
+            "maximum" : 60,
+            "descriptions" : {
+              "ja" : "自動からの相対指定 (0は自動設定)",
+              "en" : "Relative setting relative to the automatic setting (0 means Automatic setting)"
+            }
+          }
+        }
+      } ]
+    },
+    "currentStage" : {
+      "title" : "currentStage",
+      "titles" : {
+        "en" : "currentStage",
+        "ja" : "洗濯乾燥遷移状態"
+      },
+      "echonet:epc" : "0xE2",
+      "description" : "Current stage of washer and dryer cycle",
+      "descriptions" : {
+        "en" : "Current stage of washer and dryer cycle",
+        "ja" : "洗濯乾燥遷移状態"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string",
+      "enum" : [ "washing", "rinsing", "spinDrying", "suspended", "washingCompleted", "washingDryingCompleted", "drying", "wrinkleMinimizing", "dryingWrinkleMinimizingCompleted", "standby", "1stRinsing", "2ndRinsing", "3rdRinsing", "4thRinsing", "5thRinsing", "6thRinsing", "7thRinsing", "8thRinsing", "1stSpinDrying", "2ndSpinDrying", "3rdSpinDrying", "4thSpinDrying", "5thSpinDrying", "6thSpinDrying", "7thSpinDrying", "8thSpinDrying", "preheatSpinDrying" ]
+    },
+    "waterVolumeByLiter" : {
+      "title" : "waterVolumeByLiter",
+      "titles" : {
+        "en" : "waterVolumeByLiter",
+        "ja" : "水量設定1"
+      },
+      "echonet:epc" : "0xE3",
+      "description" : "Water volume setting 1",
+      "descriptions" : {
+        "en" : "Water volume setting 1",
+        "ja" : "水量設定1"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "oneOf" : [ {
+        "type" : "object",
+        "properties" : {
+          "absolute" : {
+            "type" : "number",
+            "unit" : "liter",
+            "minimum" : 0,
+            "maximum" : 127,
+            "descriptions" : {
+              "ja" : "絶対値指定",
+              "en" : "Absolute setting"
+            }
+          }
+        }
+      }, {
+        "type" : "object",
+        "properties" : {
+          "relative" : {
+            "type" : "number",
+            "unit" : "liter",
+            "minimum" : -32,
+            "maximum" : 32,
+            "descriptions" : {
+              "ja" : "自動からの相対指定 (0は自動設定)",
+              "en" : "Relative setting relative to the automatic setting (0 means Automatic setting)"
+            }
+          }
+        }
+      } ]
+    },
+    "waterVolumeByStep" : {
+      "title" : "waterVolumeByStep",
+      "titles" : {
+        "en" : "waterVolumeByStep",
+        "ja" : "水量設定2"
+      },
+      "echonet:epc" : "0xE4",
+      "description" : "Water volume setting 2",
+      "descriptions" : {
+        "en" : "Water volume setting 2",
+        "ja" : "水量設定2"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "oneOf" : [ {
+        "type" : "object",
+        "properties" : {
+          "absolute" : {
+            "type" : "number",
+            "minimum" : 1,
+            "maximum" : 16,
+            "descriptions" : {
+              "ja" : "絶対値指定",
+              "en" : "Absolute setting"
+            }
+          }
+        }
+      }, {
+        "type" : "object",
+        "properties" : {
+          "relative" : {
+            "type" : "number",
+            "minimum" : -8,
+            "maximum" : 8,
+            "descriptions" : {
+              "ja" : "自動からの相対指定 (0は自動設定)",
+              "en" : "Relative setting relative to the automatic setting (0 means Automatic setting)"
+            }
+          }
+        }
+      } ]
+    },
+    "washingTime" : {
+      "title" : "washingTime",
+      "titles" : {
+        "en" : "washingTime",
+        "ja" : "洗い時間設定値"
+      },
+      "echonet:epc" : "0xE5",
+      "description" : "Washing time setting",
+      "descriptions" : {
+        "en" : "Washing time setting",
+        "ja" : "洗い時間設定値"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "oneOf" : [ {
+        "type" : "object",
+        "properties" : {
+          "absolute" : {
+            "type" : "number",
+            "unit" : "minute",
+            "minimum" : 0,
+            "maximum" : 1439,
+            "descriptions" : {
+              "ja" : "絶対値指定",
+              "en" : "Absolute setting"
+            }
+          }
+        }
+      }, {
+        "type" : "object",
+        "properties" : {
+          "relative" : {
+            "type" : "number",
+            "unit" : "minute",
+            "minimum" : -60,
+            "maximum" : 60,
+            "descriptions" : {
+              "ja" : "自動からの相対指定 (0は自動設定)",
+              "en" : "Relative setting relative to the automatic setting (0 means Automatic setting)"
+            }
+          }
+        }
+      } ]
+    },
+    "rinsingCount" : {
+      "title" : "rinsingCount",
+      "titles" : {
+        "en" : "rinsingCount",
+        "ja" : "すすぎ回数設定値"
+      },
+      "echonet:epc" : "0xE6",
+      "description" : "Number of times of rinsing setting",
+      "descriptions" : {
+        "en" : "Number of times of rinsing setting",
+        "ja" : "すすぎ回数設定値"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "oneOf" : [ {
+        "type" : "number",
+        "minimum" : 0,
+        "maximum" : 8
+      }, {
+        "type" : "string",
+        "enum" : [ "auto" ]
+      } ]
+    },
+    "rinsingProcess" : {
+      "title" : "rinsingProcess",
+      "titles" : {
+        "en" : "rinsingProcess",
+        "ja" : "すすぎモード設定"
+      },
+      "echonet:epc" : "0xE7",
+      "description" : "Rinsing process setting",
+      "descriptions" : {
+        "en" : "Rinsing process setting",
+        "ja" : "すすぎモード設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "array",
+      "minItems" : 1,
+      "maxItems" : 8,
+      "items" : {
+        "type" : "string",
+        "enum" : [ "auto", "withoutAdditionalWater", "withAdditionalWater", "shower" ]
+      }
+    },
+    "spinDryingTime" : {
+      "title" : "spinDryingTime",
+      "titles" : {
+        "en" : "spinDryingTime",
+        "ja" : "脱水時間設定値"
+      },
+      "echonet:epc" : "0xE8",
+      "description" : "Spin drying time setting",
+      "descriptions" : {
+        "en" : "Spin drying time setting",
+        "ja" : "脱水時間設定値"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "oneOf" : [ {
+        "type" : "object",
+        "properties" : {
+          "absolute" : {
+            "type" : "number",
+            "unit" : "minute",
+            "minimum" : 0,
+            "maximum" : 59,
+            "descriptions" : {
+              "ja" : "絶対値指定",
+              "en" : "Absolute setting"
+            }
+          }
+        }
+      }, {
+        "type" : "object",
+        "properties" : {
+          "relative" : {
+            "type" : "number",
+            "unit" : "minute",
+            "minimum" : -32,
+            "maximum" : 32,
+            "descriptions" : {
+              "ja" : "自動からの相対指定 (0は自動設定)",
+              "en" : "Relative setting relative to the automatic setting (0 means Automatic setting)"
+            }
+          }
+        }
+      } ]
+    },
+    "dryingTime" : {
+      "title" : "dryingTime",
+      "titles" : {
+        "en" : "dryingTime",
+        "ja" : "乾燥時間設定値"
+      },
+      "echonet:epc" : "0xE9",
+      "description" : "Drying time setting",
+      "descriptions" : {
+        "en" : "Drying time setting",
+        "ja" : "乾燥時間設定値"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "oneOf" : [ {
+        "type" : "object",
+        "properties" : {
+          "absolute" : {
+            "type" : "number",
+            "unit" : "minute",
+            "minimum" : 0,
+            "maximum" : 1439,
+            "descriptions" : {
+              "ja" : "絶対値指定",
+              "en" : "Absolute setting"
+            }
+          }
+        }
+      }, {
+        "type" : "object",
+        "properties" : {
+          "relative" : {
+            "type" : "number",
+            "unit" : "minute",
+            "minimum" : -60,
+            "maximum" : 60,
+            "descriptions" : {
+              "ja" : "自動からの相対指定 (0は自動設定)",
+              "en" : "Relative setting relative to the automatic setting (0 means Automatic setting)"
+            }
+          }
+        }
+      } ]
+    },
+    "waterTemperature" : {
+      "title" : "waterTemperature",
+      "titles" : {
+        "en" : "waterTemperature",
+        "ja" : "洗い温水設定値"
+      },
+      "echonet:epc" : "0xEA",
+      "description" : "Warm water setting",
+      "descriptions" : {
+        "en" : "Warm water setting",
+        "ja" : "洗い温水設定値"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "oneOf" : [ {
+        "type" : "number",
+        "unit" : "Celsius",
+        "minimum" : 0,
+        "maximum" : 100
+      }, {
+        "type" : "string",
+        "enum" : [ "noWarmWater", "auto" ]
+      } ]
+    },
+    "bathtubWaterRecycle" : {
+      "title" : "bathtubWaterRecycle",
+      "titles" : {
+        "en" : "bathtubWaterRecycle",
+        "ja" : "風呂水設定"
+      },
+      "echonet:epc" : "0xEB",
+      "description" : "Bathtub water recycle setting",
+      "descriptions" : {
+        "en" : "Bathtub water recycle setting",
+        "ja" : "風呂水設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string",
+      "enum" : [ "none", "washing", "rinsingWithoutFinal", "rinsing", "washingRinsingWithoutFinal", "washingRinsing" ]
+    },
+    "wrinklingMinimization" : {
+      "title" : "wrinklingMinimization",
+      "titles" : {
+        "en" : "wrinklingMinimization",
+        "ja" : "ソフトキープ設定"
+      },
+      "echonet:epc" : "0xEC",
+      "description" : "Wrinkling minimization setting",
+      "descriptions" : {
+        "en" : "Wrinkling minimization setting",
+        "ja" : "ソフトキープ設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string",
+      "enum" : [ "enable", "disable" ]
+    },
+    "washingDryingTimeRemaining" : {
+      "title" : "washingDryingTimeRemaining",
+      "titles" : {
+        "en" : "washingDryingTimeRemaining",
+        "ja" : "洗濯乾燥残り時間"
+      },
+      "echonet:epc" : "0xED",
+      "description" : "Time remaining to complete washer and dryer cycle",
+      "descriptions" : {
+        "en" : "Time remaining to complete washer and dryer cycle",
+        "ja" : "洗濯乾燥残り時間"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "oneOf" : [ {
+        "type" : "number",
+        "unit" : "minute",
+        "minimum" : 0,
+        "maximum" : 15299
+      }, {
+        "type" : "string",
+        "enum" : [ "unknown" ]
+      } ]
+    },
+    "doorLockStatus" : {
+      "title" : "doorLockStatus",
+      "titles" : {
+        "en" : "doorLockStatus",
+        "ja" : "運転中扉・蓋ロック設定"
+      },
+      "echonet:epc" : "0xEE",
+      "description" : "Door/cover lock setting",
+      "descriptions" : {
+        "en" : "Door/cover lock setting",
+        "ja" : "運転中扉・蓋ロック設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "boolean"
+    }
+  }
+}

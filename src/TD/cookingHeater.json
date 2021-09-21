@@ -1,0 +1,942 @@
+{
+  "@context" : [ "https://www.w3.org/2019/wot/td/v1", {
+    "echonet" : "https://echonet.jp/"
+  }, {
+    "@language" : "en"
+  } ],
+  "id" : "",
+  "echonet:eoj" : "0x03B9",
+  "title" : "cookingHeater",
+  "titles" : {
+    "en" : "cookingHeater",
+    "ja" : "クッキングヒータ"
+  },
+  "description" : "Cooking heater",
+  "descriptions" : {
+    "en" : "Cooking heater",
+    "ja" : "クッキングヒータ"
+  },
+  "properties" : {
+    "operationStatus" : {
+      "title" : "operationStatus",
+      "titles" : {
+        "en" : "operationStatus",
+        "ja" : "動作状態"
+      },
+      "echonet:epc" : "0x80",
+      "description" : "Operation status",
+      "descriptions" : {
+        "en" : "Operation status",
+        "ja" : "動作状態"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : true,
+      "type" : "boolean"
+    },
+    "installationLocation" : {
+      "title" : "installationLocation",
+      "titles" : {
+        "en" : "installationLocation",
+        "ja" : "設置場所"
+      },
+      "echonet:epc" : "0x81",
+      "description" : "Installation location",
+      "descriptions" : {
+        "en" : "Installation location",
+        "ja" : "設置場所"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : true,
+      "oneOf" : [ {
+        "type" : "string"
+      }, {
+        "type" : "string"
+      } ]
+    },
+    "protocol" : {
+      "title" : "protocol",
+      "titles" : {
+        "en" : "protocol",
+        "ja" : "規格Version情報"
+      },
+      "echonet:epc" : "0x82",
+      "description" : "Standard version information",
+      "descriptions" : {
+        "en" : "Standard version information",
+        "ja" : "規格Version情報"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "id" : {
+      "title" : "id",
+      "titles" : {
+        "en" : "id",
+        "ja" : "識別番号"
+      },
+      "echonet:epc" : "0x83",
+      "description" : "Identification number",
+      "descriptions" : {
+        "en" : "Identification number",
+        "ja" : "識別番号"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "instantaneousElectricPowerConsumption" : {
+      "title" : "instantaneousElectricPowerConsumption",
+      "titles" : {
+        "en" : "instantaneousElectricPowerConsumption",
+        "ja" : "瞬時消費電力計測値"
+      },
+      "echonet:epc" : "0x84",
+      "description" : "Measured instantaneous power consumption",
+      "descriptions" : {
+        "en" : "Measured instantaneous power consumption",
+        "ja" : "瞬時消費電力計測値"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "W",
+      "minimum" : 0,
+      "maximum" : 65533
+    },
+    "consumedCumulativeElectricEnergy" : {
+      "title" : "consumedCumulativeElectricEnergy",
+      "titles" : {
+        "en" : "consumedCumulativeElectricEnergy",
+        "ja" : "積算消費電力計測値"
+      },
+      "echonet:epc" : "0x85",
+      "description" : "Measured cumulative power consumption",
+      "descriptions" : {
+        "en" : "Measured cumulative power consumption",
+        "ja" : "積算消費電力計測値"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "kWh",
+      "minimum" : 0,
+      "maximum" : 999999.999
+    },
+    "manufacturerFaultCode" : {
+      "title" : "manufacturerFaultCode",
+      "titles" : {
+        "en" : "manufacturerFaultCode",
+        "ja" : "メーカ異常コード"
+      },
+      "echonet:epc" : "0x86",
+      "description" : "Manufacturer's fault code",
+      "descriptions" : {
+        "en" : "Manufacturer's fault code",
+        "ja" : "メーカ異常コード"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "currentLimit" : {
+      "title" : "currentLimit",
+      "titles" : {
+        "en" : "currentLimit",
+        "ja" : "電流制限設定"
+      },
+      "echonet:epc" : "0x87",
+      "description" : "Current limit setting",
+      "descriptions" : {
+        "en" : "Current limit setting",
+        "ja" : "電流制限設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "%",
+      "minimum" : 0,
+      "maximum" : 100
+    },
+    "faultStatus" : {
+      "title" : "faultStatus",
+      "titles" : {
+        "en" : "faultStatus",
+        "ja" : "異常発生状態"
+      },
+      "echonet:epc" : "0x88",
+      "description" : "Fault status",
+      "descriptions" : {
+        "en" : "Fault status",
+        "ja" : "異常発生状態"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : true,
+      "type" : "boolean"
+    },
+    "faultDescription" : {
+      "title" : "faultDescription",
+      "titles" : {
+        "en" : "faultDescription",
+        "ja" : "異常内容"
+      },
+      "echonet:epc" : "0x89",
+      "description" : "Fault description",
+      "descriptions" : {
+        "en" : "Fault description",
+        "ja" : "異常内容"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "manufacturer" : {
+      "title" : "manufacturer",
+      "titles" : {
+        "en" : "manufacturer",
+        "ja" : "メーカコード"
+      },
+      "echonet:epc" : "0x8A",
+      "description" : "Manufactur code",
+      "descriptions" : {
+        "en" : "Manufactur code",
+        "ja" : "メーカコード"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "businessFacilityCode" : {
+      "title" : "businessFacilityCode",
+      "titles" : {
+        "en" : "businessFacilityCode",
+        "ja" : "事業場コード"
+      },
+      "echonet:epc" : "0x8B",
+      "description" : "Business facility code",
+      "descriptions" : {
+        "en" : "Business facility code",
+        "ja" : "事業場コード"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "productCode" : {
+      "title" : "productCode",
+      "titles" : {
+        "en" : "productCode",
+        "ja" : "商品コード"
+      },
+      "echonet:epc" : "0x8C",
+      "description" : "Product code",
+      "descriptions" : {
+        "en" : "Product code",
+        "ja" : "商品コード"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "serialNumber" : {
+      "title" : "serialNumber",
+      "titles" : {
+        "en" : "serialNumber",
+        "ja" : "製造番号"
+      },
+      "echonet:epc" : "0x8D",
+      "description" : "Production number",
+      "descriptions" : {
+        "en" : "Production number",
+        "ja" : "製造番号"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "productionDate" : {
+      "title" : "productionDate",
+      "titles" : {
+        "en" : "productionDate",
+        "ja" : "製造年月日"
+      },
+      "echonet:epc" : "0x8E",
+      "description" : "Production date",
+      "descriptions" : {
+        "en" : "Production date",
+        "ja" : "製造年月日"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string",
+      "format" : "date"
+    },
+    "powerSaving" : {
+      "title" : "powerSaving",
+      "titles" : {
+        "en" : "powerSaving",
+        "ja" : "節電動作設定"
+      },
+      "echonet:epc" : "0x8F",
+      "description" : "Power-saving operation setting",
+      "descriptions" : {
+        "en" : "Power-saving operation setting",
+        "ja" : "節電動作設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "boolean"
+    },
+    "remoteControl" : {
+      "title" : "remoteControl",
+      "titles" : {
+        "en" : "remoteControl",
+        "ja" : "遠隔操作設定"
+      },
+      "echonet:epc" : "0x93",
+      "description" : "Remote controll setting",
+      "descriptions" : {
+        "en" : "Remote controll setting",
+        "ja" : "遠隔操作設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "boolean"
+    },
+    "relativeTimeOfOffTimer" : {
+      "title" : "relativeTimeOfOffTimer",
+      "titles" : {
+        "en" : "relativeTimeOfOffTimer",
+        "ja" : "切タイマ相対時間設定値"
+      },
+      "echonet:epc" : "0x96",
+      "description" : "Relative time settings of off timers",
+      "descriptions" : {
+        "en" : "Relative time settings of off timers",
+        "ja" : "切タイマ相対時間設定値"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "leftStove" : {
+          "oneOf" : [ {
+            "type" : "string",
+            "format" : "time"
+          }, {
+            "type" : "string",
+            "enum" : [ "noSetting" ]
+          } ],
+          "descriptions" : {
+            "ja" : "左コンロ切タイマ時間",
+            "en" : "Relative time setting of the left stove off timer"
+          }
+        },
+        "rightStove" : {
+          "oneOf" : [ {
+            "type" : "string",
+            "format" : "time"
+          }, {
+            "type" : "string",
+            "enum" : [ "noSetting" ]
+          } ],
+          "descriptions" : {
+            "ja" : "右コンロ切タイマ時間",
+            "en" : "Relative time setting of the right stove off timer"
+          }
+        },
+        "farSideStove" : {
+          "oneOf" : [ {
+            "type" : "string",
+            "format" : "time"
+          }, {
+            "type" : "string",
+            "enum" : [ "noSetting" ]
+          } ],
+          "descriptions" : {
+            "ja" : "奥コンロ切タイマ時間",
+            "en" : "Relative time setting of the far-side stove off timer"
+          }
+        },
+        "roaster" : {
+          "oneOf" : [ {
+            "type" : "string",
+            "format" : "time"
+          }, {
+            "type" : "string",
+            "enum" : [ "noSetting" ]
+          } ],
+          "descriptions" : {
+            "ja" : "ロースタ切タイマ時間",
+            "en" : "Relative time setting of the roaster off timer"
+          }
+        }
+      }
+    },
+    "currentDateAndTime" : {
+      "title" : "currentDateAndTime",
+      "titles" : {
+        "en" : "currentDateAndTime",
+        "ja" : "現在年月日設定"
+      },
+      "echonet:epc" : "0x98",
+      "description" : "Current date setting",
+      "descriptions" : {
+        "en" : "Current date setting",
+        "ja" : "現在年月日設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string",
+      "format" : "date-time"
+    },
+    "powerLimit" : {
+      "title" : "powerLimit",
+      "titles" : {
+        "en" : "powerLimit",
+        "ja" : "電力制限設定"
+      },
+      "echonet:epc" : "0x99",
+      "description" : "Power limit setting",
+      "descriptions" : {
+        "en" : "Power limit setting",
+        "ja" : "電力制限設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "W",
+      "minimum" : 0,
+      "maximum" : 65533
+    },
+    "hourMeter" : {
+      "title" : "hourMeter",
+      "titles" : {
+        "en" : "hourMeter",
+        "ja" : "積算運転時間"
+      },
+      "echonet:epc" : "0x9A",
+      "description" : "Cumulative operating time",
+      "descriptions" : {
+        "en" : "Cumulative operating time",
+        "ja" : "積算運転時間"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "unit" : {
+          "type" : "string",
+          "enum" : [ "second", "minute", "hour", "day" ],
+          "descriptions" : {
+            "ja" : "積算運転時間",
+            "en" : "Cumulative operating time"
+          }
+        },
+        "time" : {
+          "type" : "number",
+          "minimum" : 0,
+          "maximum" : 4294967295,
+          "descriptions" : {
+            "ja" : "時間",
+            "en" : "time"
+          }
+        }
+      }
+    },
+    "childLock" : {
+      "title" : "childLock",
+      "titles" : {
+        "en" : "childLock",
+        "ja" : "チャイルドロック設定"
+      },
+      "echonet:epc" : "0xA1",
+      "description" : "Child lock setting",
+      "descriptions" : {
+        "en" : "Child lock setting",
+        "ja" : "チャイルドロック設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "boolean"
+    },
+    "radiantHeaterLock" : {
+      "title" : "radiantHeaterLock",
+      "titles" : {
+        "en" : "radiantHeaterLock",
+        "ja" : "ラジエントヒータロック設定"
+      },
+      "echonet:epc" : "0xA2",
+      "description" : "Radiant heater lock setting",
+      "descriptions" : {
+        "en" : "Radiant heater lock setting",
+        "ja" : "ラジエントヒータロック設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "boolean"
+    },
+    "heatingStatus" : {
+      "title" : "heatingStatus",
+      "titles" : {
+        "en" : "heatingStatus",
+        "ja" : "加熱状態"
+      },
+      "echonet:epc" : "0xB1",
+      "description" : "Heating status",
+      "descriptions" : {
+        "en" : "Heating status",
+        "ja" : "加熱状態"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "leftStove" : {
+          "type" : "string",
+          "enum" : [ "standingBy", "operating", "temporarilyStopped", "heatingProhibited", "unknown" ],
+          "descriptions" : {
+            "ja" : "左コンロ加熱状態",
+            "en" : "Heating status of the left stove"
+          }
+        },
+        "rightStove" : {
+          "type" : "string",
+          "enum" : [ "standingBy", "operating", "temporarilyStopped", "heatingProhibited", "unknown" ],
+          "descriptions" : {
+            "ja" : "右コンロ加熱状態",
+            "en" : "Heating status of the right stove"
+          }
+        },
+        "farSideStove" : {
+          "type" : "string",
+          "enum" : [ "standingBy", "operating", "temporarilyStopped", "heatingProhibited", "unknown" ],
+          "descriptions" : {
+            "ja" : "奥コンロ加熱状態",
+            "en" : "Heating status of the far-side stove"
+          }
+        },
+        "roaster" : {
+          "type" : "string",
+          "enum" : [ "standingBy", "operating", "temporarilyStopped", "heatingProhibited", "unknown" ],
+          "descriptions" : {
+            "ja" : "ロースタ加熱状態",
+            "en" : "Heating status of the roaster"
+          }
+        }
+      }
+    },
+    "heatingOperation" : {
+      "title" : "heatingOperation",
+      "titles" : {
+        "en" : "heatingOperation",
+        "ja" : "加熱設定"
+      },
+      "echonet:epc" : "0xB2",
+      "description" : "Heating setting",
+      "descriptions" : {
+        "en" : "Heating setting",
+        "ja" : "加熱設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "leftStove" : {
+          "type" : "string",
+          "enum" : [ "stopHeating", "startOrResumeHeating", "temporarilyStopHeating", "noSetting" ],
+          "descriptions" : {
+            "ja" : "左コンロ設定",
+            "en" : "Left stove setting"
+          }
+        },
+        "rightStove" : {
+          "type" : "string",
+          "enum" : [ "stopHeating", "startOrResumeHeating", "temporarilyStopHeating", "noSetting" ],
+          "descriptions" : {
+            "ja" : "右コンロ設定",
+            "en" : "Right stove setting"
+          }
+        },
+        "farSideStove" : {
+          "type" : "string",
+          "enum" : [ "stopHeating", "startOrResumeHeating", "temporarilyStopHeating", "noSetting" ],
+          "descriptions" : {
+            "ja" : "奥コンロ設定",
+            "en" : "Far-side stove setting"
+          }
+        },
+        "roaster" : {
+          "type" : "string",
+          "enum" : [ "stopHeating", "startOrResumeHeating", "temporarilyStopHeating", "noSetting" ],
+          "descriptions" : {
+            "ja" : "ロースタ設定",
+            "en" : "Roaster setting"
+          }
+        }
+      }
+    },
+    "heatingModesOfStoves" : {
+      "title" : "heatingModesOfStoves",
+      "titles" : {
+        "en" : "heatingModesOfStoves",
+        "ja" : "コンロ加熱モード設定"
+      },
+      "echonet:epc" : "0xE0",
+      "description" : "Heating modes of stoves",
+      "descriptions" : {
+        "en" : "Heating modes of stoves",
+        "ja" : "コンロ加熱モード設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "leftStove" : {
+          "type" : "string",
+          "enum" : [ "heatingPowerControl", "deepFrying", "waterHeating", "riceBoiling", "stirFrying", "noSetting" ],
+          "descriptions" : {
+            "ja" : "左コンロ加熱モード",
+            "en" : "Heating mode of the left stove"
+          }
+        },
+        "rightStove" : {
+          "type" : "string",
+          "enum" : [ "heatingPowerControl", "deepFrying", "waterHeating", "riceBoiling", "stirFrying", "noSetting" ],
+          "descriptions" : {
+            "ja" : "右コンロ加熱モード",
+            "en" : "Heating mode of the right stove"
+          }
+        },
+        "farSideStove" : {
+          "type" : "string",
+          "enum" : [ "heatingPowerControl", "deepFrying", "waterHeating", "riceBoiling", "stirFrying", "noSetting" ],
+          "descriptions" : {
+            "ja" : "奥コンロ加熱モード",
+            "en" : "Heating mode of the far-side stove"
+          }
+        }
+      }
+    },
+    "heatingTemperature" : {
+      "title" : "heatingTemperature",
+      "titles" : {
+        "en" : "heatingTemperature",
+        "ja" : "加熱温度設定値"
+      },
+      "echonet:epc" : "0xE3",
+      "description" : "Heating temperature setting",
+      "descriptions" : {
+        "en" : "Heating temperature setting",
+        "ja" : "加熱温度設定値"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "leftStove" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "Celsius",
+            "minimum" : 50,
+            "maximum" : 250
+          }, {
+            "type" : "string",
+            "enum" : [ "noSetting" ]
+          } ],
+          "descriptions" : {
+            "ja" : "左コンロ設定温度",
+            "en" : "Left stove temperature setting"
+          }
+        },
+        "rightStove" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "Celsius",
+            "minimum" : 50,
+            "maximum" : 250
+          }, {
+            "type" : "string",
+            "enum" : [ "noSetting" ]
+          } ],
+          "descriptions" : {
+            "ja" : "右コンロ設定温度",
+            "en" : "Right stove temperature setting"
+          }
+        },
+        "farSideStove" : {
+          "oneOf" : [ {
+            "type" : "number",
+            "unit" : "Celsius",
+            "minimum" : 50,
+            "maximum" : 250
+          }, {
+            "type" : "string",
+            "enum" : [ "noSetting" ]
+          } ],
+          "descriptions" : {
+            "ja" : "奥コンロ設定温度",
+            "en" : "Far-side stove temperature setting"
+          }
+        }
+      }
+    },
+    "heatingPower" : {
+      "title" : "heatingPower",
+      "titles" : {
+        "en" : "heatingPower",
+        "ja" : "加熱出力設定"
+      },
+      "echonet:epc" : "0xE7",
+      "description" : "Heating power setting",
+      "descriptions" : {
+        "en" : "Heating power setting",
+        "ja" : "加熱出力設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "leftStove" : {
+          "type" : "object",
+          "properties" : {
+            "oneOf" : [ {
+              "wattage" : {
+                "type" : "number",
+                "unit" : "W",
+                "minimum" : 0,
+                "maximum" : 10000,
+                "descriptions" : {
+                  "ja" : "出力設定形式",
+                  "en" : "Output wattage"
+                }
+              },
+              "level" : {
+                "type" : "number",
+                "minimum" : 0,
+                "maximum" : 16,
+                "descriptions" : {
+                  "ja" : "レベル設定形式",
+                  "en" : "Level"
+                }
+              },
+              "stateOfFlame" : {
+                "type" : "string",
+                "enum" : [ "veryLowFlame", "lowFlame", "mediumFlame", "highFlame", "highPower" ],
+                "descriptions" : {
+                  "ja" : "状態表現形式",
+                  "en" : "The state of flame"
+                }
+              },
+              "noSetting" : {
+                "type" : "null",
+                "descriptions" : {
+                  "ja" : "未設定",
+                  "en" : "No setting"
+                }
+              }
+            } ]
+          },
+          "descriptions" : {
+            "ja" : "左コンロ加熱出力",
+            "en" : "Heating power of the left stove"
+          }
+        },
+        "rightStove" : {
+          "type" : "object",
+          "properties" : {
+            "oneOf" : [ {
+              "wattage" : {
+                "type" : "number",
+                "unit" : "W",
+                "minimum" : 0,
+                "maximum" : 10000,
+                "descriptions" : {
+                  "ja" : "出力設定形式",
+                  "en" : "Output wattage"
+                }
+              },
+              "level" : {
+                "type" : "number",
+                "minimum" : 0,
+                "maximum" : 16,
+                "descriptions" : {
+                  "ja" : "レベル設定形式",
+                  "en" : "Level"
+                }
+              },
+              "stateOfFlame" : {
+                "type" : "string",
+                "enum" : [ "veryLowFlame", "lowFlame", "mediumFlame", "highFlame", "highPower" ],
+                "descriptions" : {
+                  "ja" : "状態表現形式",
+                  "en" : "The state of flame"
+                }
+              },
+              "noSetting" : {
+                "type" : "null",
+                "descriptions" : {
+                  "ja" : "未設定",
+                  "en" : "No setting"
+                }
+              }
+            } ]
+          },
+          "descriptions" : {
+            "ja" : "右コンロ加熱出力",
+            "en" : "Heating power of the right stove"
+          }
+        },
+        "farSideStove" : {
+          "type" : "object",
+          "properties" : {
+            "oneOf" : [ {
+              "wattage" : {
+                "type" : "number",
+                "unit" : "W",
+                "minimum" : 0,
+                "maximum" : 10000,
+                "descriptions" : {
+                  "ja" : "出力設定形式",
+                  "en" : "Output wattage"
+                }
+              },
+              "level" : {
+                "type" : "number",
+                "minimum" : 0,
+                "maximum" : 16,
+                "descriptions" : {
+                  "ja" : "レベル設定形式",
+                  "en" : "Level"
+                }
+              },
+              "stateOfFlame" : {
+                "type" : "string",
+                "enum" : [ "veryLowFlame", "lowFlame", "mediumFlame", "highFlame", "highPower" ],
+                "descriptions" : {
+                  "ja" : "状態表現形式",
+                  "en" : "The state of flame"
+                }
+              },
+              "noSetting" : {
+                "type" : "null",
+                "descriptions" : {
+                  "ja" : "未設定",
+                  "en" : "No setting"
+                }
+              }
+            } ]
+          },
+          "descriptions" : {
+            "ja" : "奥コンロ加熱出力",
+            "en" : "Heating power of the far-side stove"
+          }
+        },
+        "roaster" : {
+          "type" : "object",
+          "properties" : {
+            "oneOf" : [ {
+              "wattage" : {
+                "type" : "number",
+                "unit" : "W",
+                "minimum" : 0,
+                "maximum" : 10000,
+                "descriptions" : {
+                  "ja" : "出力設定形式",
+                  "en" : "Output wattage"
+                }
+              },
+              "level" : {
+                "type" : "number",
+                "minimum" : 0,
+                "maximum" : 16,
+                "descriptions" : {
+                  "ja" : "レベル設定形式",
+                  "en" : "Level"
+                }
+              },
+              "stateOfFlame" : {
+                "type" : "string",
+                "enum" : [ "veryLowFlame", "lowFlame", "mediumFlame", "highFlame", "highPower" ],
+                "descriptions" : {
+                  "ja" : "状態表現形式",
+                  "en" : "The state of flame"
+                }
+              },
+              "noSetting" : {
+                "type" : "null",
+                "descriptions" : {
+                  "ja" : "未設定",
+                  "en" : "No setting"
+                }
+              }
+            } ]
+          },
+          "descriptions" : {
+            "ja" : "ロースタ加熱出力",
+            "en" : "Heating power of the roaster"
+          }
+        }
+      }
+    }
+  },
+  "actions" : {
+    "allStop" : {
+      "title" : "allStop",
+      "titles" : {
+        "en" : "allStop",
+        "ja" : "一括停止設定"
+      },
+      "description" : "All stop setting",
+      "descriptions" : {
+        "en" : "All stop setting",
+        "ja" : "一括停止設定"
+      },
+      "input" : { },
+      "output" : {
+        "type" : "object",
+        "description" : "Return true/false and a message",
+        "descriptions" : {
+          "en" : "Return true/false and a message",
+          "ja" : "true/false とメッセージを返す"
+        },
+        "properties" : {
+          "result" : {
+            "type" : "boolean"
+          },
+          "message" : {
+            "type" : "string"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,806 @@
+{
+  "@context" : [ "https://www.w3.org/2019/wot/td/v1", {
+    "echonet" : "https://echonet.jp/"
+  }, {
+    "@language" : "en"
+  } ],
+  "id" : "",
+  "echonet:eoj" : "0x0273",
+  "title" : "bathroomHeaterDryer",
+  "titles" : {
+    "en" : "bathroomHeaterDryer",
+    "ja" : "浴室暖房乾燥機"
+  },
+  "description" : "Bathroom heater dryer",
+  "descriptions" : {
+    "en" : "Bathroom heater dryer",
+    "ja" : "浴室暖房乾燥機"
+  },
+  "properties" : {
+    "operationStatus" : {
+      "title" : "operationStatus",
+      "titles" : {
+        "en" : "operationStatus",
+        "ja" : "動作状態"
+      },
+      "echonet:epc" : "0x80",
+      "description" : "Operation status",
+      "descriptions" : {
+        "en" : "Operation status",
+        "ja" : "動作状態"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : true,
+      "type" : "boolean"
+    },
+    "installationLocation" : {
+      "title" : "installationLocation",
+      "titles" : {
+        "en" : "installationLocation",
+        "ja" : "設置場所"
+      },
+      "echonet:epc" : "0x81",
+      "description" : "Installation location",
+      "descriptions" : {
+        "en" : "Installation location",
+        "ja" : "設置場所"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : true,
+      "oneOf" : [ {
+        "type" : "string"
+      }, {
+        "type" : "string"
+      } ]
+    },
+    "protocol" : {
+      "title" : "protocol",
+      "titles" : {
+        "en" : "protocol",
+        "ja" : "規格Version情報"
+      },
+      "echonet:epc" : "0x82",
+      "description" : "Standard version information",
+      "descriptions" : {
+        "en" : "Standard version information",
+        "ja" : "規格Version情報"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "id" : {
+      "title" : "id",
+      "titles" : {
+        "en" : "id",
+        "ja" : "識別番号"
+      },
+      "echonet:epc" : "0x83",
+      "description" : "Identification number",
+      "descriptions" : {
+        "en" : "Identification number",
+        "ja" : "識別番号"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "instantaneousElectricPowerConsumption" : {
+      "title" : "instantaneousElectricPowerConsumption",
+      "titles" : {
+        "en" : "instantaneousElectricPowerConsumption",
+        "ja" : "瞬時消費電力計測値"
+      },
+      "echonet:epc" : "0x84",
+      "description" : "Measured instantaneous power consumption",
+      "descriptions" : {
+        "en" : "Measured instantaneous power consumption",
+        "ja" : "瞬時消費電力計測値"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "W",
+      "minimum" : 0,
+      "maximum" : 65533
+    },
+    "consumedCumulativeElectricEnergy" : {
+      "title" : "consumedCumulativeElectricEnergy",
+      "titles" : {
+        "en" : "consumedCumulativeElectricEnergy",
+        "ja" : "積算消費電力計測値"
+      },
+      "echonet:epc" : "0x85",
+      "description" : "Measured cumulative power consumption",
+      "descriptions" : {
+        "en" : "Measured cumulative power consumption",
+        "ja" : "積算消費電力計測値"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "kWh",
+      "minimum" : 0,
+      "maximum" : 999999.999
+    },
+    "manufacturerFaultCode" : {
+      "title" : "manufacturerFaultCode",
+      "titles" : {
+        "en" : "manufacturerFaultCode",
+        "ja" : "メーカ異常コード"
+      },
+      "echonet:epc" : "0x86",
+      "description" : "Manufacturer's fault code",
+      "descriptions" : {
+        "en" : "Manufacturer's fault code",
+        "ja" : "メーカ異常コード"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "currentLimit" : {
+      "title" : "currentLimit",
+      "titles" : {
+        "en" : "currentLimit",
+        "ja" : "電流制限設定"
+      },
+      "echonet:epc" : "0x87",
+      "description" : "Current limit setting",
+      "descriptions" : {
+        "en" : "Current limit setting",
+        "ja" : "電流制限設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "%",
+      "minimum" : 0,
+      "maximum" : 100
+    },
+    "faultStatus" : {
+      "title" : "faultStatus",
+      "titles" : {
+        "en" : "faultStatus",
+        "ja" : "異常発生状態"
+      },
+      "echonet:epc" : "0x88",
+      "description" : "Fault status",
+      "descriptions" : {
+        "en" : "Fault status",
+        "ja" : "異常発生状態"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : true,
+      "type" : "boolean"
+    },
+    "faultDescription" : {
+      "title" : "faultDescription",
+      "titles" : {
+        "en" : "faultDescription",
+        "ja" : "異常内容"
+      },
+      "echonet:epc" : "0x89",
+      "description" : "Fault description",
+      "descriptions" : {
+        "en" : "Fault description",
+        "ja" : "異常内容"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "manufacturer" : {
+      "title" : "manufacturer",
+      "titles" : {
+        "en" : "manufacturer",
+        "ja" : "メーカコード"
+      },
+      "echonet:epc" : "0x8A",
+      "description" : "Manufactur code",
+      "descriptions" : {
+        "en" : "Manufactur code",
+        "ja" : "メーカコード"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "businessFacilityCode" : {
+      "title" : "businessFacilityCode",
+      "titles" : {
+        "en" : "businessFacilityCode",
+        "ja" : "事業場コード"
+      },
+      "echonet:epc" : "0x8B",
+      "description" : "Business facility code",
+      "descriptions" : {
+        "en" : "Business facility code",
+        "ja" : "事業場コード"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "productCode" : {
+      "title" : "productCode",
+      "titles" : {
+        "en" : "productCode",
+        "ja" : "商品コード"
+      },
+      "echonet:epc" : "0x8C",
+      "description" : "Product code",
+      "descriptions" : {
+        "en" : "Product code",
+        "ja" : "商品コード"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "serialNumber" : {
+      "title" : "serialNumber",
+      "titles" : {
+        "en" : "serialNumber",
+        "ja" : "製造番号"
+      },
+      "echonet:epc" : "0x8D",
+      "description" : "Production number",
+      "descriptions" : {
+        "en" : "Production number",
+        "ja" : "製造番号"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string"
+    },
+    "productionDate" : {
+      "title" : "productionDate",
+      "titles" : {
+        "en" : "productionDate",
+        "ja" : "製造年月日"
+      },
+      "echonet:epc" : "0x8E",
+      "description" : "Production date",
+      "descriptions" : {
+        "en" : "Production date",
+        "ja" : "製造年月日"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string",
+      "format" : "date"
+    },
+    "powerSaving" : {
+      "title" : "powerSaving",
+      "titles" : {
+        "en" : "powerSaving",
+        "ja" : "節電動作設定"
+      },
+      "echonet:epc" : "0x8F",
+      "description" : "Power-saving operation setting",
+      "descriptions" : {
+        "en" : "Power-saving operation setting",
+        "ja" : "節電動作設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "boolean"
+    },
+    "onTimerReservation1" : {
+      "title" : "onTimerReservation1",
+      "titles" : {
+        "en" : "onTimerReservation1",
+        "ja" : "ONタイマ予約設定1"
+      },
+      "echonet:epc" : "0x90",
+      "description" : "On timer reservation setting 1",
+      "descriptions" : {
+        "en" : "On timer reservation setting 1",
+        "ja" : "ONタイマ予約設定1"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "boolean"
+    },
+    "timeOfOnTimer" : {
+      "title" : "timeOfOnTimer",
+      "titles" : {
+        "en" : "timeOfOnTimer",
+        "ja" : "ONタイマ時刻設定値"
+      },
+      "echonet:epc" : "0x91",
+      "description" : "On timer setting value",
+      "descriptions" : {
+        "en" : "On timer setting value",
+        "ja" : "ONタイマ時刻設定値"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string",
+      "format" : "time"
+    },
+    "timeOfOffTimer" : {
+      "title" : "timeOfOffTimer",
+      "titles" : {
+        "en" : "timeOfOffTimer",
+        "ja" : "ONタイマ相対時間設定値"
+      },
+      "echonet:epc" : "0x92",
+      "description" : "On relative timer setting value",
+      "descriptions" : {
+        "en" : "On relative timer setting value",
+        "ja" : "ONタイマ相対時間設定値"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string",
+      "format" : "time"
+    },
+    "remoteControl" : {
+      "title" : "remoteControl",
+      "titles" : {
+        "en" : "remoteControl",
+        "ja" : "遠隔操作設定"
+      },
+      "echonet:epc" : "0x93",
+      "description" : "Remote controll setting",
+      "descriptions" : {
+        "en" : "Remote controll setting",
+        "ja" : "遠隔操作設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "boolean"
+    },
+    "offTimerReservation" : {
+      "title" : "offTimerReservation",
+      "titles" : {
+        "en" : "offTimerReservation",
+        "ja" : "OFFタイマ予約設定"
+      },
+      "echonet:epc" : "0x94",
+      "description" : "Off timer reservation setting",
+      "descriptions" : {
+        "en" : "Off timer reservation setting",
+        "ja" : "OFFタイマ予約設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "boolean"
+    },
+    "relativeTimeOfOnTimer" : {
+      "title" : "relativeTimeOfOnTimer",
+      "titles" : {
+        "en" : "relativeTimeOfOnTimer",
+        "ja" : "OFFタイマ時刻設定値"
+      },
+      "echonet:epc" : "0x95",
+      "description" : "OFF timer setting value",
+      "descriptions" : {
+        "en" : "OFF timer setting value",
+        "ja" : "OFFタイマ時刻設定値"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string",
+      "format" : "time"
+    },
+    "relativeTimeOfOffTimer" : {
+      "title" : "relativeTimeOfOffTimer",
+      "titles" : {
+        "en" : "relativeTimeOfOffTimer",
+        "ja" : "OFFタイマ相対時間設定値"
+      },
+      "echonet:epc" : "0x96",
+      "description" : "Off relative timer setting value",
+      "descriptions" : {
+        "en" : "Off relative timer setting value",
+        "ja" : "OFFタイマ相対時間設定値"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string",
+      "format" : "time"
+    },
+    "currentDateAndTime" : {
+      "title" : "currentDateAndTime",
+      "titles" : {
+        "en" : "currentDateAndTime",
+        "ja" : "現在年月日設定"
+      },
+      "echonet:epc" : "0x98",
+      "description" : "Current date setting",
+      "descriptions" : {
+        "en" : "Current date setting",
+        "ja" : "現在年月日設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string",
+      "format" : "date-time"
+    },
+    "powerLimit" : {
+      "title" : "powerLimit",
+      "titles" : {
+        "en" : "powerLimit",
+        "ja" : "電力制限設定"
+      },
+      "echonet:epc" : "0x99",
+      "description" : "Power limit setting",
+      "descriptions" : {
+        "en" : "Power limit setting",
+        "ja" : "電力制限設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "W",
+      "minimum" : 0,
+      "maximum" : 65533
+    },
+    "hourMeter" : {
+      "title" : "hourMeter",
+      "titles" : {
+        "en" : "hourMeter",
+        "ja" : "積算運転時間"
+      },
+      "echonet:epc" : "0x9A",
+      "description" : "Cumulative operating time",
+      "descriptions" : {
+        "en" : "Cumulative operating time",
+        "ja" : "積算運転時間"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "object",
+      "properties" : {
+        "unit" : {
+          "type" : "string",
+          "enum" : [ "second", "minute", "hour", "day" ],
+          "descriptions" : {
+            "ja" : "積算運転時間",
+            "en" : "Cumulative operating time"
+          }
+        },
+        "time" : {
+          "type" : "number",
+          "minimum" : 0,
+          "maximum" : 4294967295,
+          "descriptions" : {
+            "ja" : "時間",
+            "en" : "time"
+          }
+        }
+      }
+    },
+    "operationSetting" : {
+      "title" : "operationSetting",
+      "titles" : {
+        "en" : "operationSetting",
+        "ja" : "運転設定"
+      },
+      "echonet:epc" : "0xB0",
+      "description" : "Operation setting",
+      "descriptions" : {
+        "en" : "Operation setting",
+        "ja" : "運転設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string",
+      "enum" : [ "ventilation", "prewarming", "heating", "drying", "circulation", "mistSauna", "waterMist", "stop" ]
+    },
+    "ventilationSetting" : {
+      "title" : "ventilationSetting",
+      "titles" : {
+        "en" : "ventilationSetting",
+        "ja" : "換気運転設定"
+      },
+      "echonet:epc" : "0xB1",
+      "description" : "Ventilation operation setting",
+      "descriptions" : {
+        "en" : "Ventilation operation setting",
+        "ja" : "換気運転設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "oneOf" : [ {
+        "type" : "number",
+        "minimum" : 1,
+        "maximum" : 8
+      }, {
+        "type" : "string",
+        "enum" : [ "auto", "standard" ]
+      } ]
+    },
+    "bathroomPrewarming" : {
+      "title" : "bathroomPrewarming",
+      "titles" : {
+        "en" : "bathroomPrewarming",
+        "ja" : "入浴前予備暖房運転設定"
+      },
+      "echonet:epc" : "0xB2",
+      "description" : "Bathroom prewarming operation setting",
+      "descriptions" : {
+        "en" : "Bathroom prewarming operation setting",
+        "ja" : "入浴前予備暖房運転設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "oneOf" : [ {
+        "type" : "number",
+        "minimum" : 1,
+        "maximum" : 8
+      }, {
+        "type" : "string",
+        "enum" : [ "auto", "standard" ]
+      } ]
+    },
+    "bathroomHeating" : {
+      "title" : "bathroomHeating",
+      "titles" : {
+        "en" : "bathroomHeating",
+        "ja" : "入浴中暖房運転設定"
+      },
+      "echonet:epc" : "0xB3",
+      "description" : "Bathroom heating operation setting",
+      "descriptions" : {
+        "en" : "Bathroom heating operation setting",
+        "ja" : "入浴中暖房運転設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "oneOf" : [ {
+        "type" : "number",
+        "minimum" : 1,
+        "maximum" : 8
+      }, {
+        "type" : "string",
+        "enum" : [ "auto", "standard" ]
+      } ]
+    },
+    "bathroomDrying" : {
+      "title" : "bathroomDrying",
+      "titles" : {
+        "en" : "bathroomDrying",
+        "ja" : "乾燥運転設定"
+      },
+      "echonet:epc" : "0xB4",
+      "description" : "Bathroom drying operation setting",
+      "descriptions" : {
+        "en" : "Bathroom drying operation setting",
+        "ja" : "乾燥運転設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "oneOf" : [ {
+        "type" : "number",
+        "minimum" : 1,
+        "maximum" : 8
+      }, {
+        "type" : "string",
+        "enum" : [ "auto", "standard" ]
+      } ]
+    },
+    "coolAirCirculation" : {
+      "title" : "coolAirCirculation",
+      "titles" : {
+        "en" : "coolAirCirculation",
+        "ja" : "涼風運転設定"
+      },
+      "echonet:epc" : "0xB5",
+      "description" : "Cool air circulation operation setting",
+      "descriptions" : {
+        "en" : "Cool air circulation operation setting",
+        "ja" : "涼風運転設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "oneOf" : [ {
+        "type" : "number",
+        "minimum" : 1,
+        "maximum" : 8
+      }, {
+        "type" : "string",
+        "enum" : [ "auto", "standard" ]
+      } ]
+    },
+    "mistSauna" : {
+      "title" : "mistSauna",
+      "titles" : {
+        "en" : "mistSauna",
+        "ja" : "ミストサウナ運転設定"
+      },
+      "echonet:epc" : "0xB6",
+      "description" : "Mist sauna operation setting",
+      "descriptions" : {
+        "en" : "Mist sauna operation setting",
+        "ja" : "ミストサウナ運転設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "oneOf" : [ {
+        "type" : "number",
+        "minimum" : 1,
+        "maximum" : 8
+      }, {
+        "type" : "string",
+        "enum" : [ "auto", "standard" ]
+      } ]
+    },
+    "waterMist" : {
+      "title" : "waterMist",
+      "titles" : {
+        "en" : "waterMist",
+        "ja" : "水ミスト運転設定"
+      },
+      "echonet:epc" : "0xB7",
+      "description" : "Water mist operation setting",
+      "descriptions" : {
+        "en" : "Water mist operation setting",
+        "ja" : "水ミスト運転設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "oneOf" : [ {
+        "type" : "number",
+        "minimum" : 1,
+        "maximum" : 8
+      }, {
+        "type" : "string",
+        "enum" : [ "auto", "standard" ]
+      } ]
+    },
+    "bathroomHumidity" : {
+      "title" : "bathroomHumidity",
+      "titles" : {
+        "en" : "bathroomHumidity",
+        "ja" : "浴室内相対湿度計測値"
+      },
+      "echonet:epc" : "0xBA",
+      "description" : "Measured value of bathroom relative humidity",
+      "descriptions" : {
+        "en" : "Measured value of bathroom relative humidity",
+        "ja" : "浴室内相対湿度計測値"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "%",
+      "minimum" : 0,
+      "maximum" : 100
+    },
+    "bathroomTemperature" : {
+      "title" : "bathroomTemperature",
+      "titles" : {
+        "en" : "bathroomTemperature",
+        "ja" : "浴室内温度計測値"
+      },
+      "echonet:epc" : "0xBB",
+      "description" : "Measured value of bathroom temperature",
+      "descriptions" : {
+        "en" : "Measured value of bathroom temperature",
+        "ja" : "浴室内温度計測値"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "number",
+      "unit" : "Celsius",
+      "minimum" : -127,
+      "maximum" : 125
+    },
+    "ventilationAirFlowLevel" : {
+      "title" : "ventilationAirFlowLevel",
+      "titles" : {
+        "en" : "ventilationAirFlowLevel",
+        "ja" : "換気風量設定"
+      },
+      "echonet:epc" : "0xC2",
+      "description" : "Ventilation air flow rate setting",
+      "descriptions" : {
+        "en" : "Ventilation air flow rate setting",
+        "ja" : "換気風量設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "oneOf" : [ {
+        "type" : "number",
+        "minimum" : 1,
+        "maximum" : 8
+      }, {
+        "type" : "string",
+        "enum" : [ "auto" ]
+      } ]
+    },
+    "filterCleaningReminderSign" : {
+      "title" : "filterCleaningReminderSign",
+      "titles" : {
+        "en" : "filterCleaningReminderSign",
+        "ja" : "フィルタサイン設定"
+      },
+      "echonet:epc" : "0xCF",
+      "description" : "Filter cleaning reminder sign setting",
+      "descriptions" : {
+        "en" : "Filter cleaning reminder sign setting",
+        "ja" : "フィルタサイン設定"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "boolean"
+    },
+    "humanBodyDetectionStatus" : {
+      "title" : "humanBodyDetectionStatus",
+      "titles" : {
+        "en" : "humanBodyDetectionStatus",
+        "ja" : "人体検知状態"
+      },
+      "echonet:epc" : "0xE0",
+      "description" : "Human body detection status",
+      "descriptions" : {
+        "en" : "Human body detection status",
+        "ja" : "人体検知状態"
+      },
+      "readOnly" : true,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "boolean"
+    },
+    "onTimerReservation2" : {
+      "title" : "onTimerReservation2",
+      "titles" : {
+        "en" : "onTimerReservation2",
+        "ja" : "ONタイマ予約設定2"
+      },
+      "echonet:epc" : "0xE1",
+      "description" : "On timer reservation setting 2",
+      "descriptions" : {
+        "en" : "On timer reservation setting 2",
+        "ja" : "ONタイマ予約設定2"
+      },
+      "readOnly" : false,
+      "writeOnly" : false,
+      "observable" : false,
+      "type" : "string",
+      "enum" : [ "ventilationReservation", "prewarmingReservation", "heatingReservation", "dryingReservation", "circulationReservation", "mistSaunaReservation", "waterMistReservation", "noReservation" ]
+    }
+  }
+}

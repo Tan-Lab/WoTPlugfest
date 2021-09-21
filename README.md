@@ -1,2 +1,6 @@
-# WoTPlugfest
-Source code of the ECHONET Lite - WoT Intermediate for WoT 2021 Plugfest
+# eWoTProxy
+A proxy to turn ECHONET Lite Web API into WoT Resources  
+
+## How To Run
+1. npm run build
+2. npm run start
