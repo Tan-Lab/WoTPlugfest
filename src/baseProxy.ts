@@ -84,7 +84,7 @@ export class WotDevice {
 			this.thing.setPropertyReadHandler(pp,() => { 
 				return new Promise((resolve, reject) => {
 					var url = this.SERVER_ADDR
-					+ this.td['id'] + '/properties/' + pp;
+					+ this.td['id'].replace("echonet:" + this.td['title'] + ":","") + '/properties/' + pp;
 					fetch(url,{
 					headers: {
 					'Content-Type': 'application/json'}
@@ -110,7 +110,7 @@ export class WotDevice {
 					}
 					else {
 						var url = this.SERVER_ADDR
-						+ this.td['id'] + '/properties/' + pp;
+						+ this.td['id'].replace("echonet:" + this.td['title'] + ":","") + '/properties/' + pp;
 						var bodyobj = {};
 						bodyobj[pp] = inputData;
 						fetch(url, { method: 'PUT', headers: {
@@ -143,7 +143,7 @@ export class WotDevice {
 				}
 				else {
 					var url = this.SERVER_ADDR
-					+ this.td['id'] + '/actions/' + action;
+					+ this.td['id'].replace("echonet:" + this.td['title'] + ":","") + '/actions/' + action;
 					fetch(url, { method: 'POST', headers: {
 						'Content-Type': 'application/json'
 						},
