@@ -49,28 +49,32 @@
       "readOnly" : false,
       "writeOnly" : false,
       "observable" : true,
-      "oneOf" : [ {
-        "type" : "string"
-      }, {
-        "type" : "string"
-      } ]
+      "type" : "string"
     },
     "protocol" : {
       "title" : "protocol",
       "titles" : {
         "en" : "protocol",
-        "ja" : "規格Version情報"
+        "ja" : "Protocolversion情報"
       },
       "echonet:epc" : "0x82",
-      "description" : "Standard version information",
+      "description" : "Protocol version information",
       "descriptions" : {
-        "en" : "Standard version information",
-        "ja" : "規格Version情報"
+        "en" : "Protocol version information",
+        "ja" : "Protocol version情報"
       },
       "readOnly" : true,
       "writeOnly" : false,
       "observable" : false,
-      "type" : "string"
+      "type" : "object",
+      "properties" : {
+        "type" : {
+          "type" : "string"
+        },
+        "version" : {
+          "type" : "string"
+        }
+      }
     },
     "id" : {
       "title" : "id",
@@ -204,18 +208,34 @@
       "title" : "manufacturer",
       "titles" : {
         "en" : "manufacturer",
-        "ja" : "メーカコード"
+        "ja" : "メーカー"
       },
       "echonet:epc" : "0x8A",
-      "description" : "Manufactur code",
+      "description" : "Manufacturer",
       "descriptions" : {
-        "en" : "Manufactur code",
-        "ja" : "メーカコード"
+        "en" : "Manufacturer",
+        "ja" : "メーカー"
       },
       "readOnly" : true,
       "writeOnly" : false,
       "observable" : false,
-      "type" : "string"
+      "type" : "object",
+      "properties" : {
+        "code" : {
+          "type" : "string"
+        },
+        "descriptions" : {
+          "type" : "object",
+          "properties" : {
+            "ja" : {
+              "type" : "string"
+            },
+            "en" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
     },
     "businessFacilityCode" : {
       "title" : "businessFacilityCode",
@@ -258,9 +278,9 @@
         "ja" : "製造番号"
       },
       "echonet:epc" : "0x8D",
-      "description" : "Production number",
+      "description" : "Serial number",
       "descriptions" : {
-        "en" : "Production number",
+        "en" : "Serial number",
         "ja" : "製造番号"
       },
       "readOnly" : true,
@@ -357,34 +377,17 @@
       "type" : "string",
       "format" : "time"
     },
-    "remoteControl" : {
-      "title" : "remoteControl",
-      "titles" : {
-        "en" : "remoteControl",
-        "ja" : "遠隔操作設定"
-      },
-      "echonet:epc" : "0x93",
-      "description" : "Remote controll setting",
-      "descriptions" : {
-        "en" : "Remote controll setting",
-        "ja" : "遠隔操作設定"
-      },
-      "readOnly" : false,
-      "writeOnly" : false,
-      "observable" : false,
-      "type" : "boolean"
-    },
     "currentDateAndTime" : {
       "title" : "currentDateAndTime",
       "titles" : {
         "en" : "currentDateAndTime",
-        "ja" : "現在年月日設定"
+        "ja" : "現在日時"
       },
       "echonet:epc" : "0x98",
-      "description" : "Current date setting",
+      "description" : "Current date and time",
       "descriptions" : {
-        "en" : "Current date setting",
-        "ja" : "現在年月日設定"
+        "en" : "Current date and time",
+        "ja" : "現在日時"
       },
       "readOnly" : false,
       "writeOnly" : false,

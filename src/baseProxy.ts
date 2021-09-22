@@ -170,7 +170,7 @@ export class WotDevice {
 		var defJSON = JSON.parse(fs.readFileSync('./src/TD/'+dev['deviceType'] + '.json', 'utf8'));
 		var TDSchema = {
 			"@context" : defJSON['@context'],
-			"id" : dev['id'],
+			"id" : "echonet:" + dev['deviceType'] + ":" +dev['id'],
 			"title" : dev['deviceType'],
 			"titles": defJSON['titles'],
 			"description": defJSON['description'],
