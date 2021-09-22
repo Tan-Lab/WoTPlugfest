@@ -8,7 +8,7 @@
       "@language": "en"
     }
   ],
-  "id": "192168117029001",
+  "id": "echonet:generalLighting:192168117029001",
   "title": "generalLighting",
   "description": "General lighting",
   "properties": {
@@ -456,14 +456,7 @@
       "readOnly": false,
       "writeOnly": false,
       "observable": true,
-      "oneOf": [
-        {
-          "type": "string"
-        },
-        {
-          "type": "string"
-        }
-      ],
+      "type": "string",
       "forms": [
         {
           "href": "http://150.65.231.21:8081/generallighting/properties/installationLocation",
@@ -724,7 +717,23 @@
       "readOnly": true,
       "writeOnly": false,
       "observable": false,
-      "type": "string",
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string"
+        },
+        "descriptions": {
+          "type": "object",
+          "properties": {
+            "ja": {
+              "type": "string"
+            },
+            "en": {
+              "type": "string"
+            }
+          }
+        }
+      },
       "forms": [
         {
           "href": "http://150.65.231.21:8081/generallighting/properties/manufacturer",
@@ -760,7 +769,7 @@
         }
       ],
       "title": "manufacturer",
-      "description": "Manufactur code"
+      "description": "Manufacturer"
     },
     "manufacturerFaultCode": {
       "echonet:epc": "0x86",
@@ -1234,7 +1243,15 @@
       "readOnly": true,
       "writeOnly": false,
       "observable": false,
-      "type": "string",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        }
+      },
       "forms": [
         {
           "href": "http://150.65.231.21:8081/generallighting/properties/protocol",
@@ -1270,7 +1287,7 @@
         }
       ],
       "title": "protocol",
-      "description": "Standard version information"
+      "description": "Protocol version information"
     },
     "serialNumber": {
       "echonet:epc": "0x8D",
@@ -1313,7 +1330,7 @@
         }
       ],
       "title": "serialNumber",
-      "description": "Production number"
+      "description": "Serial number"
     }
   },
   "@type": "Thing",
