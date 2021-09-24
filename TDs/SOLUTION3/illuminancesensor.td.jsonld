@@ -177,7 +177,6 @@
                     "htv:methodName": "GET"
                 }
             ],
-            "value": 0,
             "title": "value",
             "description": "Measured illuminance value in LUX"
         }
