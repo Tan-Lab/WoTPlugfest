@@ -1037,7 +1037,7 @@
       "type": "boolean",
       "forms": [
         {
-          "href": "http://150.65.231.21:8081/generallighting/properties/operationStatus",
+          "href": "http://192.168.30.110:8081/generallighting/properties/operationStatus",
           "contentType": "application/json",
           "op": [
             "readproperty",

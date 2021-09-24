@@ -398,10 +398,10 @@
         }
       }
     },
-    "illuminance": {
-        "title" : "illuminance",
+    "value": {
+        "title" : "value",
         "titles" : {
-          "en" : "illuminance",
+          "en" : "value",
           "ja" : "照度計測値"
         },
         "echonet:epc" : "0xE0",
@@ -418,13 +418,13 @@
         "minimum": 0,
         "maximum": 65535
     },
-    "illuminance1": {
-        "title" : "illuminance1",
+    "valueInKLUX": {
+        "title" : "valueInKLUX",
         "titles" : {
-          "en" : "illuminance1",
+          "en" : "valueInKLUX",
           "ja" : "照度計測値1"
         },
-        "echonet:epc" : "0xE0",
+        "echonet:epc" : "0xE1",
         "description" : "Measured illuminance value in Klux",
         "descriptions" : {
           "en" : "Measured illuminance value in Klux",
@@ -434,7 +434,7 @@
         "writeOnly" : false,
         "observable" : false,
         "type": "number",
-        "unit": "Lux",
+        "unit": "KLux",
         "minimum": 0,
         "maximum": 65535
     }
