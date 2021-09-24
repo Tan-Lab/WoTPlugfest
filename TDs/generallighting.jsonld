@@ -23,30 +23,6 @@
       "maximum": 100,
       "forms": [
         {
-          "href": "http://150.65.231.21:8081/generallighting/properties/brightness",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
-          "href": "http://[2001:df0:2ed:4131:101a:1fb4:24b8:a833]:8081/generallighting/properties/brightness",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
-          "href": "http://[2001:df0:2ed:4131:d59f:6dde:7a40:664e]:8081/generallighting/properties/brightness",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
           "href": "http://192.168.30.110:8081/generallighting/properties/brightness",
           "contentType": "application/json",
           "op": [
@@ -55,6 +31,7 @@
           ]
         }
       ],
+      "value": 100,
       "title": "brightness",
       "description": "Illuminance level"
     },
@@ -69,30 +46,6 @@
       "maximum": 100,
       "forms": [
         {
-          "href": "http://150.65.231.21:8081/generallighting/properties/brightnessLevelForMainLighting",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
-          "href": "http://[2001:df0:2ed:4131:101a:1fb4:24b8:a833]:8081/generallighting/properties/brightnessLevelForMainLighting",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
-          "href": "http://[2001:df0:2ed:4131:d59f:6dde:7a40:664e]:8081/generallighting/properties/brightnessLevelForMainLighting",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
           "href": "http://192.168.30.110:8081/generallighting/properties/brightnessLevelForMainLighting",
           "contentType": "application/json",
           "op": [
@@ -101,6 +54,7 @@
           ]
         }
       ],
+      "value": 100,
       "title": "brightnessLevelForMainLighting",
       "description": "Brightness level setting for main lighting"
     },
@@ -115,30 +69,6 @@
       "maximum": 100,
       "forms": [
         {
-          "href": "http://150.65.231.21:8081/generallighting/properties/brightnessLevelForNightLighting",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
-          "href": "http://[2001:df0:2ed:4131:101a:1fb4:24b8:a833]:8081/generallighting/properties/brightnessLevelForNightLighting",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
-          "href": "http://[2001:df0:2ed:4131:d59f:6dde:7a40:664e]:8081/generallighting/properties/brightnessLevelForNightLighting",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
           "href": "http://192.168.30.110:8081/generallighting/properties/brightnessLevelForNightLighting",
           "contentType": "application/json",
           "op": [
@@ -147,6 +77,7 @@
           ]
         }
       ],
+      "value": 100,
       "title": "brightnessLevelForNightLighting",
       "description": "Brightness level setting for night lighting"
     },
@@ -158,30 +89,6 @@
       "type": "string",
       "forms": [
         {
-          "href": "http://150.65.231.21:8081/generallighting/properties/brightnessLevelStep",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
-          "href": "http://[2001:df0:2ed:4131:101a:1fb4:24b8:a833]:8081/generallighting/properties/brightnessLevelStep",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
-          "href": "http://[2001:df0:2ed:4131:d59f:6dde:7a40:664e]:8081/generallighting/properties/brightnessLevelStep",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
           "href": "http://192.168.30.110:8081/generallighting/properties/brightnessLevelStep",
           "contentType": "application/json",
           "op": [
@@ -190,6 +97,7 @@
           ]
         }
       ],
+      "value": "20",
       "title": "brightnessLevelStep",
       "description": "Brightness level step setting"
     },
@@ -201,30 +109,6 @@
       "type": "string",
       "forms": [
         {
-          "href": "http://150.65.231.21:8081/generallighting/properties/brightnessLevelStepForMainLighting",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
-          "href": "http://[2001:df0:2ed:4131:101a:1fb4:24b8:a833]:8081/generallighting/properties/brightnessLevelStepForMainLighting",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
-          "href": "http://[2001:df0:2ed:4131:d59f:6dde:7a40:664e]:8081/generallighting/properties/brightnessLevelStepForMainLighting",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
           "href": "http://192.168.30.110:8081/generallighting/properties/brightnessLevelStepForMainLighting",
           "contentType": "application/json",
           "op": [
@@ -233,6 +117,7 @@
           ]
         }
       ],
+      "value": "20",
       "title": "brightnessLevelStepForMainLighting",
       "description": "Brightness level step setting for main lighting"
     },
@@ -251,30 +136,6 @@
       ],
       "forms": [
         {
-          "href": "http://150.65.231.21:8081/generallighting/properties/brightnessLevelStepForNightLighting",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
-          "href": "http://[2001:df0:2ed:4131:101a:1fb4:24b8:a833]:8081/generallighting/properties/brightnessLevelStepForNightLighting",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
-          "href": "http://[2001:df0:2ed:4131:d59f:6dde:7a40:664e]:8081/generallighting/properties/brightnessLevelStepForNightLighting",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
           "href": "http://192.168.30.110:8081/generallighting/properties/brightnessLevelStepForNightLighting",
           "contentType": "application/json",
           "op": [
@@ -283,6 +144,7 @@
           ]
         }
       ],
+      "value": "daylightWhite",
       "title": "brightnessLevelStepForNightLighting",
       "description": "Light color setting for main lighting"
     },
@@ -294,30 +156,6 @@
       "type": "string",
       "forms": [
         {
-          "href": "http://150.65.231.21:8081/generallighting/properties/businessFacilityCode",
-          "contentType": "application/json",
-          "op": [
-            "readproperty"
-          ],
-          "htv:methodName": "GET"
-        },
-        {
-          "href": "http://[2001:df0:2ed:4131:101a:1fb4:24b8:a833]:8081/generallighting/properties/businessFacilityCode",
-          "contentType": "application/json",
-          "op": [
-            "readproperty"
-          ],
-          "htv:methodName": "GET"
-        },
-        {
-          "href": "http://[2001:df0:2ed:4131:d59f:6dde:7a40:664e]:8081/generallighting/properties/businessFacilityCode",
-          "contentType": "application/json",
-          "op": [
-            "readproperty"
-          ],
-          "htv:methodName": "GET"
-        },
-        {
           "href": "http://192.168.30.110:8081/generallighting/properties/businessFacilityCode",
           "contentType": "application/json",
           "op": [
@@ -326,6 +164,7 @@
           "htv:methodName": "GET"
         }
       ],
+      "value": "000001",
       "title": "businessFacilityCode",
       "description": "Business facility code"
     },
@@ -337,30 +176,6 @@
       "type": "string",
       "forms": [
         {
-          "href": "http://150.65.231.21:8081/generallighting/properties/faultDescription",
-          "contentType": "application/json",
-          "op": [
-            "readproperty"
-          ],
-          "htv:methodName": "GET"
-        },
-        {
-          "href": "http://[2001:df0:2ed:4131:101a:1fb4:24b8:a833]:8081/generallighting/properties/faultDescription",
-          "contentType": "application/json",
-          "op": [
-            "readproperty"
-          ],
-          "htv:methodName": "GET"
-        },
-        {
-          "href": "http://[2001:df0:2ed:4131:d59f:6dde:7a40:664e]:8081/generallighting/properties/faultDescription",
-          "contentType": "application/json",
-          "op": [
-            "readproperty"
-          ],
-          "htv:methodName": "GET"
-        },
-        {
           "href": "http://192.168.30.110:8081/generallighting/properties/faultDescription",
           "contentType": "application/json",
           "op": [
@@ -369,6 +184,7 @@
           "htv:methodName": "GET"
         }
       ],
+      "value": "No fault",
       "title": "faultDescription",
       "description": "Fault description"
     },
@@ -379,57 +195,6 @@
       "observable": true,
       "type": "boolean",
       "forms": [
-        {
-          "href": "http://150.65.231.21:8081/generallighting/properties/faultStatus",
-          "contentType": "application/json",
-          "op": [
-            "readproperty"
-          ],
-          "htv:methodName": "GET"
-        },
-        {
-          "href": "http://150.65.231.21:8081/generallighting/properties/faultStatus/observable",
-          "contentType": "application/json",
-          "op": [
-            "observeproperty",
-            "unobserveproperty"
-          ],
-          "subprotocol": "longpoll"
-        },
-        {
-          "href": "http://[2001:df0:2ed:4131:101a:1fb4:24b8:a833]:8081/generallighting/properties/faultStatus",
-          "contentType": "application/json",
-          "op": [
-            "readproperty"
-          ],
-          "htv:methodName": "GET"
-        },
-        {
-          "href": "http://[2001:df0:2ed:4131:101a:1fb4:24b8:a833]:8081/generallighting/properties/faultStatus/observable",
-          "contentType": "application/json",
-          "op": [
-            "observeproperty",
-            "unobserveproperty"
-          ],
-          "subprotocol": "longpoll"
-        },
-        {
-          "href": "http://[2001:df0:2ed:4131:d59f:6dde:7a40:664e]:8081/generallighting/properties/faultStatus",
-          "contentType": "application/json",
-          "op": [
-            "readproperty"
-          ],
-          "htv:methodName": "GET"
-        },
-        {
-          "href": "http://[2001:df0:2ed:4131:d59f:6dde:7a40:664e]:8081/generallighting/properties/faultStatus/observable",
-          "contentType": "application/json",
-          "op": [
-            "observeproperty",
-            "unobserveproperty"
-          ],
-          "subprotocol": "longpoll"
-        },
         {
           "href": "http://192.168.30.110:8081/generallighting/properties/faultStatus",
           "contentType": "application/json",
@@ -448,6 +213,7 @@
           "subprotocol": "longpoll"
         }
       ],
+      "value": false,
       "title": "faultStatus",
       "description": "Fault status"
     },
@@ -458,57 +224,6 @@
       "observable": true,
       "type": "string",
       "forms": [
-        {
-          "href": "http://150.65.231.21:8081/generallighting/properties/installationLocation",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
-          "href": "http://150.65.231.21:8081/generallighting/properties/installationLocation/observable",
-          "contentType": "application/json",
-          "op": [
-            "observeproperty",
-            "unobserveproperty"
-          ],
-          "subprotocol": "longpoll"
-        },
-        {
-          "href": "http://[2001:df0:2ed:4131:101a:1fb4:24b8:a833]:8081/generallighting/properties/installationLocation",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
-          "href": "http://[2001:df0:2ed:4131:101a:1fb4:24b8:a833]:8081/generallighting/properties/installationLocation/observable",
-          "contentType": "application/json",
-          "op": [
-            "observeproperty",
-            "unobserveproperty"
-          ],
-          "subprotocol": "longpoll"
-        },
-        {
-          "href": "http://[2001:df0:2ed:4131:d59f:6dde:7a40:664e]:8081/generallighting/properties/installationLocation",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
-          "href": "http://[2001:df0:2ed:4131:d59f:6dde:7a40:664e]:8081/generallighting/properties/installationLocation/observable",
-          "contentType": "application/json",
-          "op": [
-            "observeproperty",
-            "unobserveproperty"
-          ],
-          "subprotocol": "longpoll"
-        },
         {
           "href": "http://192.168.30.110:8081/generallighting/properties/installationLocation",
           "contentType": "application/json",
@@ -527,6 +242,7 @@
           "subprotocol": "longpoll"
         }
       ],
+      "value": "installationLocationNotSpecified",
       "title": "installationLocation",
       "description": "Installation location"
     },
@@ -541,30 +257,6 @@
       "maximum": 65533,
       "forms": [
         {
-          "href": "http://150.65.231.21:8081/generallighting/properties/instantaneousElectricPowerConsumption",
-          "contentType": "application/json",
-          "op": [
-            "readproperty"
-          ],
-          "htv:methodName": "GET"
-        },
-        {
-          "href": "http://[2001:df0:2ed:4131:101a:1fb4:24b8:a833]:8081/generallighting/properties/instantaneousElectricPowerConsumption",
-          "contentType": "application/json",
-          "op": [
-            "readproperty"
-          ],
-          "htv:methodName": "GET"
-        },
-        {
-          "href": "http://[2001:df0:2ed:4131:d59f:6dde:7a40:664e]:8081/generallighting/properties/instantaneousElectricPowerConsumption",
-          "contentType": "application/json",
-          "op": [
-            "readproperty"
-          ],
-          "htv:methodName": "GET"
-        },
-        {
           "href": "http://192.168.30.110:8081/generallighting/properties/instantaneousElectricPowerConsumption",
           "contentType": "application/json",
           "op": [
@@ -573,6 +265,7 @@
           "htv:methodName": "GET"
         }
       ],
+      "value": 2,
       "title": "instantaneousElectricPowerConsumption",
       "description": "Measured instantaneous power consumption"
     },
@@ -591,30 +284,6 @@
       ],
       "forms": [
         {
-          "href": "http://150.65.231.21:8081/generallighting/properties/lightColor",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
-          "href": "http://[2001:df0:2ed:4131:101a:1fb4:24b8:a833]:8081/generallighting/properties/lightColor",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
-          "href": "http://[2001:df0:2ed:4131:d59f:6dde:7a40:664e]:8081/generallighting/properties/lightColor",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
           "href": "http://192.168.30.110:8081/generallighting/properties/lightColor",
           "contentType": "application/json",
           "op": [
@@ -623,6 +292,7 @@
           ]
         }
       ],
+      "value": "daylightWhite",
       "title": "lightColor",
       "description": "Light color setting"
     },
@@ -634,30 +304,6 @@
       "type": "string",
       "forms": [
         {
-          "href": "http://150.65.231.21:8081/generallighting/properties/lightColorLevelStep",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
-          "href": "http://[2001:df0:2ed:4131:101a:1fb4:24b8:a833]:8081/generallighting/properties/lightColorLevelStep",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
-          "href": "http://[2001:df0:2ed:4131:d59f:6dde:7a40:664e]:8081/generallighting/properties/lightColorLevelStep",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
           "href": "http://192.168.30.110:8081/generallighting/properties/lightColorLevelStep",
           "contentType": "application/json",
           "op": [
@@ -666,6 +312,7 @@
           ]
         }
       ],
+      "value": "12",
       "title": "lightColorLevelStep",
       "description": "Light color step setting"
     },
@@ -677,30 +324,6 @@
       "type": "string",
       "forms": [
         {
-          "href": "http://150.65.231.21:8081/generallighting/properties/lightColorLevelStepForMainLighting",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
-          "href": "http://[2001:df0:2ed:4131:101a:1fb4:24b8:a833]:8081/generallighting/properties/lightColorLevelStepForMainLighting",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
-          "href": "http://[2001:df0:2ed:4131:d59f:6dde:7a40:664e]:8081/generallighting/properties/lightColorLevelStepForMainLighting",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
           "href": "http://192.168.30.110:8081/generallighting/properties/lightColorLevelStepForMainLighting",
           "contentType": "application/json",
           "op": [
@@ -709,6 +332,7 @@
           ]
         }
       ],
+      "value": "12",
       "title": "lightColorLevelStepForMainLighting",
       "description": "Light color level step setting for main lighting"
     },
@@ -736,30 +360,6 @@
       },
       "forms": [
         {
-          "href": "http://150.65.231.21:8081/generallighting/properties/manufacturer",
-          "contentType": "application/json",
-          "op": [
-            "readproperty"
-          ],
-          "htv:methodName": "GET"
-        },
-        {
-          "href": "http://[2001:df0:2ed:4131:101a:1fb4:24b8:a833]:8081/generallighting/properties/manufacturer",
-          "contentType": "application/json",
-          "op": [
-            "readproperty"
-          ],
-          "htv:methodName": "GET"
-        },
-        {
-          "href": "http://[2001:df0:2ed:4131:d59f:6dde:7a40:664e]:8081/generallighting/properties/manufacturer",
-          "contentType": "application/json",
-          "op": [
-            "readproperty"
-          ],
-          "htv:methodName": "GET"
-        },
-        {
           "href": "http://192.168.30.110:8081/generallighting/properties/manufacturer",
           "contentType": "application/json",
           "op": [
@@ -768,6 +368,13 @@
           "htv:methodName": "GET"
         }
       ],
+      "value": {
+        "code": "0x00001B",
+        "descriptions": {
+          "en": "TOSHIBA LIGHTING & TECHNOLOGY CORPORATION",
+          "ja": "東芝ライテック株式会社"
+        }
+      },
       "title": "manufacturer",
       "description": "Manufacturer"
     },
@@ -779,30 +386,6 @@
       "type": "string",
       "forms": [
         {
-          "href": "http://150.65.231.21:8081/generallighting/properties/manufacturerFaultCode",
-          "contentType": "application/json",
-          "op": [
-            "readproperty"
-          ],
-          "htv:methodName": "GET"
-        },
-        {
-          "href": "http://[2001:df0:2ed:4131:101a:1fb4:24b8:a833]:8081/generallighting/properties/manufacturerFaultCode",
-          "contentType": "application/json",
-          "op": [
-            "readproperty"
-          ],
-          "htv:methodName": "GET"
-        },
-        {
-          "href": "http://[2001:df0:2ed:4131:d59f:6dde:7a40:664e]:8081/generallighting/properties/manufacturerFaultCode",
-          "contentType": "application/json",
-          "op": [
-            "readproperty"
-          ],
-          "htv:methodName": "GET"
-        },
-        {
           "href": "http://192.168.30.110:8081/generallighting/properties/manufacturerFaultCode",
           "contentType": "application/json",
           "op": [
@@ -811,6 +394,7 @@
           "htv:methodName": "GET"
         }
       ],
+      "value": "02-00001B-0000",
       "title": "manufacturerFaultCode",
       "description": "Manufacturer's fault code"
     },
@@ -862,30 +446,6 @@
       },
       "forms": [
         {
-          "href": "http://150.65.231.21:8081/generallighting/properties/maximumSettableLevelForNightLighting",
-          "contentType": "application/json",
-          "op": [
-            "readproperty"
-          ],
-          "htv:methodName": "GET"
-        },
-        {
-          "href": "http://[2001:df0:2ed:4131:101a:1fb4:24b8:a833]:8081/generallighting/properties/maximumSettableLevelForNightLighting",
-          "contentType": "application/json",
-          "op": [
-            "readproperty"
-          ],
-          "htv:methodName": "GET"
-        },
-        {
-          "href": "http://[2001:df0:2ed:4131:d59f:6dde:7a40:664e]:8081/generallighting/properties/maximumSettableLevelForNightLighting",
-          "contentType": "application/json",
-          "op": [
-            "readproperty"
-          ],
-          "htv:methodName": "GET"
-        },
-        {
           "href": "http://192.168.30.110:8081/generallighting/properties/maximumSettableLevelForNightLighting",
           "contentType": "application/json",
           "op": [
@@ -894,6 +454,10 @@
           "htv:methodName": "GET"
         }
       ],
+      "value": {
+        "brightness": 6,
+        "color": "notColor"
+      },
       "title": "maximumSettableLevelForNightLighting",
       "description": "Maximum value of settable level for night lighting"
     },
@@ -945,30 +509,6 @@
       },
       "forms": [
         {
-          "href": "http://150.65.231.21:8081/generallighting/properties/maximumSpecifiableLevel",
-          "contentType": "application/json",
-          "op": [
-            "readproperty"
-          ],
-          "htv:methodName": "GET"
-        },
-        {
-          "href": "http://[2001:df0:2ed:4131:101a:1fb4:24b8:a833]:8081/generallighting/properties/maximumSpecifiableLevel",
-          "contentType": "application/json",
-          "op": [
-            "readproperty"
-          ],
-          "htv:methodName": "GET"
-        },
-        {
-          "href": "http://[2001:df0:2ed:4131:d59f:6dde:7a40:664e]:8081/generallighting/properties/maximumSpecifiableLevel",
-          "contentType": "application/json",
-          "op": [
-            "readproperty"
-          ],
-          "htv:methodName": "GET"
-        },
-        {
           "href": "http://192.168.30.110:8081/generallighting/properties/maximumSpecifiableLevel",
           "contentType": "application/json",
           "op": [
@@ -977,6 +517,10 @@
           "htv:methodName": "GET"
         }
       ],
+      "value": {
+        "brightness": 20,
+        "color": 21
+      },
       "title": "maximumSpecifiableLevel",
       "description": "Maximum specifiable values"
     },
@@ -994,30 +538,6 @@
       ],
       "forms": [
         {
-          "href": "http://150.65.231.21:8081/generallighting/properties/operationMode",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
-          "href": "http://[2001:df0:2ed:4131:101a:1fb4:24b8:a833]:8081/generallighting/properties/operationMode",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
-          "href": "http://[2001:df0:2ed:4131:d59f:6dde:7a40:664e]:8081/generallighting/properties/operationMode",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
           "href": "http://192.168.30.110:8081/generallighting/properties/operationMode",
           "contentType": "application/json",
           "op": [
@@ -1026,6 +546,7 @@
           ]
         }
       ],
+      "value": "normal",
       "title": "operationMode",
       "description": "Lighting mode setting"
     },
@@ -1045,57 +566,6 @@
           ]
         },
         {
-          "href": "http://150.65.231.21:8081/generallighting/properties/operationStatus/observable",
-          "contentType": "application/json",
-          "op": [
-            "observeproperty",
-            "unobserveproperty"
-          ],
-          "subprotocol": "longpoll"
-        },
-        {
-          "href": "http://[2001:df0:2ed:4131:101a:1fb4:24b8:a833]:8081/generallighting/properties/operationStatus",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
-          "href": "http://[2001:df0:2ed:4131:101a:1fb4:24b8:a833]:8081/generallighting/properties/operationStatus/observable",
-          "contentType": "application/json",
-          "op": [
-            "observeproperty",
-            "unobserveproperty"
-          ],
-          "subprotocol": "longpoll"
-        },
-        {
-          "href": "http://[2001:df0:2ed:4131:d59f:6dde:7a40:664e]:8081/generallighting/properties/operationStatus",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
-          "href": "http://[2001:df0:2ed:4131:d59f:6dde:7a40:664e]:8081/generallighting/properties/operationStatus/observable",
-          "contentType": "application/json",
-          "op": [
-            "observeproperty",
-            "unobserveproperty"
-          ],
-          "subprotocol": "longpoll"
-        },
-        {
-          "href": "http://192.168.30.110:8081/generallighting/properties/operationStatus",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
           "href": "http://192.168.30.110:8081/generallighting/properties/operationStatus/observable",
           "contentType": "application/json",
           "op": [
@@ -1105,6 +575,7 @@
           "subprotocol": "longpoll"
         }
       ],
+      "value": false,
       "title": "operationStatus",
       "description": "Operation status"
     },
@@ -1116,30 +587,6 @@
       "type": "boolean",
       "forms": [
         {
-          "href": "http://150.65.231.21:8081/generallighting/properties/powerSaving",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
-          "href": "http://[2001:df0:2ed:4131:101a:1fb4:24b8:a833]:8081/generallighting/properties/powerSaving",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
-          "href": "http://[2001:df0:2ed:4131:d59f:6dde:7a40:664e]:8081/generallighting/properties/powerSaving",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
           "href": "http://192.168.30.110:8081/generallighting/properties/powerSaving",
           "contentType": "application/json",
           "op": [
@@ -1148,6 +595,7 @@
           ]
         }
       ],
+      "value": false,
       "title": "powerSaving",
       "description": "Power-saving operation setting"
     },
@@ -1159,30 +607,6 @@
       "type": "string",
       "forms": [
         {
-          "href": "http://150.65.231.21:8081/generallighting/properties/productCode",
-          "contentType": "application/json",
-          "op": [
-            "readproperty"
-          ],
-          "htv:methodName": "GET"
-        },
-        {
-          "href": "http://[2001:df0:2ed:4131:101a:1fb4:24b8:a833]:8081/generallighting/properties/productCode",
-          "contentType": "application/json",
-          "op": [
-            "readproperty"
-          ],
-          "htv:methodName": "GET"
-        },
-        {
-          "href": "http://[2001:df0:2ed:4131:d59f:6dde:7a40:664e]:8081/generallighting/properties/productCode",
-          "contentType": "application/json",
-          "op": [
-            "readproperty"
-          ],
-          "htv:methodName": "GET"
-        },
-        {
           "href": "http://192.168.30.110:8081/generallighting/properties/productCode",
           "contentType": "application/json",
           "op": [
@@ -1191,6 +615,7 @@
           "htv:methodName": "GET"
         }
       ],
+      "value": "LEDH-LT4    ",
       "title": "productCode",
       "description": "Product code"
     },
@@ -1203,30 +628,6 @@
       "format": "date",
       "forms": [
         {
-          "href": "http://150.65.231.21:8081/generallighting/properties/productionDate",
-          "contentType": "application/json",
-          "op": [
-            "readproperty"
-          ],
-          "htv:methodName": "GET"
-        },
-        {
-          "href": "http://[2001:df0:2ed:4131:101a:1fb4:24b8:a833]:8081/generallighting/properties/productionDate",
-          "contentType": "application/json",
-          "op": [
-            "readproperty"
-          ],
-          "htv:methodName": "GET"
-        },
-        {
-          "href": "http://[2001:df0:2ed:4131:d59f:6dde:7a40:664e]:8081/generallighting/properties/productionDate",
-          "contentType": "application/json",
-          "op": [
-            "readproperty"
-          ],
-          "htv:methodName": "GET"
-        },
-        {
           "href": "http://192.168.30.110:8081/generallighting/properties/productionDate",
           "contentType": "application/json",
           "op": [
@@ -1235,6 +636,7 @@
           "htv:methodName": "GET"
         }
       ],
+      "value": "2014-08-17",
       "title": "productionDate",
       "description": "Production date"
     },
@@ -1254,30 +656,6 @@
       },
       "forms": [
         {
-          "href": "http://150.65.231.21:8081/generallighting/properties/protocol",
-          "contentType": "application/json",
-          "op": [
-            "readproperty"
-          ],
-          "htv:methodName": "GET"
-        },
-        {
-          "href": "http://[2001:df0:2ed:4131:101a:1fb4:24b8:a833]:8081/generallighting/properties/protocol",
-          "contentType": "application/json",
-          "op": [
-            "readproperty"
-          ],
-          "htv:methodName": "GET"
-        },
-        {
-          "href": "http://[2001:df0:2ed:4131:d59f:6dde:7a40:664e]:8081/generallighting/properties/protocol",
-          "contentType": "application/json",
-          "op": [
-            "readproperty"
-          ],
-          "htv:methodName": "GET"
-        },
-        {
           "href": "http://192.168.30.110:8081/generallighting/properties/protocol",
           "contentType": "application/json",
           "op": [
@@ -1286,6 +664,10 @@
           "htv:methodName": "GET"
         }
       ],
+      "value": {
+        "type": "ECHONET_Lite v1.13",
+        "version": "Rel.M"
+      },
       "title": "protocol",
       "description": "Protocol version information"
     },
@@ -1297,30 +679,6 @@
       "type": "string",
       "forms": [
         {
-          "href": "http://150.65.231.21:8081/generallighting/properties/serialNumber",
-          "contentType": "application/json",
-          "op": [
-            "readproperty"
-          ],
-          "htv:methodName": "GET"
-        },
-        {
-          "href": "http://[2001:df0:2ed:4131:101a:1fb4:24b8:a833]:8081/generallighting/properties/serialNumber",
-          "contentType": "application/json",
-          "op": [
-            "readproperty"
-          ],
-          "htv:methodName": "GET"
-        },
-        {
-          "href": "http://[2001:df0:2ed:4131:d59f:6dde:7a40:664e]:8081/generallighting/properties/serialNumber",
-          "contentType": "application/json",
-          "op": [
-            "readproperty"
-          ],
-          "htv:methodName": "GET"
-        },
-        {
           "href": "http://192.168.30.110:8081/generallighting/properties/serialNumber",
           "contentType": "application/json",
           "op": [
@@ -1329,6 +687,7 @@
           "htv:methodName": "GET"
         }
       ],
+      "value": "000000000000000000000000",
       "title": "serialNumber",
       "description": "Serial number"
     }
@@ -1338,36 +697,6 @@
     "nosec_sc"
   ],
   "forms": [
-    {
-      "href": "http://150.65.231.21:8081/generallighting/all/properties",
-      "contentType": "application/json",
-      "op": [
-        "readallproperties",
-        "readmultipleproperties",
-        "writeallproperties",
-        "writemultipleproperties"
-      ]
-    },
-    {
-      "href": "http://[2001:df0:2ed:4131:101a:1fb4:24b8:a833]:8081/generallighting/all/properties",
-      "contentType": "application/json",
-      "op": [
-        "readallproperties",
-        "readmultipleproperties",
-        "writeallproperties",
-        "writemultipleproperties"
-      ]
-    },
-    {
-      "href": "http://[2001:df0:2ed:4131:d59f:6dde:7a40:664e]:8081/generallighting/all/properties",
-      "contentType": "application/json",
-      "op": [
-        "readallproperties",
-        "readmultipleproperties",
-        "writeallproperties",
-        "writemultipleproperties"
-      ]
-    },
     {
       "href": "http://192.168.30.110:8081/generallighting/all/properties",
       "contentType": "application/json",
