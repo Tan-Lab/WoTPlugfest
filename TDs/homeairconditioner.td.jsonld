@@ -80,10 +80,6 @@
           "htv:methodName": "GET"
         }
       ],
-      "value": {
-        "clusterIon": "no",
-        "electronic": "yes"
-      },
       "title": "airCleaningMethod",
       "description": "Mounted air cleaning method"
     },
@@ -124,7 +120,6 @@
           "subprotocol": "longpoll"
         }
       ],
-      "value": "auto",
       "title": "airFlowLevel",
       "description": "Air flow rate setting"
     },
@@ -274,11 +269,6 @@
           ]
         }
       ],
-      "value": {
-        "auto": "on",
-        "level": 0,
-        "mode": "off"
-      },
       "title": "airPurifierFunction",
       "description": "Air purifier function setting"
     },
@@ -304,7 +294,6 @@
           ]
         }
       ],
-      "value": "off",
       "title": "automaticSwingAirFlow",
       "description": "Automatic swing of air flow setting"
     },
@@ -324,7 +313,6 @@
           "htv:methodName": "GET"
         }
       ],
-      "value": "00000F",
       "title": "businessFacilityCode",
       "description": "Business facility code"
     },
@@ -347,7 +335,6 @@
           "htv:methodName": "GET"
         }
       ],
-      "value": 0.1,
       "title": "currentConsumption",
       "description": "Measured value of current consumption"
     },
@@ -370,7 +357,6 @@
           ]
         }
       ],
-      "value": 100,
       "title": "currentLimit",
       "description": "Current limit setting"
     },
@@ -390,7 +376,6 @@
           "htv:methodName": "GET"
         }
       ],
-      "value": "No fault",
       "title": "faultDescription",
       "description": "Fault description"
     },
@@ -419,7 +404,6 @@
           "subprotocol": "longpoll"
         }
       ],
-      "value": false,
       "title": "faultStatus",
       "description": "Fault status"
     },
@@ -463,7 +447,6 @@
           "htv:methodName": "GET"
         }
       ],
-      "value": 283467845972,
       "title": "hourMeter",
       "description": "Cumulative operating time"
     },
@@ -496,7 +479,6 @@
           "htv:methodName": "GET"
         }
       ],
-      "value": 60,
       "title": "humidity",
       "description": "Measured value of room relative humidity"
     },
@@ -525,7 +507,6 @@
           "subprotocol": "longpoll"
         }
       ],
-      "value": "installationLocationNotSpecified",
       "title": "installationLocation",
       "description": "Installation location"
     },
@@ -561,13 +542,6 @@
           "htv:methodName": "GET"
         }
       ],
-      "value": {
-        "code": "0x000017",
-        "descriptions": {
-          "en": "TOSHIBA CARRIER CORPORATION",
-          "ja": "東芝キヤリア株式会社"
-        }
-      },
       "title": "manufacturer",
       "description": "Manufacturer"
     },
@@ -587,7 +561,6 @@
           "htv:methodName": "GET"
         }
       ],
-      "value": "05-000017-0000000000",
       "title": "manufacturerFaultCode",
       "description": "Manufacturer's fault code"
     },
@@ -615,7 +588,6 @@
           ]
         }
       ],
-      "value": "bothOff",
       "title": "offTimerReservation",
       "description": "OFF timer-based reservation setting"
     },
@@ -643,7 +615,6 @@
           ]
         }
       ],
-      "value": "timeOffRelativeTimeOff",
       "title": "onTimerReservation",
       "description": "ON timer-based reservation setting"
     },
@@ -680,7 +651,6 @@
           "subprotocol": "longpoll"
         }
       ],
-      "value": "cooling",
       "title": "operationMode",
       "description": "Operation mode setting"
     },
@@ -709,7 +679,6 @@
           "subprotocol": "longpoll"
         }
       ],
-      "value": false,
       "title": "operationStatus",
       "description": "Operation status"
     },
@@ -742,7 +711,6 @@
           "htv:methodName": "GET"
         }
       ],
-      "value": "unmeasurable",
       "title": "outdoorTemperature",
       "description": "Measured outdoor air temperature"
     },
@@ -762,7 +730,6 @@
           "htv:methodName": "GET"
         }
       ],
-      "value": "RAS-221PDR  ",
       "title": "productCode",
       "description": "Product code"
     },
@@ -783,7 +750,6 @@
           "htv:methodName": "GET"
         }
       ],
-      "value": "2009-03-13",
       "title": "productionDate",
       "description": "Production date"
     },
@@ -811,10 +777,6 @@
           "htv:methodName": "GET"
         }
       ],
-      "value": {
-        "type": "ECHONET_Lite v1.13",
-        "version": "Rel.M"
-      },
       "title": "protocol",
       "description": "Protocol version information"
     },
@@ -837,7 +799,6 @@
           ]
         }
       ],
-      "value": 50,
       "title": "relativeHumidityDehumidifying",
       "description": "Set value of relative humidity in dehumidifying mode"
     },
@@ -870,7 +831,6 @@
           "htv:methodName": "GET"
         }
       ],
-      "value": 24,
       "title": "roomTemperature",
       "description": "Measured value of room temperature"
     },
@@ -1020,11 +980,6 @@
           ]
         }
       ],
-      "value": {
-        "auto": "on",
-        "level": 0,
-        "mode": "off"
-      },
       "title": "selfCleaningFunction",
       "description": "Self-cleaning function setting"
     },
@@ -1057,7 +1012,6 @@
           ]
         }
       ],
-      "value": 24,
       "title": "targetTemperature",
       "description": "Set temperature value"
     },
@@ -1083,7 +1037,6 @@
           ]
         }
       ],
-      "value": "off",
       "title": "ventilationFunction",
       "description": "Ventilation function setting"
     }

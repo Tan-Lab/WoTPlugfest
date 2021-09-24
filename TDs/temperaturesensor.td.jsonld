@@ -37,7 +37,6 @@
                     "subprotocol": "longpoll"
                 }
             ],
-            "value": false,
             "title": "faultStatus",
             "description": "Fault status"
         },
@@ -66,7 +65,6 @@
                     "subprotocol": "longpoll"
                 }
             ],
-            "value": "installationLocationNotSpecified",
             "title": "installationLocation",
             "description": "Installation location"
         },
@@ -102,13 +100,6 @@
                     "htv:methodName": "GET"
                 }
             ],
-            "value": {
-                "code": "0x000000",
-                "descriptions": {
-                    "en": "unknown",
-                    "ja": "未知"
-                }
-            },
             "title": "manufacturer",
             "description": "Manufacturer"
         },
@@ -137,7 +128,6 @@
                     "subprotocol": "longpoll"
                 }
             ],
-            "value": true,
             "title": "operationStatus",
             "description": "Operation status"
         },
@@ -165,10 +155,6 @@
                     "htv:methodName": "GET"
                 }
             ],
-            "value": {
-                "type": "ECHONET_Lite v1.13",
-                "version": "Rel.M"
-            },
             "title": "protocol",
             "description": "Protocol version information"
         },
@@ -191,7 +177,6 @@
                     "htv:methodName": "GET"
                 }
             ],
-            "value": 23.3,
             "title": "value",
             "description": "Measured temperature value"
         }
