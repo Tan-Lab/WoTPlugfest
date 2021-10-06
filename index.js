@@ -17,11 +17,11 @@ HttpServer = require("@node-wot/binding-http").HttpServer
 //MqttBrokerServer = require("@node-wot/binding-mqtt").MqttBrokerServer
 
 //Creating the instances of the binding servers
-var httpServer = new HttpServer({ adress:'0.0.0.0', port:8081});
+var httpServer = new HttpServer({ adress:'192.168.30.110', port:8081});
 //var coapServer = new CoapServer({port: 5683});
 //var mqttServer = new MqttBrokerServer("test.mosquitto.org"); //change it according to the broker address
 
-const serverAddr= 'http://150.65.231.31:5000/elapi/v1/devices/'
+const serverAddr= 'ELWEB API Server Address'
 //Building the servient object
 var servient = new Servient();
 //Adding different bindings to the server
